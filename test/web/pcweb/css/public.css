@@ -1,0 +1,31 @@
+body,p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dd,form,input,ul,ol
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-weight:normal;
+}
+img
+{
+    border:none;
+}
+a
+{
+    color:#999;
+    text-decoration:none;
+}
+body
+{
+    font-size:14px;
+    font-family:"Microsoft yahei";
+    color:#999;
+    background-color:#f5f5f5;
+}
+*{
+    color: #999;
+}
+input
+{
+    border:1px #CCCCCC solid;
+    font-family: "Microsoft yahei";
+}

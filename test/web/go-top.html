@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<script src="../app/music/js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<input type="checkbox" name="" id="" value="" />
+		<div class="all">全选</div>
+		<div class="fan">反选</div>
+	</body>
+	<script type="text/javascript">
+		$('.all').click(function() {
+			if($('input').prop('checked') == true) {
+				$('input').prop('checked', false);
+			} else {
+				$('input').prop('checked', true);
+			}
+		})
+		$("input").each(function() {
+			$(this).click(function() {
+				$(this).prop("checked");
+				if(this.checked) {
+					$(this).siblings('input').prop('checked',false)
+				}
+			});
+		});
+		$('.fan').click(function(){
+			$('input').each(function(){
+				if($(this).prop('checked')==true)
+				{
+					$(this).prop('checked',false)
+				}
+				else{
+					$(this).prop('checked',true)
+				}
+			})
+		})		
+	</script>
+
+</html>

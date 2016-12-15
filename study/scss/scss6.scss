@@ -1,0 +1,6 @@
+@mixin flo($left:left){
+    float: $left;
+}
+div{
+    @include flo();
+}

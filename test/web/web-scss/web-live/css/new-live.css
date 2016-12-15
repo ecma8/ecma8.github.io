@@ -1,0 +1,147 @@
+.live-box {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  margin: 20px auto 0;
+  clear: both;
+}
+.live-box .live-left {
+  width: 860px;
+  height: 600px;
+  float: left;
+}
+.live-box .live-left .title {
+  width: 860px;
+  height: 80px;
+}
+.live-box .live-left .title h2 {
+  width: 860px;
+  height: 50px;
+  line-height: 50px;
+  color: #333;
+  font-size: 20px;
+}
+.live-box .live-left .title p {
+  width: 860px;
+  height: 30px;
+  line-height: 30px;
+}
+.live-box .live-left .title p span {
+  float: left;
+}
+.live-box .live-left .title p .span1 {
+  margin-left: 50px;
+}
+.live-box .live-left .player {
+  width: 860px;
+  height: 510px;
+  background: #333333;
+  margin-top: 10px;
+}
+.live-box .live-right {
+  width: 320px;
+  height: 600px;
+  float: left;
+  margin-left: 20px;
+  background: #fff;
+  position: relative;
+}
+.live-box .live-right .liaotian-title {
+  width: 320px;
+  height: 39px;
+  border-bottom: 1px solid #ccc;
+  line-height: 40px;
+  text-align: center;
+  color: #333333;
+  font-size: 18px;
+}
+.live-box .live-right .liaotian {
+  width: 320px;
+  height: 480px;
+}
+.live-box .live-right .liaotian ul {
+  width: 300px;
+  height: 480px;
+  margin: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.live-box .live-right .liaotian ul li {
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.live-box .live-right .liaotian ul li .p1 {
+  height: 20px;
+}
+.live-box .live-right .liaotian ul li .p1 .name {
+  color: #4cadfc;
+  font-weight: bold;
+}
+.live-box .live-right .liaotian ul li .p1 .time {
+  color: #999;
+  margin-left: 10px;
+}
+.live-box .live-right .liaotian ul li .p2 {
+  width: 280px;
+  height: auto;
+  overflow: hidden;
+  word-wrap: break-word;
+  font-size: 12px;
+}
+.live-box .live-right .input {
+  width: 320px;
+  height: 60px;
+  border-top: 1px solid #ccc;
+}
+.live-box .live-right .input textarea {
+  width: 240px;
+  height: 38px;
+  resize: none;
+  float: left;
+  border: 1px solid #fb673d;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-top: 10px;
+  outline: none;
+  padding: 5px;
+  margin-left: 8px;
+}
+.live-box .live-right .input input {
+  width: 50px;
+  height: 50px;
+  background: #f60;
+  border: none;
+  color: #fff;
+  float: left;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-top: 10px;
+}
+
+.live-jieshao {
+  width: 1200px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.live-jieshao .jieshao-title {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  border-left: 6px solid #f93;
+  padding-left: 10px;
+  font-size: 20px;
+}
+.live-jieshao .jieshao-inner {
+  width: 1160px;
+  padding: 20px;
+  background: #fff;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=new-live.css.map */

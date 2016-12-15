@@ -1,0 +1,3 @@
+1.scss 是css的预编译器  同类的东西还有less  sass
+2.scss 和 sass其实是同类的东西 不同点在于 scss写法跟css写法有类似 都有括号 sass却没有 
+3.推荐大家学习使用scss 语法OK 规范编码习惯

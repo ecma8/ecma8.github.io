@@ -1,0 +1,79 @@
+.index-video {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 0.2rem;
+}
+.index-video .index-video-box {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.index-video .index-video-box .index-title {
+  width: 6rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  border-bottom: 1px solid #ececec;
+  margin: 0 auto;
+}
+.index-video .index-video-box .index-title img {
+  height: 0.26rem;
+  vertical-align: middle;
+}
+.index-video .index-video-box .index-title span {
+  color: #666;
+  font-size: 0.28rem;
+  color: #f93;
+}
+.index-video .index-video-box .index-title a {
+  float: right;
+  color: #999;
+  font-size: 0.22rem;
+}
+.index-video .index-video-box .index-box-inner {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 0.2rem;
+}
+.index-video .index-video-box .index-box-inner a {
+  width: 2.9rem;
+  height: auto;
+  float: left;
+  margin-left: 0.2rem;
+  margin-top: 0.2rem;
+  overflow: hidden;
+}
+.index-video .index-video-box .index-box-inner a .index-video-one {
+  width: 2.9rem;
+  height: auto;
+  overflow: hidden;
+}
+.index-video .index-video-box .index-box-inner a .index-video-one .video-img {
+  width: 2.9rem;
+  height: 1.6rem;
+}
+.index-video .index-video-box .index-box-inner a .index-video-one p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 0.4rem;
+  width: 2.8rem;
+  line-height: 0.4rem;
+  font-size: 0.24rem;
+  color: #333;
+}
+.index-video .index-video-box .index-box-inner a .index-video-one div {
+  width: 2.9rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+}
+.index-video .index-video-box .index-box-inner a .index-video-one div img {
+  width: 0.24rem;
+  vertical-align: middle;
+}
+.index-video .index-video-box .index-box-inner a .index-video-one div span {
+  font-size: 0.22rem;
+}

@@ -1,0 +1,21 @@
+body,ul,li,h1,h2,h3,h4,h5,h6,p,img,textarea,input{
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+	color: #333;
+	font-family: "microsoft yahei";
+	font-size: 14px;
+}
+input,textarea{
+    margin: 0;
+    padding: 0;
+	border: 1px solid #333333;
+    outline: none;
+}
+body{
+    background: #f5f5f5;
+}
+a{
+	text-decoration: none;
+    color: #333;
+}

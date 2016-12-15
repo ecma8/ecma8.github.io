@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="contentHolder">       
+	<video id="video" width="320" height="320" autoplay>
+	</video>       
+	<button id="snap" style="display:none"> 拍照</button>        
+	<canvas style="display:none" id="canvas" width="320" height="320">
+	</canvas> 
+   </div>
+</body>
+<script>      
+window.addEventListener("DOMContentLoaded", function () {            
+   var 	canvas = document.getElementById("canvas"),              
+     	context = canvas.getContext("2d"),                
+   		video = document.getElementById("video"),          
+        videoObj = { "video": true },           
+      	errBack = function (error) {           
+            console.log("Video capture error: ", error.code);    
+        };               
+		navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia ||  navigator.webkitGetUserMedia || navigator.msGetUserMedia);    
+        if (navigator.getUserMedia) {     
+              navigator.getUserMedia(videoObj, function (stream) {
+                video.src = stream;                
+   				video.play();      
+        }, errBack);           
+	    }else if (navigator.webkitGetUserMedia) {     
+	           navigator.getUserMedia(videoObj, function (stream) {          
+	             video.src = window.webkitURL.createObjectURL(stream);           
+	            video.play();           
+	        }, errBack);           
+	    }         
+      //这个是拍照按钮的事件，          
+     $("#snap").click(function () {          
+         context.drawImage(video, 0, 0, 320, 320);     
+              //CatchCode();           
+    });           
+          }, false);           
+          //定时器         
+      	 	$("#snap").click();
+//实际运用可不写，测试代 ， 为单击拍照按钮就获取了当前图像，有其他用途    
+           var canvans = document.getElementById("canvas"); 
+//获取浏览器页面的画布对象                       
+   //以下开始编 数据   
+                                  var imgData = canvans.toDataURL(); 
+//将图像转换为base64数据
+               var base64Data = imgData.substr(22); 
+</script>
+</script>
+</html>

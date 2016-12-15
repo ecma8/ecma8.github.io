@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>身份绑定</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-3.3.0-dist/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bindMobile.css">
+
+</head>
+<body>
+<div class='wap_page'>
+    <div class='wap_top_nav'>
+        <div class='row'>
+            <div class='col-xs-2 returnImg'>
+                <img src="images/return.png">
+            </div>
+            <div class='col-xs-8'>
+                <span class="identityText">身份绑定</span>
+            </div>
+        </div>
+    </div>
+    <div class="main_warp">
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <div class='wap_input'>
+                        <label class='div_label' for="name">姓名</label> <input id='name' class="form-control public_input" type='text' placeholder='请正确填写' >
+                    </div>
+                </div>
+            </div>
+            <div id='infoForName' class="msg"></div>
+
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <div class='wap_input'>
+                        <label class='div_label' for="identify">身份证号码</label> <input id='identify' type='text' class='form-control public_input' placeholder='请正确填写'>
+                    </div>
+                </div>
+            </div>
+            <div class='msg'></div>
+            <div class='row'>
+                <div class='col-xs-4'>
+                    <div class='sex'>性别</div>
+                </div>
+                <div class='col-xs-7 pull-right'>
+                    <div class='button_group person_gender_value_tag'>
+                        <button id='sexM' type="button"
+                             class='button button_default person_gender_M pull-left' value="M">男</button>
+                        <button id='sexF' type="button"
+                             class='button button_default person_gender_F pull-left' value="F">女</button>
+                    </div>
+                </div>
+                <div class='col-xs-1'>
+                    <div class=''></div>
+                </div>
+            </div>
+            <div class='msg'></div>
+
+        <div class='row'>
+            <div class='col-xs-12'>
+                <div class='wap_input'>
+                    <label class='div_label'>出生日期</label> <input  class="form-control public_input" type='date' placeholder='请正确填写' >
+                </div>
+            </div>
+        </div>
+
+        <div class='info_area'>
+            <div class='row'>
+                <div class='col-xs-5'>
+                    <div >微信绑定协议</div>
+                </div>
+                <div class='col-xs-5'>
+                    <div class='text-right'>详情</div>
+                </div>
+                <div class='col-xs-1 text-center'>
+                    <div >
+                        <img src="images/right_tag.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='wrap_agreement'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                        <input type="checkbox">
+                        <span>&nbsp;&nbsp;已阅读并同意以上微信绑定协议</span>
+                </div>
+            </div>
+        </div>
+        <div class='wrap_binding'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <div class='button button_next'
+                    >绑定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/public.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/live-video.css"/>
+<body>
+	<div id="warp">
+			<header class="header-nav">
+				<a class="mui-action-back mui-icon mui-pull-left left-icon">&#xe471;</a>
+				<h1 class="header-title">直播</h1>
+				<b class="mui-icon mui-pull-right right-icon">&#xe537;</b>
+			</header>
+			<div class="box-top"></div>
+			<div class="video">
+				<video src="" controls="controls" poster="img/video-logo.png"></video>
+			</div>
+			<div class="video-title">
+				<div class="video-title-one">
+					<div class="color">互动</div>
+				</div>
+				<div class="video-title-one">
+					<div>介绍</div>
+				</div>
+				<div class="video-title-two">
+					<a href="">
+						<span>进入学校</span>
+						<img src="img/time-live.png" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="video-box">
+				<div class="video-box-one">
+					<div class="say">
+						<ul id="dialog">
+						</ul>
+					</div>
+					<div class="input">
+						<textarea name="" rows="" cols="" placeholder="请输入聊天内容"></textarea>
+						<input type="submit" id="send" value="发送" />
+						<select id="client_list" style="display: none;">
+							<option value="all">所有人</option>
+						</select>
+					</div>
+				</div>
+				<div class="video-box-one" style="display: none;">
+					<div class="act">
+						<div class="act-box">
+							<h2>好讲台硬件发布会</h2>
+							<div class="act-inner">
+								<div class="one">
+									<div class="left">
+										<span>机构：</span>
+										<span>好讲台</span>
+									</div>
+									<div class="right">
+										<span>老师：</span>
+										<span>周朝</span>
+									</div>
+								</div>
+								<div class="one">
+									<div class="left">
+										<span>咨询电话：</span>
+										<span>010-0000000</span>
+									</div>
+								</div>
+								<div class="one">
+									<div class="left">
+										<span>直播介绍：</span>
+									</div>
+								</div>
+							</div>
+							<div class="jieshao">
+								<div class="jieshao-box">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+<script type="text/javascript">
+	$('textarea').focus(function(e){
+		e.preventDefault();
+    	e.stopPropagation();
+	})
+</script>
+</html>

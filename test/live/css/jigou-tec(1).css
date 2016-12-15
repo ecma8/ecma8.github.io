@@ -1,0 +1,105 @@
+.jigou-tec {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-top: 1px solid #dcdcdc;
+  margin-top: 0.2rem;
+}
+.jigou-tec .jigou-tec-one {
+  width: 6.4rem;
+  margin: 0 auto;
+  height: 1.9rem;
+  overflow: hidden;
+  border-bottom: 1px solid #dcdcdc;
+}
+.jigou-tec .jigou-tec-one .tec-top {
+  width: 6rem;
+  margin: 0 auto;
+  height: 1.2rem;
+  margin-top: 0.2rem;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-left {
+  width: 1.2rem;
+  height: 1.2rem;
+  float: left;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-left img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right {
+  width: 4.6rem;
+  margin-left: 0.2rem;
+  float: left;
+  height: 1.2rem;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-a {
+  height: 0.4rem;
+  line-height: 0.3rem;
+  width: 100%;
+  color: #333;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-a span {
+  font-size: 0.26rem;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-b {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  width: 100%;
+  color: #666;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-b span {
+  font-size: 0.22rem;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-b span:nth-of-type(1) {
+  float: left;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-b span:nth-of-type(2) {
+  float: right;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-c {
+  height: 0.4rem;
+  line-height: 0.4rem;
+  width: 100%;
+  color: #666;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-c span {
+  font-size: 0.22rem;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-c span:nth-of-type(1) {
+  float: left;
+}
+.jigou-tec .jigou-tec-one .tec-top .tec-top-right .tec-top-right-c span:nth-of-type(2) {
+  float: right;
+  color: #f00;
+}
+.jigou-tec .jigou-tec-one .tec-bottom {
+  width: 6rem;
+  height: 0.4rem;
+  margin: 0 auto;
+}
+.jigou-tec .jigou-tec-one .tec-bottom .tec-bottom-left {
+  width: 1.2rem;
+  height: 0.4rem;
+  float: left;
+}
+.jigou-tec .jigou-tec-one .tec-bottom .tec-bottom-left img {
+  width: 0.18rem;
+  float: left;
+  margin-right: 0.06rem;
+  margin-top: 0.14rem;
+}
+.jigou-tec .jigou-tec-one .tec-bottom .tec-bottom-right {
+  float: left;
+  width: 4.3rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.22rem;
+  margin-left: 0.18rem;
+  color: #999;
+}
+/*# sourceMappingURL=jigou-tec.css.map */

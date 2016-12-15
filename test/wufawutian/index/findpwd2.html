@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>    
+<head>   
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <meta name="apple-mobile-web-app-capable" content="yes" />  
+	 <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	 <meta name="format-detection" content="telephone=no" /> 
+	 <title>找回密码</title>
+	 <link rel="stylesheet" href="../css/bootstrap.min.css">
+	 <!-- <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+	 <link rel="stylesheet" href="../css/public.css">
+     <link rel="stylesheet" href="../css/findpwd.css">
+</head>
+<body>
+<div class="warp">
+	    <div class="header">
+				<span class="right glyphicon glyphicon-menu-hamburger"></span>
+	    </div>
+        <div class="content">
+            <div class="title"><span class="left glyphicon glyphicon-menu-left"></span>找回密码</div>
+             <div class="inp_par">
+                 <ul >
+                   <li class="phone"><input type="tel" placeholder="输入手机号码" maxlength="13"></li>
+                   <li class="yzm"><input type="text" placeholder="图片验证码" maxlength="4">
+                     <img src="../images/yzm.jpg" alt="">
+                   </li>
+                   <li class="dx_yzm"><input type="tel" placeholder="短信验证码" maxlength="6">
+                      <input type="button" class="oc_yzm" value="点击获取验证码">
+                   </li>
+                   <li class="password"><input type="password" placeholder="密码,6-16位数字或字母,区分大小写" maxlength="16"></li>
+                   <li class="password2"><input type="password" placeholder="请再次输入密码" maxlength="16"></li>
+                 </ul>
+            </div>
+            <input type="button" value="提交" class="phone_sub" />
+            <a href="#">收不到手机验证码?</a>
+        </div>
+
+	    <!-- <div class="footer">
+            
+	    </div> -->
+</div>
+   
+</body>
+</html>

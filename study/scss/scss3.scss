@@ -1,0 +1,7 @@
+$w1:20px;
+$w2:30px;
+div{
+    margin: $w1*20;
+    width: $w1/2;
+    height: 20px+$w2;
+}

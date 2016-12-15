@@ -1,0 +1,235 @@
+.select-search {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+}
+.select-search .select-title {
+  width: 100%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  position: fixed;
+  top: 0.7rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 0.24rem;
+}
+.select-search .select-title .select-title-one {
+  float: left;
+  text-align: center;
+}
+.select-search .select-title .select-title-two {
+  float: left;
+  text-align: center;
+  width: 3.2rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+.select-search .select-title .w1 {
+  width: 1.6rem;
+}
+.select-search .select-title .w2 {
+  width: 3.2rem;
+}
+.select-search .select-title .w3 {
+  width: 1.6rem;
+}
+.select-search .select-title .title-color {
+  color: #FF921A;
+}
+.select-search .select-box {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  margin-top: 0.7rem;
+}
+.select-search .select-box .select-box-one {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.select-search .select-box .select-box-one .select-box-one-left {
+  width: 1.6rem;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  background: #f5f5f5;
+  font-size: 0.24rem;
+}
+.select-search .select-box .select-box-one .select-box-one-left a {
+  display: block;
+  width: 1.6rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+}
+.select-search .select-box .select-box-one .select-box-one-left .select-left-a {
+  background: #fff;
+  color: #FF921A;
+  border-right: 1px solid rgba(0, 0, 0, 0);
+}
+.select-search .select-box .select-box-one .select-box-one-right {
+  width: 4.8rem;
+  height: auto;
+  overflow: hidden;
+  float: left;
+  background: #fff;
+  padding-bottom: 0.2rem;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box {
+  width: 4.4rem;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-top {
+  width: 100%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border-bottom: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  color: #999;
+  font-size: 0.22rem;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-top span {
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-top span:nth-of-type(1) {
+  float: left;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-top span:nth-of-type(2) {
+  float: right;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-top-color {
+  background: #fff;
+  color: #FF921A;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-bottom {
+  width: 4.4rem;
+  height: auto;
+  overflow: hidden;
+  font-size: 0.22rem;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-bottom a {
+  float: left;
+  width: 1.36rem;
+  height: 0.6rem;
+  border: 1px solid #efefef;
+  background: #f5f5f5;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 0.6rem;
+  margin-top: 0.05rem;
+  margin-right: 0.1rem;
+}
+.select-search .select-box .select-box-one .select-box-one-right .select-right-box .select-right-bottom .select-right-bottom-color {
+  background: #fff;
+  color: #FF921A;
+}
+.select-search .select-box .select-box-one .select-three {
+  width: 6.4rem;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+}
+.select-search .select-box .select-box-one .select-three .select-three-box {
+  width: 6rem;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 0.24rem;
+}
+.select-search .select-box .select-box-one .select-three .select-three-box a {
+  display: block;
+  width: 100%;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.select-search .select-box .select-box-one .select-three .select-three-box a span:nth-of-type(1) {
+  float: left;
+}
+.select-search .select-box .select-box-one .select-three .select-three-box a span:nth-of-type(2) {
+  float: right;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  font-size: 0.6rem;
+}
+.select-search .select-box .select-box-one .select-three .select-three-box .select-three-color {
+  color: #FF921A;
+}
+.inner {
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  width: 6.4rem;
+  margin-top: 0.7rem;
+}
+.jigou-box {
+  width: 6rem;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+.jigou-box a {
+  display: block;
+  width: 6rem;
+  height: 2rem;
+}
+.jigou-box .jigou-box-one {
+  width: 6rem;
+  height: 2rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.jigou-box .jigou-box-one .left {
+  width: 2.1rem;
+  height: 1.6rem;
+  margin-top: 0.2rem;
+  float: left;
+}
+.jigou-box .jigou-box-one .left img {
+  width: 2.1rem;
+  height: 1.6rem;
+}
+.jigou-box .jigou-box-one .right {
+  width: 3.7rem;
+  height: 1.6rem;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  float: left;
+}
+.jigou-box .jigou-box-one .right p:nth-of-type(1) {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  font-size: 0.26rem;
+  color: #000;
+}
+.jigou-box .jigou-box-one .right p:nth-of-type(2) {
+  width: 3.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.22rem;
+  color: #999;
+}
+.jigou-box .jigou-box-one .right p:nth-of-type(3) {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.24rem;
+  color: #999;
+}
+.jigou-box .jigou-box-one .right p:nth-of-type(3) img {
+  height: 0.22rem;
+  width: 0.24rem;
+  margin-right: 0.1rem;
+}
+/*# sourceMappingURL=new-search.css.map */

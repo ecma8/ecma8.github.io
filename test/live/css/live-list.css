@@ -1,0 +1,61 @@
+.live-list {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+}
+.live-list .live-list-box {
+  width: 6rem;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.live-list .live-list-box .live-list-box-one {
+  width: 6rem;
+  height: 1rem;
+  border-bottom: 1px solid #ececec;
+}
+.live-list .live-list-box .live-list-box-one .left {
+  width: 4.5rem;
+  height: 1rem;
+  float: left;
+}
+.live-list .live-list-box .live-list-box-one .left .top {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.6rem;
+  font-size: 0.24rem;
+  color: #333;
+}
+.live-list .live-list-box .live-list-box-one .left .bom {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.4rem;
+  font-size: 0.18rem;
+  color: #999;
+}
+.live-list .live-list-box .live-list-box-one .right {
+  width: 1.5rem;
+  height: 1rem;
+  float: left;
+}
+.live-list .live-list-box .live-list-box-one .right a {
+  width: 1.3rem;
+  height: 0.42rem;
+  display: block;
+  float: right;
+  background: #f93;
+  border-radius: 4px;
+  line-height: 0.42rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  font-size: 0.2rem;
+  color: #fff;
+}
+.live-list .live-list-box .live-list-box-one .right .a1 {
+  background: #fdc184;
+}
+.live-list .live-list-box .live-list-box-one .right .a2 {
+  background: #ccc;
+}
+/*# sourceMappingURL=live-list.css.map */

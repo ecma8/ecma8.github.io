@@ -1,0 +1,185 @@
+body,img{
+	margin: 0;
+	padding: 0;
+}
+.beijing{
+	width: 750px;
+	height: 1334px;
+	background: red;
+	margin: 0 auto;
+}
+.zhuangtailan{
+	width: 750px;
+	height: 40px;
+	background: #101010;
+	background-image: url(../img/img_01.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 0px;
+}
+.biaoti{
+	width: 750px;
+	height: 88px;
+	background: #101010;
+	background-image: url(../img/img_04.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.daohang{
+	width: 750px;
+	height: 68px;
+	background: white;
+}
+.zi1{
+	font-family: "微软雅黑";
+	font-size: 30px;
+	color: #383838;
+	font-weight: normal;
+	float: left;
+/*	line-height: 68px;*/
+	margin-left: 44px;
+	margin-top: 14px;
+}
+.zi2{
+	font-family: "微软雅黑";
+	font-size: 30px;
+	font-weight: lighter;
+	color: #868686;
+	float: left;
+	margin-left: 52px;
+	margin-top: 14px;
+
+	/*line-height: 68px;*/
+}
+.more{
+	float: left;
+	margin-top: -68px;
+	margin-left: 670px;
+}
+.banner{
+	width: 750px;
+	height: 300px;
+	background-image: url(../img/img_11.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.neirong{
+	width: 750px;
+	height: 300px;
+	background-image: url(../img/img_12.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.biaoti1{
+	width: 750px;
+	height: 75px;
+	background-image: url(../img/img_13.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.icon{
+	width: 750px;
+	height: 190px;
+	background: white;
+	position: relative;
+}
+.icon1{
+	position: absolute;
+	top: 28px;
+	left: 35px;
+	
+}
+.icon2{
+	position: absolute;
+	top: 28px;
+	left: 180px;
+/*	margin-left: 140px;
+*/
+}
+.icon3{
+	position: absolute;
+	top: 28px;
+	left: 200px;
+	margin-left: 124px;
+}
+.icon4{
+	position: absolute;
+	top: 28px;
+	left: 250px;
+	margin-left: 220px;
+}
+.icon5{
+	position: absolute;
+	top: 28px;
+	left: 300px;
+	margin-left: 310px;
+}
+.iconb{
+	width: 750px;
+	height: 190px;
+	background: white;
+	position: relative;
+}
+
+.icon6{
+	position: absolute;
+	top: 28px;
+	left: 35px;
+	
+}
+.icon7{
+	position: absolute;
+	top: 28px;
+	left: 180px;
+/*	margin-left: 140px;
+*/
+}
+.icon8{
+	position: absolute;
+	top: 28px;
+	left: 200px;
+	margin-left: 124px;
+}
+.icon9{
+	position: absolute;
+	top: 28px;
+	left: 250px;
+	margin-left: 220px;
+}
+.icon10{
+	position: absolute;
+	top: 28px;
+	left: 300px;
+	margin-left: 310px;
+}
+.tab{
+	width: 750px;
+	height: 98px;
+	background: #101010;
+	position: relative;
+}
+.tab1{
+	position: absolute;
+	top: 8px;
+	left: 58px;
+}
+.tab2{
+	position: absolute;
+	top: 8px;
+	left: 204px;
+}
+.tab3{
+	position: absolute;
+	top: 8px;
+	left: 340px;
+}
+.tab4{
+	position: absolute;
+	top: 8px;
+	left: 480px;
+}
+.tab5{
+	position: absolute;
+	top: 8px;
+	left: 620px;
+}

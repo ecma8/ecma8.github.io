@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=480,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/public.css" />
+    <script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/new-index.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="css/index-live.css" />
+    <link rel="stylesheet" href="css/index-seach-header.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/index-video.css" />
+    <script type="text/javascript" charset="utf-8">
+      	$(function(){
+      		var mySwiper = new Swiper('.swiper-container', {
+				autoplay: 3000,//可选选项，自动滑动
+				autoplayDisableOnInteraction : false,
+				loop:true,
+				pagination : '.swiper-pagination',
+				paginationClickable :true,
+				speed:600,
+				// prevButton:'.swiper-button-prev',
+				// nextButton:'.swiper-button-next',
+			})
+			$('.one').click(function(){
+				alert(this);
+			})
+      	})
+    </script>
+</head>
+<body>
+	<div id="warp">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-pull-left header-left left-a" href="">北京</a>
+			<div class="index-search">
+				<div class="select">
+					<select name="">
+						<option value="">机构</option>
+						<option value="">班课</option>
+						<option value="">老师</option>
+					</select>
+				</div>
+				<div class="input">
+					<input type="submit" class="submit mui-icon" value="&#xe466;" />
+					<input type="text" name="" id=""placeholder="搜索机构"  class="text"/>
+<!--					<span class="iconfont">&#xe670;</span>-->
+				</div>
+			</div>
+		    <b class="mui-icon mui-pull-right header-right right-b">&#xe537;</b>
+		</header>
+		<div class="down" style="">
+			<a href="">首页</a>
+			<a href="">直播大厅</a>
+			<a href="">注册</a>
+			<a href="">登录</a>
+		</div>
+		<div class="box-top"></div>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="img/1.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="img/2.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="img/3.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="img/4.jpg" alt="">
+				</div>
+				<div class="swiper-slide">
+					<img src="img/5.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="index-icon">
+			<a href="">
+			<div class="one">
+				<img src="img/index-1.png" alt="" />
+				<p>小学</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-2.png" alt="" />
+				<p>初中</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-3.png" alt="" />
+				<p>高中</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-4.png" alt="" />
+				<p>培训</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-5.png" alt="" />
+				<p>语言</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-6.png" alt="" />
+				<p>艺术</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-7.png" alt="" />
+				<p>数学</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-8.png" alt="" />
+				<p>语文</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-9.png" alt="" />
+				<p>英语</p>
+			</div>
+			</a>
+			<a href="">
+			<div class="one">
+				<img src="img/index-10.png" alt="" />
+				<p>更多</p>
+			</div>
+			</a>
+		</div>
+		<div class="index-live">
+			<div class="index-live-box">
+				<div class="index-title">
+					<img src="img/index-video.png" alt="" />
+					<span>直播课程</span>
+					<a href="javascript:;">更多</a>
+				</div>
+				<div class="index-box-inner">
+					<a href="javascript:;">
+						<div class="inner-one">
+							<div class="inner-title">
+								<img src="img/jiaoyu.png" alt="" />
+								<span>学游教育</span>
+							</div>
+							<div class="inner-box">
+								<div class="inner-box-left">
+									<img src="img/jiaoyu-img.png" alt="" />
+								</div>
+								<div class="inner-box-right">
+									<div class="a">
+										学优教育直播
+									</div>
+									<div class="b">
+										<span>2017-10-10</span>
+										<span>16:00-18:00</span>
+									</div>
+									<div class="c">
+										<span>已报名:</span>
+										<span>100/500人</span>
+										<span>￥500</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="javascript:;">
+						<div class="inner-one">
+							<div class="inner-title">
+								<img src="img/jiaoyu.png" alt="" />
+								<span>学游教育</span>
+							</div>
+							<div class="inner-box">
+								<div class="inner-box-left">
+									<img src="img/jiaoyu-img.png" alt="" />
+								</div>
+								<div class="inner-box-right">
+									<div class="a">
+										学优教育直播
+									</div>
+									<div class="b">
+										<span>2017-10-10</span>
+										<span>16:00-18:00</span>
+									</div>
+									<div class="c">
+										<span>已报名:</span>
+										<span>100/500人</span>
+										<span>￥500</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="index-live" style="margin-top: 0.2rem;">
+			<div class="index-live-box">
+				<div class="index-title">
+					<img src="img/index-peo.png" alt="" />
+					<span>班课课程</span>
+					<a href="javascript:;">更多</a>
+				</div>
+				<div class="index-box-inner">
+					<a href="javascript:;">
+						<div class="inner-one">
+							<div class="inner-title">
+								<img src="img/jiaoyu.png" alt="" />
+								<span>学游教育</span>
+							</div>
+							<div class="inner-box">
+								<div class="inner-box-left">
+									<img src="img/jiaoyu-img.png" alt="" />
+								</div>
+								<div class="inner-box-right">
+									<div class="a">
+										学优教育直播
+									</div>
+									<div class="b">
+										<span>2017-10-10 开课</span>
+										<span>张老师</span>
+									</div>
+									<div class="c">
+										<span>1课时&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+										<span>500人</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<a href="javascript:;">
+						<div class="inner-one">
+							<div class="inner-title">
+								<img src="img/jiaoyu.png" alt="" />
+								<span>学游教育</span>
+							</div>
+							<div class="inner-box">
+								<div class="inner-box-left">
+									<img src="img/jiaoyu-img.png" alt="" />
+								</div>
+								<div class="inner-box-right">
+									<div class="a">
+										学优教育直播
+									</div>
+									<div class="b">
+										<span>2017-10-10 开课</span>
+										<span>张老师</span>
+									</div>
+									<div class="c">
+										<span>1课时&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+										<span>500人</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="index-video" style="margin-top: 0.2rem;">
+			<div class="index-video-box">
+				<div class="index-title">
+					<img src="img/index-play.png" alt="" />
+					<span>录播视频</span>
+					<a href="javascript:;">更多</a>
+				</div>
+				<div class="index-box-inner">
+					<a href="">
+						<div class="index-video-one">
+							<img src="img/kechenglubo.png" alt="" class="video-img"/>
+							<p>这是简介这是简介这是简介</p>
+							<div>
+								<img src="img/index-play1.png" alt="" />
+								<span>1000次</span>
+							</div>
+						</div>
+					</a>
+					<a href="">
+						<div class="index-video-one">
+							<img src="img/kechenglubo.png" alt="" class="video-img"/>
+							<p>这是简介这是简介这是简介</p>
+							<div>
+								<img src="img/index-play1.png" alt="" />
+								<span>1000次</span>
+							</div>
+						</div>
+					</a>
+					<a href="">
+						<div class="index-video-one">
+							<img src="img/kechenglubo.png" alt="" class="video-img"/>
+							<p>这是简介这是简介这是简介</p>
+							<div>
+								<img src="img/index-play1.png" alt="" />
+								<span>1000次</span>
+							</div>
+						</div>
+					</a>
+					<a href="">
+						<div class="index-video-one">
+							<img src="img/kechenglubo.png" alt="" class="video-img"/>
+							<p>这是简介这是简介这是简介</p>
+							<div>
+								<img src="img/index-play1.png" alt="" />
+								<span>1000次</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+

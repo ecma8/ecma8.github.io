@@ -1,0 +1,204 @@
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+/*  display: none;*/
+}
+
+.login-inner {
+  width: 500px;
+  height: auto;
+  overflow: hidden;
+}
+
+.new-login {
+  width: 400px;
+  height: 360px;
+  min-height: 360px;
+  max-height: 510px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 5px;
+}
+.new-login .login-title {
+  width: 400px;
+  height: 50px;
+  border-bottom: 3px solid #ccc;
+  position: relative;
+}
+.new-login .login-title div {
+  width: 60px;
+  height: 50px;
+  border-bottom: 3px solid transparent;
+  position: absolute;
+  line-height: 50px;
+  text-align: center;
+  top: 0;
+  font-size: 16px;
+  color: #666;
+}
+.new-login .login-title .login1 {
+  left: 20px;
+}
+.new-login .login-title .login2 {
+  left: 100px;
+}
+.new-login .login-title .close {
+  right: 0;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  text-align: center;
+}
+.new-login .login-title .close img {
+  vertical-align: middle;
+}
+.new-login .login-title .color {
+  border-bottom-color: #f60;
+  color: #f60;
+}
+.new-login .login-box-one {
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.new-login .login-box-one .one {
+  width: 330px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.new-login .login-box-one .one input {
+  width: 310px;
+  height: 34px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  border-radius: 5px;
+  float: left;
+}
+.new-login .login-box-one .two {
+  width: 330px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.new-login .login-box-one .two .text {
+  width: 190px;
+  height: 34px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  border-radius: 5px;
+  float: left;
+}
+.new-login .login-box-one .two .img {
+  width: 110px;
+  height: 34px;
+  text-align: center;
+  float: left;
+  margin-left: 10px;
+  background: #ccc;
+  letter-spacing: 4px;
+  line-height: 34px;
+}
+.new-login .login-box-one .two .button {
+  width: 110px;
+  height: 34px;
+  text-align: center;
+  float: left;
+  margin-left: 10px;
+  line-height: 34px;
+  padding-left: 0;
+  background: #4cadfc;
+  color: #fff;
+  border: none;
+}
+.new-login .login-box-one .three {
+  width: 330px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.new-login .login-box-one .three input {
+  width: 322px;
+  height: 34px;
+  text-align: center;
+  border: none;
+  background: #f60;
+  border-radius: 5px;
+  float: left;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+.new-login .login-box-one .four {
+  width: 330px;
+  height: 20px;
+  line-height: 20px;
+  margin: 16px auto 0;
+}
+.new-login .login-box-one .four .check {
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin-top: 4px;
+}
+.new-login .login-box-one .four label {
+  float: left;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.new-login .login-box-one .four span {
+  float: left;
+  margin-left: 65px;
+  font-size: 12px;
+}
+.new-login .login-box-one .four .a1 {
+  color: #f60;
+  text-decoration: underline;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.new-login .login-box-one .four .a2 {
+  color: #4cadfc;
+  text-decoration: underline;
+  font-size: 12px;
+  margin-left: 20px;
+}
+.new-login .login-box-one .yanzheng {
+  width: 340px;
+  height: 20px;
+  color: #f00;
+  clear: both;
+  margin: 0 auto;
+  padding-left: 18px;
+  font-size: 12px;
+}
+.new-login .login-box-one p {
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 16px;
+  font-size: 12px;
+}
+.new-login .login-box-one p a {
+  color: #f60;
+}
+.new-login .login-one {
+  height: 360px;
+}
+.new-login .login-two {
+  height: 510px;
+}
+
+/*# sourceMappingURL=new-login.css.map */

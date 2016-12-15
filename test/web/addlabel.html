@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="jquery-1.11.3.js"></script>
+	<style type="text/css">
+		.inner{
+			width: 300px;
+			height: auto;
+			overflow: hidden;
+		}
+		p{
+			line-height: 30px;
+		}
+		input[type=text]{
+			width: 80%;
+		}
+		input[type=button]
+		{
+			width: 40%;
+			margin-top: 20px;
+		}
+		a{
+			display: inline-block;
+			background: #0097FF;
+			line-height: 30px;
+			color: #fff;
+			padding: 0 5px;
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+		b{
+			transform: rotate(45deg);
+			margin-left: 10px;
+			margin-right: 10px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div class="inner">
+		<p class="box">
+		</p>
+		<input type="text" required/ class="text">
+		<input type="button" value="添加"/ class="button">
+	</div>
+</body>
+<script type="text/javascript">
+	var arr=[];
+	function add(obj,inner){
+		obj.append(inner)
+	}
+	function del(that)
+	{
+		that.parent().remove();
+	}
+	$('.button').click(function(){
+		// alert($.inArray($('.text').val(),arr)!=-1)
+		if($('.text').val()=='')
+		{
+			return false
+			$('.text').val('')
+			
+		}
+		if($.inArray($('.text').val(),arr)!=-1)
+		{
+			return false
+			$('.text').val('')
+		}
+		else{
+			add($('.box'),'<a href="javascript:;"><span>'+$('.text').val()+'</span><b>+</b></a>');
+			arr.push($('.text').val())
+			$('.text').val('')
+		}
+		console.log(arr)
+	})
+		
+	$(document).on('click','b',function(){
+		del($(this))
+		var text=$(this).parent().find('span').text();
+		var index=$.inArray(text,arr);
+		arr.splice(index,1)
+		console.log(arr)
+	})
+</script>
+</html>

@@ -1,0 +1,99 @@
+.content{
+    width:100%;
+    max-width: 480px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-top:44px;
+    color:#7e7e7e;
+    border-top:1px solid #ebebeb;
+}
+.content .title{
+    height:30px;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 30px;
+    background:#fff;
+    margin-bottom:10px;
+}
+.content .title span{
+    padding:6px;
+}
+.content .inp_par{
+    width:100%;
+}
+ .inp_par ul li{
+    border-top:1px solid #e8e8e8;
+    border-bottom:1px solid #e8e8e8;
+    margin-top:-1px;
+    height:43px;
+    padding-left:5%;
+    background:#fff;
+ }
+  .inp_par ul li input {
+    border:none;
+    float:left;
+    outline:none;
+    height:100%;
+    width:80%;
+  }
+   .inp_par .yzm input,.inp_par .dx_yzm input{
+    width:50%;
+   }
+
+.inp_par .yzm img{
+    height:30px;
+    float:left;
+    margin-top:6px;
+    margin-left:5%;
+}
+.content  .inp_par .oc_yzm {
+    float:left;
+    height:30px;
+    width:35%;
+    margin-top:6px;
+    margin-left:5%;
+    background:#2fb1ed;
+    border-radius: 3px;
+    color:#fff;
+}
+.sub{
+    width:90%;
+    margin:0 auto;
+    overflow: hidden;
+}
+.sub input{
+    margin-top:20px;
+    width:100%;
+    height:40px;    
+    background:#2fb1ed;
+    color:#fff;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+.sub a{
+    display: block;
+    margin-top:20px;
+    color:#2fb1ed;
+}
+.third_login{
+    width:100%;
+    border-top:1px solid #f0f0f0;
+    margin-top:35px;
+
+}
+.third_login p{
+    width:25%;
+    background:#f6f6f6;
+    color:#7d7d7d;
+    font-size:1.1em;
+    text-align:center;
+    margin:0 auto;
+    margin-top:-10px;
+}
+.third_login a{
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    margin-top:35px
+}

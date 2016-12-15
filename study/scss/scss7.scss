@@ -1,0 +1,7 @@
+.color{
+    background: #fff;
+    color: #CCC;
+}
+div{
+    @extend .color;
+}

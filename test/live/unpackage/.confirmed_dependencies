@@ -1,0 +1,43 @@
+{
+  "index.html": {
+    "resources": [
+      "css/index-live.css",
+      "js/jquery-1.11.3.js",
+      "fonts/mui.ttf",
+      "img/4.jpg",
+      "img/jiaoyu.png",
+      "css/public.css",
+      "img/kechengzhibo.png",
+      "js/swiper-3.3.1.jquery.min.js",
+      "img/5.jpg",
+      "css/media.css",
+      "img/huodongzhibo.png",
+      "img/kechenglubo.png",
+      "img/huodonglubo.png",
+      "img/2.jpg",
+      "js/mui.min.js",
+      "img/1.jpg",
+      "img/zhibo.png",
+      "css/mui.min.css",
+      "img/jiaoyu-img.png",
+      "img/3.jpg",
+      "css/swiper-3.3.1.min.css"
+    ],
+    "refer": []
+  },
+  "xxx.html": {
+    "resources": [
+      "css/index-live.css",
+      "css/new-search.css",
+      "img/jigou-img.png",
+      "js/new-search.js",
+      "js/jquery-1.11.3.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/public.css",
+      "css/index-seach-header.css",
+      "img/jigou-tel.png",
+      "css/media.css"
+    ]
+  }
+}

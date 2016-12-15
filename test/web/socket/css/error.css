@@ -1,0 +1,35 @@
+.error{
+	width: 6.4rem;
+	height: 8rem;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:  auto auto;
+	text-align: center;
+	z-index: 1000;
+}
+.error img{
+	width: 5.3rem;
+	margin-top: 0.8rem;
+	height: 4.1rem;
+}
+.error p{
+	font-size: 0.24rem;
+	margin-top: 0.5rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+}
+.error a{
+	font-size: 0.3rem;
+	width: 2.6rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	background: #FF921A;
+	color: #fff;
+	display: inline-block;
+	border-radius: 3px;
+	margin-top: 1rem;
+}

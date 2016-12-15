@@ -1,0 +1,116 @@
+.act {
+  width: 6.4rem;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+}
+.act .act-box {
+  width: 6rem;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 0.2rem;
+}
+.act .act-box h2 {
+  width: 6rem;
+  height: 0.6rem;
+  text-align: left;
+  color: #333;
+  font-weight: normal;
+  font-size: 0.26rem;
+  line-height: 0.6rem;
+}
+.act .act-box .act-inner {
+  width: 6rem;
+  height: 1.4rem;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+.act .act-box .act-inner .one {
+  width: 5.6rem;
+  height: 0.40rem;
+  margin: 0 auto;
+  line-height: 0.40rem;
+}
+.act .act-box .act-inner .one .left {
+  float: left;
+  height: 0.4rem;
+  width: 3.2rem;
+  color: #666;
+  line-height: 0.4rem;
+}
+.act .act-box .act-inner .one .left img {
+  width: 0.24rem;
+  height: 0.24rem;
+  vertical-align: middle;
+  margin: 0;
+}
+.act .act-box .act-inner .one .left span {
+  font-size: 0.20rem;
+}
+.act .act-box .act-inner .one .right {
+  float: left;
+  height: 0.4rem;
+  width: 2.4rem;
+  color: #666;
+}
+.act .act-box .act-inner .one .right img {
+  width: 0.24rem;
+  vertical-align: middle;
+}
+.act .act-box .act-inner .one .right span {
+  font-size: 0.20rem;
+}
+.act .act-box .act-inner .one:nth-of-type(1) {
+  margin-top: 0.1rem;
+}
+.act .act-box .img {
+  width: 6rem;
+  display: block;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.act .act-box .jieshao {
+  width: 6rem;
+  height: auto;
+  overflow: hidden;
+}
+.act .act-box .jieshao .jieshao-title {
+  width: 6rem;
+  height: 0.4rem;
+  text-align: left;
+  line-height: 0.4rem;
+  color: #666;
+  font-size: 0.22rem;
+}
+.act .act-box .jieshao .jieshao-box {
+  width: 6rem;
+  height: auto;
+  overflow: hidden;
+  text-align: left;
+  line-height: 0.4rem;
+  color: #666;
+  font-size: 0.2rem;
+}
+.act .act-box .btn {
+  width: 6rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+.act .act-box .btn a {
+  width: 5.6rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  display: block;
+  background: #f93;
+  color: #fff;
+  font-size: 0.26rem;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+  border-radius: 5px;
+}
+.act .act-box .btn .a1 {
+  background: #ccc;
+}
+/*# sourceMappingURL=live-act.css.map */

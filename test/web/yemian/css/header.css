@@ -1,0 +1,56 @@
+.header-nav
+{
+	line-height: 0.7rem;
+	height: 0.7rem;
+	background: #1d9f49;
+	padding: 0!important;
+	position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    border-bottom: 0;
+    width: 100%;
+	max-width: 6.4rem;
+	min-width: 3.2rem; 
+	margin: 0 auto;
+}
+.header-title{
+	right: 1.2rem;
+    left: 1.2rem;
+    top: 0;
+    width: 4rem;
+    margin: auto !important;
+    font-weight: 500;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    position: absolute;
+    display: block;
+    margin: 0 -10px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 0.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "microsoft yahei";
+}
+.header-nav .left-text
+{
+	width: 1rem;
+	height: 0.7rem;
+	border-right: 1px solid #078933;
+	font-size: 0.32rem;
+	list-style-type: none;
+	text-decoration: none;
+	line-height: 0.6rem;
+	display: block;
+	color: #fff;
+	text-align: center;
+}
+.header-nav .left-text span{
+	display: inline-block;
+	transform: scaleY(2);
+	transform-origin: center;
+	
+}

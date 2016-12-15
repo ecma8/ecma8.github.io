@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"/>
+	<link rel="stylesheet" href="lib/css/font-awesome.css">
+	<script src="lib/angular.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.error{
+			color:#f60;
+			height: 30px;
+			line-height: 30px;
+		}
+		.warp{
+			width: 200px;
+			margin: 20px auto;
+		}
+		.font{
+			position: relative;
+			top:-65px;
+			left:180px;
+			color: #3c763d;
+		}
+	</style>
+</head>
+<body ng-app="validationApp" ng-controller="mainController">
+<div class="warp">
+	<h2>注册</h2>
+	<form name="userForm" ng-submit="submitForm()">
+		<div class="form-group" ng-class="{'has-success':userForm.username.$valid}">
+			<label for="">用户名</label>
+			<input type="text"
+				    maxlength="10"
+				    minlength="6"
+				    name="username"
+				    class="form-control"
+				    ng-model="userdata.username"
+				    required
+				    ng-minlength="6"
+				    ng-maxlength="10"
+				    ng-pattern="/^[a-zA-Z\d]+$/"
+			>
+			<p class="error" >
+				<span ng-if="(
+					userForm.username.$error.minlength ||
+					userForm.username.$error.maxlength)
+					&& userForm.username.$dirty">
+					用户名应该在6-10
+				</span>
+				<span  ng-if="
+					userForm.username.$error.required
+					&& userForm.username.$dirty">
+					不能为空
+				</span>
+				<span  ng-if="
+					userForm.username.$error.pattern
+					&& userForm.username.$dirty">
+					输入错误
+				</span>
+			</p>
+			<!-- <p class="font fa fa-star" ng-if="userForm.username.$valid"></p> -->
+		</div>
+		<div class="form-group"  ng-class="{'has-success':userForm.password1.$valid}">
+			<label for="">密码</label>
+			<input type="password"
+				   	maxlength="10"
+				   	minlength="6"
+				   	name="password1"
+				   	class="form-control"
+				   	ng-model="userdata.password1"
+				   	ng-maxlength="16"
+				   	ng-minlength="6"
+				   	ng-pattern="/^[a-zA-Z\d]+$/"
+				   	required
+			>
+			<p class="error">
+				<span ng-if="(
+					userForm.password1.$error.minlength ||
+					userForm.password1.$error.maxlength)
+					&& userForm.username.$dirty">
+					密码是6-10位
+				</span>
+				<span  ng-if="
+					userForm.password1.$error.required
+					&& userForm.password1.$dirty">
+					不能为空
+				</span>
+				<span  ng-if="
+					userForm.password1.$error.pattern
+					&& userForm.password1.$dirty">
+					输入错误
+				</span>
+			</p>
+			<!-- <p class="font fa fa-star" ng-if="userForm.password1.$valid"></p> -->
+		</div>
+		<div class="form-group"  ng-class="{'has-success':userForm.password2.$valid}">
+			<label for="">再次输入</label>
+			<input type="password"
+					minlength="6"
+					maxlength="10" 
+				    name="password2"
+				    class="form-control"
+				    ng-model="userdata.password2"
+				    required
+				    phone="userdata.password1"
+			>
+			<p class="error" >
+				<span ng-if="userForm.password2.$error.phone && userForm.password2.$dirty">两次输入不一致</span>
+			</p>
+			<!-- <p class="font fa fa-star" ng-if="userForm.password2.$valid"></p> -->
+			<!--<p class="error" ng-if="userdata.password2!=userdata.password1">两次密码输入不一致</p>-->
+		</div>
+		<div class="form-group">
+			<input type="submit" class="btn btn-primary" value="注册">
+		</div>
+		<!--<div class="form-group">-->
+		    <!--<label>Username</label>-->
+		    <!--<input type="text" -->
+		    	<!--name="username" -->
+		    	<!--class="form-control" -->
+		    	<!--ng-model="user.username"-->
+		    	<!--ng-pattern="/^[\w]+$/"-->
+		    	<!--ng-maxlength="10"-->
+		    	<!--ng-class="{ 'error' :userForm.username.$invalid && userForm.username.$dirty }">-->
+			<!--<p ng-if="userForm.username.$invalid && userForm.username.$dirty">输入有误</p>-->
+		<!--</div>-->
+		<!--<input type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">-->
+	</form>
+</div>
+</body>
+</html>

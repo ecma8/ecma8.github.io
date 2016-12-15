@@ -1,0 +1,66 @@
+.top{margin:0 auto;background:#f1f1f1;width:100%;min-width:1180px;height:24px;padding-top:3px}
+.top .pub-top{width:1180px;margin:0 auto;color:#cacaca}
+.top .pub-top em span{color:#c8c8c8;margin:0 10px;}
+.top .pub-top p{color:#666;}
+.top .login{background:url(../img/i-login.png) no-repeat left 2px;padding-left:20px;color:#ffb034;display: inline-block;}
+.top .pub-top .m-r-4{margin-right:4px;color:#379ecf;}
+.logo-main{width:1180px;margin:25px auto 0;margin-bottom:15px;min-width:1180px}
+.logo-main .logo{background:url(../img/logo.png) no-repeat left top;width:380px;height:60px;margin-right:60px;}
+.logo-main .logo a{display:block;width:100%;height:100%}
+.logo-main .search{width:480px;}
+.fr-logo-box{
+    width: 100%;
+    height: 100px;
+    background: #fff;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+em{
+    font-style: normal;
+}
+.fr-logo{
+    width: 1180px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    min-width: 1180px;
+}
+.fr-logo-img{
+    height: 158px;
+    width: auto;
+    overflow: hidden;
+    float: left;
+    margin-top: 20px;
+}
+.fr-logo-img img{
+    height: 60px;
+}
+.fr-logo-img .shuxian{
+    width: 30px;
+    height: 60px;
+}
+.fr-logo-right{
+    height: 56px;
+    width: 213px;
+    overflow: hidden;
+    float: right;
+    margin-top: 24px;
+    text-align: center;
+}
+.fr-logo-right .box{
+    float: left;
+    margin-right: 15px;
+}
+.fr-logo-right .box p{
+    margin-top: 3px;
+}
+.jigou-banner {
+    width: 1180px;
+    height: 420px;
+    margin-top:20px;
+}
+.jigou-banner img {
+    width: 1180px;
+    height: 420px;
+}

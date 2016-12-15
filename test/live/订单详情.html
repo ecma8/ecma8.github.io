@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link href="css/mui.min.css" rel="stylesheet" />
+	<script src="js/mui.min.js"></script>
+	<link rel="stylesheet" href="css/public.css" />
+	<link rel="stylesheet" type="text/css" href="css/yueke.css"/>
+	<script type="text/javascript">
+		mui.init()
+	</script>
+</head>
+<body>
+	<div id="warp">
+	<header class="mui-bar mui-bar-nav" style="background: #FE9832;color: #fff;box-shadow: none;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;" href="/index.php?c=Order&a=orderList&status=1&flags=3"></a>
+		<h1 class="mui-title" style="color: #fff;">订单详情</h1>
+	</header>
+	<div class="box-top"></div>
+	<volist name="orderInfo" id="item">
+	<div class="yueke-box">
+		<div class="yueke-box-one"><span class="span1">订单编号 :</span><span class="span2">{$item.order_id}</span></div>
+		<div class="yueke-box-one"><span class="span1">授课教师 :</span><span class="span2">{$item.user_name}</span></div>
+		<div class="yueke-box-one"><span class="span1">直播类型 :</span>
+		  <if condition=" $item.order_type_id eq '1' ">
+		   <span class="span2">活动直播</span>
+		</div>
+		<div class="yueke-box-one"><span class="span1">直播时长 :</span><span class="span2">{$item.old_quantity}个</span></div>
+		<div class="yueke-box-one"><span class="span1">订单状态 :</span><span class="span2">已支付</span></div>
+		<div class="yueke-box-one" style="margin-top: 1em;"><span class="span1">订单金额 :</span><span class="span2">￥{$item.total}</span></div>
+		<div class="yueke-box-one"><span class="span1">支付金额 :</span><span class="span2">￥{$item.total}</span></div>
+	</div>
+	<div class="yueke-btn">
+		<div><a href="/index.php?c=Order&a=after_sale&order_id={$item.order_id}"><input type="submit" style="background: #fff;color: #959595;border-color: #e1e1e1;" value="申请售后"/></a></div>
+		<div><a href="/index.php?c=Order&a=createOrder&flag=1&userId={$item.tid}"><input type="submit" style="background: #FF9A37;color: #fff;border: none;" value="观看直播"/></a></div>
+	</div>
+	</volist>
+	</div>
+</body>
+</html>

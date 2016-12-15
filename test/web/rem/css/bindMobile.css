@@ -1,0 +1,117 @@
+
+body{
+    background:#F6F6F6;
+    font-size:1.4em;
+}
+input{
+    outline-style:none;
+    border:0;
+}
+/*header    wap_top_nav*/
+.wap_top_nav{
+    height:50px;
+    padding:0 15px;
+    margin-bottom:15px;
+    background-color:#1D9F49;
+    color:#FFFFFF;
+    line-height:50px;
+    font-size:1.2em;
+    text-align:center;
+}
+.returnImg{
+    font-size:2.0em;
+    border-right:1px solid #FFFFFF;
+    border-right: #118438 solid 1px;
+    -webkit-box-shadow: 1px 0px 0px rgba(34, 188, 86, 1.0);
+    box-shadow: 1px 0px 0px rgba(34, 188, 86, 1.0);
+    height: 50px;
+}
+.returnImg img{
+    width: 12px;
+    height: 22px;
+    margin-top: -6px;
+}
+
+/*body main_warp*/
+.main_warp{
+    padding:0 15px;
+}
+.main_warp .wap_input{
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0px 10px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.175);
+}
+.main_warp .div_label{
+    width: 33.333333333333334%;
+    float: left;
+    font-size: 1.2em;
+    line-height: 34px;
+}
+.main_warp  .public_input{
+    text-align: right;
+    width: 66.666666666666667%;
+    border: 0px;
+    padding: 0px;
+    font-size: 1.2em;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);*/
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow
+    ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+.msg {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    text-align: right;
+    height:15px;
+    line-height:15px;
+    color:#FF0000;
+}
+
+.person_gender_M,.person_gender_F{
+    width:50%;
+    padding:6px 0;
+    border:1px solid #cccccc;
+
+}
+.person_gender_M{
+    background-color: #1D9F49;
+    border-radius:5px 0 0 5px;
+    color: #FFFFFF;
+}
+.person_gender_F{
+    border-radius:0 5px 5px 0;
+}
+.info_area{
+    width:100%;
+    margin:30px 0;
+}
+.info_area .row>div:nth-child(2){
+    color:#999;
+}
+.info_area .row>div:last-child img{
+    width:8px;
+    height:auto;
+}
+.wrap_binding .button{
+    margin-top:30px;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 1.2em;
+    border-radius: 4px;
+    background-color: #1D9F49;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.sex{
+    line-height:34px;
+}

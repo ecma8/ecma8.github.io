@@ -1,0 +1,13 @@
+div {
+  width: 200px;
+}
+div a {
+  display: block;
+  height: 200px;
+}
+
+div {
+  border-color: #FF0000;
+}
+
+/*# sourceMappingURL=scss4.css.map */

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="css/header.css"/>
+	<link rel="stylesheet" type="text/css" href="css/yemian.css"/>
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="warp">	
+	<header class="header-nav">
+		<a href="" class="left-text"><span><</span></a>
+		<h1 class="header-title">这是头部</h1>
+	</header>
+	<div class="box-top"></div>
+	<div class="input">
+		<div class="input-box">
+			<div class="one">
+				<span>姓名</span>
+				<input type="text" name="" id="" value="" placeholder="请正确填写"/>
+			</div>
+			<div class="one">
+				<span>身份证号码</span>
+				<input type="text" name="" id="" value="" placeholder="请正确填写"/>
+			</div>
+			<div class="two">
+				<span>姓名</span>
+				<div class="radio">
+					<input type="button" name="" id="" value="男"  class="color"/>
+					<input type="button" name="" id="" value="女" />
+				</div>
+			</div>
+			<div class="one">
+				<span>出生日期</span>
+				<input type="date" name="" id=""/>
+			</div>
+			<div class="three">
+				<span>微信绑定协议</span>
+				<a href="">详情</a>
+			</div>
+			<div class="four">
+				<input type="checkbox" name="" id="box" value="" />
+				<label for="box">微信绑定协议</label>
+			</div>
+			<div class="five">
+				<input type="submit" name="" id="" value="绑定" />
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('.two .radio input').click(function(){
+		var index=$('.two .radio input').index(this);
+		$('.two .radio input').eq(index).addClass('color').siblings().removeClass('color');
+	})
+	$('.one input[type=date]').blur(function(){
+		$(this).css('padding-left','3.7rem')
+	})
+	$('.one input[type=date]').focus(function(){
+		$(this).css('padding-left','3.7rem')
+	})
+</script>
+</html>

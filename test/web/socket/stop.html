@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>stop</title>
+	<script src="js/jquery-1.11.3.js"></script>
+	<style>
+		.list1,.list2{
+			width: 200px;
+			float: left;
+			text-align:center;
+			margin-left:20px;
+		}
+		.title1,.title2{
+			width: 200px;
+			height: 50px;
+			text-align:center;
+			line-height: 50px;
+			background: #f1f1f1;
+		}
+		ul{
+			width: 200px;
+			height: auto;
+			line-height: 50px;
+			overflow: hidden;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			width: 200px;
+			height: 50px;
+			text-align:center;
+			border-top: 1px solid #ccc;
+			background: #ddd;
+			list-style-type:none ;
+		}
+		.ul1,.ul2{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="list1">
+		<div class="title1">123</div>
+		<div class="ul1">
+			<ul>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+			</ul>
+		</div>
+	</div>
+	<div class="list2">
+		<div class="title2">123</div>
+		<div class="ul2">
+			<ul>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+				<li>123</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+	$('.title1').click(function(){
+		$('.ul1').slideToggle();
+	})
+	$('.title2').click(function(){
+		$('.ul2').stop().slideToggle()
+	})
+</script>
+</html>

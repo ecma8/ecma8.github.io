@@ -1,0 +1,102 @@
+.new-peo {
+  width: 6.4rem;
+  height: 2rem;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 0.2rem;
+  background: #fff;
+  overflow: hidden;
+}
+.new-peo .new-peo-box {
+  width: 6rem;
+  height: 1.4rem;
+  margin: 0 auto;
+  margin-top: 0.3rem;
+}
+.new-peo .new-peo-box .new-peo-box-left {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.6rem;
+  float: left;
+}
+.new-peo .new-peo-box .new-peo-box-left img {
+  border-radius: 0.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.new-peo .new-peo-box .new-peo-box-right1 {
+  width: 3rem;
+  float: left;
+  height: 1rem;
+  margin-left: 0.3rem;
+  margin-top: 0.2rem;
+}
+.new-peo .new-peo-box .new-peo-box-right1 .one {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.4rem;
+  text-align: left;
+  font-size: 0.28rem;
+  color: #ff921a;
+}
+.new-peo .new-peo-box .new-peo-box-right1 .two {
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: left;
+  font-size: 0.24rem;
+  color: #333;
+}
+.new-peo .new-peo-box .new-peo-box-right2 {
+  width: 1.5rem;
+  float: left;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.new-peo .new-peo-box .new-peo-box-right2 a {
+  float: right;
+  width: 1.2rem;
+  height: 0.4rem;
+  border: 2px solid #ff921a;
+  border-radius: 0.2rem;
+  line-height: 0.36rem;
+  color: #ff921a;
+  font-size: 0.18rem;
+  margin-top: 0.5rem;
+}
+.new-peo-list {
+  width: 6.4rem;
+  height: auto;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  background: #fff;
+}
+.new-peo-list a {
+  display: block;
+  width: 6.4rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: 1px solid #dcdcdc;
+}
+.new-peo-list a .one {
+  width: 6rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin: 0 auto;
+}
+.new-peo-list a .one img {
+  height: 0.3rem;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+.new-peo-list a .one span {
+  color: #333;
+  font-size: 0.26rem;
+}
+.new-peo-list a .one span:nth-of-type(2) {
+  float: right;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #333;
+}

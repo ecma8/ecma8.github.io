@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	
+	<title>music</title>
+	<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/media.css"/>
+	<link rel="stylesheet" type="text/css" href="css/header.css"/>
+	<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	<link rel="stylesheet" href="css/music.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+	<script src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+	<div id="warp">
+	<header class="header-nav">
+	    <a class="right-icon"></a>
+	    <h1 class="header-title">Favorite</h1>
+	</header>
+	<div class="box-top"></div>
+	<div class="box">
+		<div class="banner">
+			<img src="img/banner1.jpg" alt=""  class=""/>
+		</div>
+		<audio src="https://fr13935819740.github.io/music/1.mp3" controls="controls"></audio>
+		<div class="con">			
+			<div><span class="fa jingyin">&#xf04d;</span></div>
+			<div><span class="fa up">&#xf049;</span></div>
+			<div><span class="fa play">&#xf04b;</span></div>
+			<div><span class="fa down1">&#xf050;</span></div>
+			<div><span class="fa">&#xf004;</span></div>
+		</div>
+		<div class="list">
+			<ul >
+				<li audiolist='https://fr13935819740.github.io/music/1.mp3' class="color">这是音乐1</li>
+				<li audiolist='https://fr13935819740.github.io/music/2.mp3'>这是音乐2</li>
+				<li audiolist='https://fr13935819740.github.io/music/3.mp3'>这是音乐3</li>
+				<li audiolist='https://fr13935819740.github.io/music/4.mp3'>这是音乐4</li>
+				<li audiolist='https://fr13935819740.github.io/music/5.mp3'>这是音乐5</li>
+				<li audiolist='https://fr13935819740.github.io/music/6.mp3'>这是音乐6</li>
+				<li audiolist='https://fr13935819740.github.io/music/7.mp3'>这是音乐7</li>
+				<li audiolist='https://fr13935819740.github.io/music/8.mp3'>这是音乐8</li>
+				<li audiolist='https://fr13935819740.github.io/music/9.mp3'>这是音乐9</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+</body>
+<script type="text/javascript">
+
+
+
+	var imgh=parseInt($('.banner').css('height'));
+	var con=parseInt($('.con').css('height'));
+	var audioh=parseInt($('audio').css('height'));
+	var headerh=parseInt($('header').css('height'));
+	var windowh=parseInt($(window).height());
+	var sayh=windowh-audioh-con-headerh-imgh;
+	
+	$('.list').css('height',sayh+'px');
+	$('ul').css('height',sayh+'px');
+
+	function drag(obj,option){
+	    return new music(obj,option);
+	}
+	function music(obj,option){
+		this.obj=obj;
+		this.play=option.play;
+		this.mute=option.mute;
+		this.up=option.up;
+		this.down=option.down;
+		this.list=option.list;
+		this.playAudio();
+		this.muteAudio();
+		this.upAudio();
+		this.downAudio();
+		this.listPlay();
+		this.num=0;
+	}
+	music.prototype={
+		playAudio:function(){
+			that=this;
+			this.play.onclick=function(){
+				if(that.obj.paused)
+				{
+					that.obj.play();
+					that.play.innerHTML='&#xf04c';
+				}
+				else{
+					that.obj.pause()
+					
+					that.play.innerHTML='&#xf04b;'
+				}
+			}
+		},
+		muteAudio:function(){
+			that=this;
+			this.mute.onclick=function(){
+				if(that.obj.volume!=0)
+				{
+					that.obj.volume=0;
+				}
+				else{
+					that.obj.volume=1;
+				}
+			}
+		},
+		upAudio:function(){
+			that=this;
+			this.up.onclick=function(){
+				if(that.num>0)
+				{
+					that.num--;
+
+				}
+				else{
+					that.num=that.list.size()-1;
+				}
+				var audiolist=that.list.eq(that.num).attr('audiolist');
+				that.list.eq(that.num).addClass('color').siblings().removeClass('color');
+				$(that.obj).attr('src',audiolist);
+				that.obj.play();
+			}
+		},
+		downAudio:function(){
+			that=this;
+			this.down.onclick=function(){
+				if(that.num<that.list.size()-1)
+				{
+					that.num++;
+				}
+				else{
+					that.num=0;
+				}
+				var audiolist=that.list.eq(that.num).attr('audiolist');
+				that.list.eq(that.num).addClass('color').siblings().removeClass('color');
+				$(that.obj).attr('src',audiolist);
+				that.obj.play();
+			}
+		},
+		listPlay:function(){
+			that=this;
+			this.list.click(function(){
+				var index=that.list.index(this);
+				that.list.eq(index).addClass('color').siblings().removeClass('color');
+				that.num=index;
+				var audiolist=that.list.eq(index).attr('audiolist');
+				$(that.obj).attr('src',audiolist);
+				that.obj.play();
+			})
+		}
+	};
+	drag(
+		$('audio')[0],
+		{
+			'play':$('.play')[0],
+			'mute':$('.jingyin')[0],
+			'mute':$('.jingyin')[0],
+			'up':$('.up')[0],
+			'down':$('.down1')[0],
+			'list':$('.list ul li'),
+		}
+	)
+</script>
+
+</html>

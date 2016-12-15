@@ -1,0 +1,223 @@
+.fr-xinxi {
+  width: 918px;
+  height: 650px;
+  border: 1px solid #cacaca;
+  border-top: 1px solid #ff9900;
+  background: #fff;
+  margin: 0 auto;
+}
+.fr-xinxi .box {
+  width: 840px;
+  height: 470px;
+  margin-left: 40px;
+  margin-top: 26px;
+}
+.fr-xinxi .box .title {
+  width: 840px;
+  height: 20px;
+  line-height: 20px;
+}
+.fr-xinxi .box .title span {
+  line-height: 20px;
+  font-size: 16px;
+  float: left;
+}
+.fr-xinxi .box .title .right {
+  float: right;
+  width: 120px;
+  height: 20px;
+  line-height: 20px;
+}
+.fr-xinxi .box .title .right .a1 {
+  float: left;
+  color: #379ecf;
+  margin-right: 15px;
+  font-size: 15px;
+  text-decoration: underline;
+}
+.fr-xinxi .box .title .right .a2 {
+  float: left;
+  color: #ff9a37;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.fr-xinxi .box .xian {
+  width: 840px;
+  height: 5px;
+  border-bottom: 1px solid #cacaca;
+}
+.fr-xinxi .box .box1 {
+  width: 800px;
+  height: 650px;
+  margin-left: 20px;
+  margin-top: 12px;
+}
+.fr-xinxi .box .box1 .title1 {
+  width: 800px;
+  height: 20px;
+  line-height: 20px;
+}
+.fr-xinxi .box .box1 .title1 img {
+  height: 18px;
+  float: left;
+}
+.fr-xinxi .box .box1 .title1 span {
+  line-height: 20px;
+  font-size: 16px;
+  float: left;
+  margin-left: 5px;
+}
+.fr-xinxi .box .box1 .title1 a {
+  float: right;
+  color: #ff9a37;
+  font-size: 16px;
+}
+.fr-xinxi .box .box1 .xian1 {
+  width: 800px;
+  height: 5px;
+}
+.fr-xinxi .box .box1 .text {
+  width: 800px;
+  height: 410px;
+  border: 1px solid #cacaca;
+  padding-top: 20px;
+  position: relative;
+}
+.fr-xinxi .box .box1 .text .one {
+  width: 600px;
+  height: 34px;
+  line-height: 40px;
+  margin-left: 70px;
+  margin-top: 3px;
+}
+.fr-xinxi .box .box1 .text .one span {
+  width: 75px;
+  height: 34px;
+  text-align: left;
+  float: left;
+}
+.fr-xinxi .box .box1 .text .one .miaoshu {
+  float: left;
+  height: 34px;
+  color: #f00;
+  margin-left: 10px;
+}
+.fr-xinxi .box .box1 .text .one input {
+  float: left;
+  border: 1px solid #cacaca;
+  height: 32px;
+  width: 240px;
+  padding-left: 5px;
+  margin-left: 5px;
+  font-size: 15px;
+}
+.fr-xinxi .box .box1 .text .one img {
+  margin-left: 10px;
+}
+.fr-xinxi .box .box1 .text .two {
+  width: 700px;
+  height: 130px;
+  line-height: 40px;
+  margin-left: 70px;
+  margin-top: 4px;
+}
+.fr-xinxi .box .box1 .text .two span {
+  width: 75px;
+  height: 34px;
+  text-align: left;
+  float: left;
+}
+.fr-xinxi .box .box1 .text .two .miaoshu {
+  height: 30px;
+  color: #f00;
+  width: 200px;
+  margin-left: 80px;
+  line-height: 30px;
+}
+.fr-xinxi .box .box1 .text .two textarea {
+  float: left;
+  border: 1px solid #cacaca;
+  height: 90px;
+  width: 420px;
+  padding-left: 5px;
+  margin-left: 5px;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "Microsoft yahei";
+}
+.fr-xinxi .box .box1 .text .two img {
+  margin-left: 10px;
+}
+.fr-xinxi .box .box1 .text .img {
+  position: absolute;
+  right: 40px;
+  top: 36px;
+  width: 200px;
+  height: 200px;
+}
+.fr-xinxi .box .box1 .text .img img {
+  width: 200px;
+  height: 140px;
+}
+.fr-xinxi .box .box1 .text .img .file {
+  width: 200px;
+  height: 40px;
+}
+.fr-xinxi .box .box1 .text .img .file span {
+  width: 98px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+}
+.fr-xinxi .box .box1 .text .img .file div {
+  float: left;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  background: #ff9a37;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.fr-xinxi .box .box1 .text .img .file div input {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  left: 0;
+  top: 5px;
+  border: none;
+  filter: alpha(opacity=0);
+}
+.fr-xinxi .box .box1 .text .img .file div .shangchuan {
+  position: absolute;
+  z-index: 0;
+  width: 100px;
+  left: 0;
+  top: 0;
+  line-height: 30px;
+  color: #fff;
+}
+.fr-xinxi .box .box1 .text .input {
+  width: 500px;
+  height: 40px;
+  margin-left: 150px;
+  display: inline;
+}
+.fr-xinxi .box .box1 .text .input input {
+  width: 120px;
+  height: 36px;
+  line-height: 36px;
+  background: #ff9a37;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 6px;
+  outline: none;
+}
+.fr-xinxi .box .box1 .text .input .color {
+  background: #cacaca;
+}

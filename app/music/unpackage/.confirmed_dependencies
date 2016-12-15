@@ -1,0 +1,16 @@
+{
+	"index.html": {
+		"resources": [
+			"css/mui.min.css",
+			"css/header.css",
+			"css/media.css",
+			"css/public.css",
+			"1.mp3",
+			"css/music.css",
+			"css/font-awesome.css",
+			"js/jquery-1.11.3.js",
+			"img/banner1.jpg",
+			"fonts/fontawesome-webfont.ttf"
+		]
+	}
+}

@@ -1,0 +1,83 @@
+body {
+  background: #ffffff;
+}
+.fr-zjg {
+  width: 1180px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.fr-zjg .title {
+  width: 1180px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  border-bottom: 1px solid #cacaca;
+}
+.fr-zjg .left {
+  width: 860px;
+  height: 800px;
+}
+.fr-zjg .left .one {
+  width: 860px;
+  height: 140px;
+  padding: 48px 0;
+  border-bottom: 1px solid #cacaca;
+}
+.fr-zjg .left .one .img {
+  width: 228px;
+  height: 140px;
+  float: left;
+  background: #eee;
+}
+.fr-zjg .left .one .img img {
+  width: 228px;
+  height: 138px;
+}
+.fr-zjg .left .one .text {
+  width: 630px;
+  height: 140px;
+  float: left;
+  overflow: hidden;
+}
+.fr-zjg .left .one .text h2 {
+  margin-top: 4px;
+  margin-left: 28px;
+  color: #666;
+  font-weight: bold;
+}
+.fr-zjg .left .one .text .miaoshu {
+  margin-top: 6px;
+  margin-left: 28px;
+  color: #666;
+}
+.fr-zjg .left .one .text .kecheng {
+  width: 600px;
+  background: #eee;
+  height: 68px;
+  margin-top: 12px;
+  margin-left: 28px;
+}
+.fr-zjg .left .one .text .kecheng div {
+  width: 600px;
+  height: 34px;
+  line-height: 34px;
+}
+.fr-zjg .left .one .text .kecheng div span {
+  color: #666;
+}
+.fr-zjg .left .one .text .kecheng div .color {
+  color: #ff6a33;
+}
+.fr-zjg .left .one .text .kecheng div .span1 {
+  float: left;
+  margin-left: 10px;
+}
+.fr-zjg .left .one .text .kecheng div .span2 {
+  float: left;
+  margin-left: 10px;
+}
+.fr-zjg .left .one .text .kecheng div .span3 {
+  float: right;
+  margin-right: 15px;
+}

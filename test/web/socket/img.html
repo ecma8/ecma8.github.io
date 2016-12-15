@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+<style>
+	.mask{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background: rgba(0,0,0,0.6);
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		text-align: center;
+		display: none;
+	}
+	.mask img{
+		width:600px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin:  auto;
+	}
+	@-webkit-keyframes baobao{
+		0%{
+			transform: scale(0);
+		}
+		100%{
+			transform: scale(1);
+		}
+	}
+	@-webkit-keyframes baobao1{
+		0%{
+			transform: scale(1);
+		}
+		100%{
+			transform: scale(0);
+		}
+	}
+	.animate
+	{
+		animation: baobao 0.2s ease forwards;
+	}
+	.animate1
+	{
+		animation: baobao1 0.2s ease forwards;
+	}
+</style>
+<body>
+	<div class="new-img">
+		<img src="img/error.png"/>
+	</div>
+	<div class="mask animate">
+		<img src="" alt="" />
+	</div>
+<script>
+$(document).ready(function(){
+	$('.new-img img').click(function(){
+		var i = $('.new-img img').index(this);
+		$('.mask img').attr('src','img/error.png');
+		$('.mask').show().addClass('animate').removeClass('animate1');
+		$('.mask').click(function(){
+			$('.mask').addClass('animate1').removeClass('animate');
+		})
+	});
+});
+
+</script>
+</html>
