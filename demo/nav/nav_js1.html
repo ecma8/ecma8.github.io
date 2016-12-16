@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../public/js/jquery-1.11.3.js"></script>
+    <link rel="stylesheet" href="jigou-nav.css">
+</head>
+<body>
+    <div class="nav-box">
+        <div class="jigou-nav">
+            <div class="nav-left">
+                <div class="nav-left-one hover1">1</div>
+                <div class="nav-left-one hover2">2</div>
+                <div class="nav-left-one hover3">3</div>
+            </div>
+            <div class="nav-right">
+                <div class="nav-right-one hover1">001</div>
+                <div class="nav-right-one hover2">002</div>
+                <div class="nav-right-one hover3">003</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+   var hover1=$('.hover1');
+   hover1.hover(function(){
+       hover1.eq(1).show();
+   },function(){
+       hover1.eq(1).hide();
+   });
+   var hover2=$('.hover2');
+   hover2.hover(function(){
+       hover2.eq(1).show();
+   },function(){
+       hover2.eq(1).hide();
+   });
+   var hover3=$('.hover3');
+   hover3.hover(function(){
+       hover3.eq(1).show();
+   },function(){
+       hover3.eq(1).hide();
+   });
+   // var left=$('.nav-left-one');
+   // var right=$('.nav-right-one');
+   // left.hover(function(){
+   //     var index=left.index(this);
+   //     right.eq(index).show();
+   // },function(){
+   //     var index1=left.index(this);
+   //     right.eq(index1).hide();
+   // });
+   // $('.nav').hover(function(){
+   //     right.show();
+   // },function(){
+   //     right.hide();
+   // })
+    // var left=$('.nav-left-one');
+    // var right=$('.nav-right-one');
+    // left.hover(function(){
+    //     var index1=$(this).index();
+    //     right.eq(index1).show().siblings().hide();
+    // },function(){});
+    // $('.jigou-nav').hover(function(){},function(){
+    //     $('.nav-right-one').hide();
+    // })
+</script>
+</html>
