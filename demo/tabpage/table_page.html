@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="../../js/jquery-1.11.3.js"></script>
+	<style type="text/css">
+		.tabpage{
+			width: 800px;
+			height: 30px;
+			line-height: 30px;
+			
+		}
+		.tabpage a{
+			float: left;
+			padding:0 5px;
+			color: #333;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.tabpage .a-color{
+			color: #f93;
+		}
+		.tabpage p{
+			float: left;
+			margin: 0;
+			padding: 0;
+			padding: 0 10px;			
+			text-align: center;
+		}
+		.tabpage p span{
+			padding: 0 5px;
+			margin: 0 5px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+		}
+		.tabpage p .span-color{
+			border: 1px solid #f93;
+			color: #f93;
+		}
+	</style>
+</head>
+<body>
+	<table border="" cellspacing="" cellpadding="" id="table1">
+		<tr>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>001</td>
+		</tr>
+		<tr>
+			<td>002</td>
+		</tr>
+		<tr>
+			<td>003</td>
+		</tr>
+		<tr>
+			<td>004</td>
+		</tr>
+		<tr>
+			<td>005</td>
+		</tr>
+		<tr>
+			<td>006</td>
+		</tr>
+		<tr>
+			<td>007</td>
+		</tr>
+		<tr>
+			<td>008</td>
+		</tr>
+		<tr>
+			<td>009</td>
+		</tr>
+		<tr>
+			<td>010</td>
+		</tr>
+		<tr>
+			<td>011</td>
+		</tr>
+		<tr>
+			<td>012</td>
+		</tr>
+		<tr>
+			<td>013</td>
+		</tr>
+		<tr>
+			<td>014</td>
+		</tr>
+		<tr>
+			<td>015</td>
+		</tr>
+		<tr>
+			<td>016</td>
+		</tr>
+		<tr>
+			<td>017</td>
+		</tr>
+		<tr>
+			<td>018</td>
+		</tr>
+		<tr>
+			<td>019</td>
+		</tr>
+		<tr>
+			<td>020</td>
+		</tr>
+		<tr>
+			<td>021</td>
+		</tr>
+		<tr>
+			<td>022</td>
+		</tr>
+		<tr>
+			<td>023</td>
+		</tr>
+		<tr>
+			<td>024</td>
+		</tr>
+		<tr>
+			<td>025</td>
+		</tr>
+		<tr>
+			<td>026</td>
+		</tr>
+		<tr>
+			<td>027</td>
+		</tr>
+		<tr>
+			<td>028</td>
+		</tr>
+		<tr>
+			<td>029</td>
+		</tr>
+		<tr>
+			<td>030</td>
+		</tr>
+		<tr>
+			<td>031</td>
+		</tr>
+		<tr>
+			<td>032</td>
+		</tr>
+		<tr>
+			<td>033</td>
+		</tr>
+		<tr>
+			<td>034</td>
+		</tr>
+		<tr>
+			<td>035</td>
+		</tr>
+	</table>
+	<div class="tabpage" id="page1"></div>
+	<table border="" cellspacing="" cellpadding="" id="table2">
+		<tr>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>001</td>
+		</tr>
+		<tr>
+			<td>002</td>
+		</tr>
+		<tr>
+			<td>003</td>
+		</tr>
+		<tr>
+			<td>004</td>
+		</tr>
+		<tr>
+			<td>005</td>
+		</tr>
+		<tr>
+			<td>006</td>
+		</tr>
+		<tr>
+			<td>007</td>
+		</tr>
+		<tr>
+			<td>008</td>
+		</tr>
+		<tr>
+			<td>009</td>
+		</tr>
+		<tr>
+			<td>010</td>
+		</tr>
+		<tr>
+			<td>011</td>
+		</tr>
+		<tr>
+			<td>012</td>
+		</tr>
+		<tr>
+			<td>013</td>
+		</tr>
+		<tr>
+			<td>014</td>
+		</tr>
+		<tr>
+			<td>015</td>
+		</tr>
+		<tr>
+			<td>016</td>
+		</tr>
+		<tr>
+			<td>017</td>
+		</tr>
+		<tr>
+			<td>018</td>
+		</tr>
+		<tr>
+			<td>019</td>
+		</tr>
+		<tr>
+			<td>020</td>
+		</tr>
+		<tr>
+			<td>021</td>
+		</tr>
+		<tr>
+			<td>022</td>
+		</tr>
+		<tr>
+			<td>023</td>
+		</tr>
+		<tr>
+			<td>024</td>
+		</tr>
+		<tr>
+			<td>025</td>
+		</tr>
+		<tr>
+			<td>026</td>
+		</tr>
+		<tr>
+			<td>027</td>
+		</tr>
+		<tr>
+			<td>028</td>
+		</tr>
+		<tr>
+			<td>029</td>
+		</tr>
+		<tr>
+			<td>030</td>
+		</tr>
+		<tr>
+			<td>031</td>
+		</tr>
+		<tr>
+			<td>032</td>
+		</tr>
+		<tr>
+			<td>033</td>
+		</tr>
+		<tr>
+			<td>034</td>
+		</tr>
+		<tr>
+			<td>035</td>
+		</tr>
+	</table>
+	<div class="tabpage" id="page2"></div>
+</body>
+<script type="text/javascript">
+	$.fn.extend({
+		tabPage:function(obj,tabpage,len){
+		var trlen=$(obj).find('tr').size();
+		var page=Math.ceil(trlen/len);
+		var page1=(trlen-1)%len;
+		var divpage=$(tabpage);
+		var ppage=$('<p></p>');
+		$(obj).find('tr').slice(1,trlen).hide()
+		$(obj).find('tr').slice(1,len+1).show();
+		var indexpage=$('<a href=javascript:; class=a-color>首页</a>')
+		var endpage=$('<a href=javascript:;>尾页</a>')
+		var lastpage=$('<a href=javascript:;>上一页</a>')
+		var nextpage=$('<a href=javascript:;>下一页</a>')
+		for (var i=0;i<page;i++) {
+			$('<span>'+(i+1)+'</span>').appendTo(ppage)
+		}
+		divpage.append(indexpage)
+		divpage.append(lastpage)
+		divpage.append(ppage)
+		divpage.append(nextpage)
+		divpage.append(endpage);
+		$(tabpage).find('p span').first().addClass('span-color');
+		var num=0;
+		divpage.on('click','a',function(){
+			var text=$(this).text();
+			if(text=='首页')
+			{
+				$(obj).find('tr').slice(1,trlen).hide()
+				$(obj).find('tr').slice(1,len+1).show();
+				$(this).addClass('a-color').siblings('a').removeClass('a-color');
+				$(tabpage).find('p span').removeClass('span-color');
+				$(tabpage).find('p span').first().addClass('span-color').siblings().removeClass('span-color');
+			}
+			else if(text=='尾页')
+			{
+				if(page1==0)
+				{
+					var spantext1=$(tabpage).find('p span').last().text();
+					$(obj).find('tr').slice(1,trlen).hide()
+					var x=$(obj).find('tr').slice(len*(spantext1-1)+1,len*spantext1+1).show();
+					$(this).addClass('a-color').siblings('a').removeClass('a-color');
+					$(tabpage).find('p span').last().addClass('span-color').siblings().removeClass('span-color');
+				}
+				else{
+					var spantext1=$(tabpage).find('p span').last().text();
+					$(obj).find('tr').slice(1,trlen).hide()
+					$(obj).find('tr').slice(len*(spantext1-1)+1,len*spantext1+1).show()
+					$(this).addClass('a-color').siblings('a').removeClass('a-color');
+					$(tabpage).find('p span').removeClass('span-color');
+					$(tabpage).find('p span').last().addClass('span-color').siblings().removeClass('span-color');
+				}
+				
+			}
+			else if(text=='上一页'&&!($(tabpage).find('p span').first().hasClass('span-color')))
+			{
+				var spantext2=$(tabpage).find('p .span-color').text();
+				spantext2--
+				$(tabpage).find('p .span-color').prev().addClass('span-color').siblings().removeClass('span-color')
+				$(obj).find('tr').slice(1,trlen).hide()
+				$(obj).find('tr').slice(len*(spantext2-1)+1,len*spantext2+1).show()
+			}
+			else if(text=='下一页'&&!($(tabpage).find('p span').last().hasClass('span-color')))
+			{
+				var spantext2=$(tabpage).find('p .span-color').text();
+				spantext2++
+				$(tabpage).find('p .span-color').next().addClass('span-color').siblings().removeClass('span-color')
+				$(obj).find('tr').slice(1,trlen).hide()
+				$(obj).find('tr').slice(len*(spantext2-1)+1,len*spantext2+1).show()
+			}
+		})
+		if(page1==0)
+		{
+			$(tabpage).find('p span').last().remove()
+		}
+		ppage.on('click','span',function(){
+			var spantext=$(this).text();
+			$(this).addClass('span-color').siblings().removeClass('span-color');
+			$(tabpage).find('a').removeClass('a-color');
+			$(obj).find('tr').slice(1,trlen).hide()
+			$(obj).find('tr').slice(len*(spantext-1)+1,len*spantext+1).show()
+		})
+	}
+	})
+	//table 需要分页的表格
+	//tabPage 显示分页的容器
+	//len 每页显示的数量
+	$('#table1').tabPage('#table1','#page1',4);
+	$('#table2').tabPage('#table2','#page2',7);
+</script>
+</html>
