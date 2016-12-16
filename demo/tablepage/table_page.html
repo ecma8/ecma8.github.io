@@ -18,6 +18,9 @@
 			text-decoration: none;
 			cursor: pointer;
 		}
+		.tabpage a:hover{
+			color: #f93;
+		}
 		.tabpage .a-color{
 			color: #f93;
 		}
@@ -320,6 +323,7 @@
 			}
 			else if(text=='上一页'&&!($(tabpage).find('p span').first().hasClass('span-color')))
 			{
+				$(tabpage).find('a').removeClass('a-color');
 				var spantext2=$(tabpage).find('p .span-color').text();
 				spantext2--
 				$(tabpage).find('p .span-color').prev().addClass('span-color').siblings().removeClass('span-color')
@@ -328,6 +332,7 @@
 			}
 			else if(text=='下一页'&&!($(tabpage).find('p span').last().hasClass('span-color')))
 			{
+				$(tabpage).find('a').removeClass('a-color');
 				var spantext2=$(tabpage).find('p .span-color').text();
 				spantext2++
 				$(tabpage).find('p .span-color').next().addClass('span-color').siblings().removeClass('span-color')
