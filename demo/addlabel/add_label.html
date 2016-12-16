@@ -62,7 +62,7 @@
 			$('.text').val('')
 			
 		}
-		if($.inArray($('.text').val(),arr)!=-1)
+		if($.inArray($.trim($('.text').val(),arr))!=-1)
 		{
 			return false
 			$('.text').val('')
