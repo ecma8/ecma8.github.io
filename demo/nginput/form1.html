@@ -19,9 +19,10 @@
     <h1>用户注册</h1>
     <form name="registerForm" novalidate>
         <div id="email-group">
-            <label for="email">E-mail:</label> <input type="email"
-                                                      class="form-control" ng-model="email" name="email" id="email"
-                                                      placeholder="请输入电子邮箱..." required>
+            <label for="email">E-mail:</label> 
+            <input type="email"
+                class="form-control" ng-model="email" name="email" id="email"
+                placeholder="请输入电子邮箱..." required>
             <p>
                     <span style="color: red" ng-show=" registerForm.email.$invalid">
                         <span ng-show="registerForm.email.$error.required">*请输入邮箱</span> <span
