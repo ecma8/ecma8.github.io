@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	<style>
+		.p1{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.p{
+			width: 600px;
+			line-height: 30px;
+			word-wrap: break-word;
+			margin: 0;
+		}
+		table {
+		  border-collapse: collapse;
+		  width: 100%;
+		  text-align: center;
+		  width: 800px!important;
+		  margin: 100px auto;
+		}
+		table tr {
+		  height: 40px;
+		  border-bottom: 1px solid #f5f5f5;
+		}
+		table tr td,table tr th{
+			text-align: center;
+		}
+		td .span-close{
+			display: block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			font-size: 22px;
+			border-radius: 10px;
+			background: #f93;
+			color: #fff;
+			font-weight: bold;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<table border="1" bordercolor="#ddd" cellspacing="" cellpadding="" class="table table-striped">
+		<tr>
+			<th>Header</th>
+			<th>Header</th>
+			<th style="width: 300px;">Header</th>
+			<th>Header</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td></td>
+			<td>
+				<p style="width: 300px;" class="p p1">
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+				</p>
+			</td>
+			<td>
+				<span class="span-close">+</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td></td>
+			<td>
+				<p style="width: 300px;" class="p p1">
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+				</p>
+			</td>
+			<td>
+				<span class="span-close">+</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td></td>
+			<td>
+				<p style="width: 300px;" class="p p1">
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+					12323123213
+				</p>
+			</td>
+			<td>
+				<span class="span-close">+</span>
+			</td>
+		</tr>
+	</table>
+</body>
+<script src="../js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+//	$('.span').click(function(){
+//		var index=$('.span').index(this)
+//		if($('.p').eq(index).hasClass('p1'))
+//		{
+//			$('.span').eq(index).html('-').css({
+//				'background':'#ccc'
+//				})
+//			$('.span').eq(index).parent().parent().find('p').removeClass('p1')
+//		}
+//		else{
+//			$('.span').eq(index).html('+').css({
+//				'background':'#f93'
+//				})
+//			$('.span').eq(index).parent().parent().find('p').addClass('p1')
+//		}
+//	})
+	(function ($){
+		$.fn.extend({
+			distab:function(span,class1,class2,color1,color2){
+				span.click(function(){
+					var index=span.index(this)
+					if($('.'+class1).eq(index).hasClass(class2))
+					{
+						span.eq(index).html('-').css({
+							'background':color1
+							})
+						span.eq(index).parent().parent().find(class1).removeClass(class2)
+					}
+					else{
+						span.eq(index).html('+').css({
+							'background':color2
+							})
+						span.eq(index).parent().parent().find(class1).addClass(class2)
+					}
+				})
+			}
+		})
+	})
+	(jQuery);
+	
+	$('table').distab($('.span-close'),'p','p1','#ccc','#f93')
+</script>
+</html>
