@@ -68,7 +68,7 @@
 			$('.text').val('')
 		}
 		else{
-			add($('.box'),'<a href="javascript:;"><span>'+$('.text').val()+'</span><b>+</b></a>');
+			add($('.box'),'<a href="javascript:;"><span>'+$.trim($('.text').val())+'</span><b>+</b></a>');
 			arr.push($('.text').val())
 			$('.text').val('')
 		}
