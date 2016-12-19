@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../public/js/jquery-1.11.3.js"></script>
+	<link rel="stylesheet" href="../public/css/bootstrap.css">
+	<style>
+		nav{
+			height: 40px;
+			line-height: 40px;
+			position: fixed;
+			top:0;
+			left:0;
+			right:0;
+			margin: 0 auto;
+			background: rgba(0,0,0,0.3);
+			color: #fff;
+		}
+		nav .right a{
+			color: #fff;
+		}
+		nav .right a:hover{
+			color: #05ff76!important;
+		}
+		nav .right .color{
+			color: #05ff76;
+		}
+		.floor{
+			text-align: center;
+			height: 400px;
+			line-height: 400px;
+			font-size: 100px;
+		}
+		.floor:nth-of-type(1)
+		{
+			background: #eee;
+		}
+		.floor:nth-of-type(2)
+		{
+			background: #ddd;
+		}
+		.floor:nth-of-type(3)
+		{
+			background: #ccc;
+		}
+		.floor:nth-of-type(4)
+		{
+			background: #bbb;
+		}
+		.floor:nth-of-type(5)
+		{
+			background: #aaa;
+		}
+		.floor:nth-of-type(6)
+		{
+			background: #999;
+		}
+	</style>
+</head>
+<body>
+	<nav class="container">
+		<div class="row">
+			<div class="left col-md-6"></div>
+			<div class="right col-md-6">
+				<a href="javascript:;" class="col-md-2 color">点击看看</a>
+				<a href="javascript:;" class="col-md-2">点击看看</a>
+				<a href="javascript:;" class="col-md-2">点击看看</a>
+				<a href="javascript:;" class="col-md-2">点击看看</a>
+				<a href="javascript:;" class="col-md-2">点击看看</a>
+				<a href="javascript:;" class="col-md-2">点击看看</a>
+			</div>
+		</div>
+	</nav>
+	<div style="height: 40px"></div>
+	<div class="container">
+		<div class="floor">1</div>
+		<div class="floor">2</div>
+		<div class="floor">3</div>
+		<div class="floor">4</div>
+		<div class="floor">5</div>
+		<div class="floor">6</div>
+	</div>
+</body>
+<script>
+	$.fn.extend({
+		navScroll:function(navList,boxList,color,moreHeight){
+			navList.click(function(){
+				var index=$(this).index();
+				var scroll=boxList.eq(index).offset().top;
+				$('body').animate({'scrollTop':scroll},300)
+			})
+			$(window).scroll(function(){
+				var bodyScroll=$('body').scrollTop()+moreHeight;
+				boxList.each(function(i){
+					var floorOffset=boxList.eq(i).offset().top;
+					console.log(floorOffset)
+					if(bodyScroll>floorOffset)
+					{
+						navList.eq(i).addClass(color).siblings().removeClass(color);
+					}
+				})
+			})
+		}
+	})
+	$('nav').navScroll($('.right a'),$('.floor'),'color',440)
+</script>
+</html>
