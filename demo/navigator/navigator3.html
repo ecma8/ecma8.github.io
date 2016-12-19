@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var x = navigator.userAgent.toLowerCase();
+			console.log(x)
+			if(x.indexOf('firefox')!=-1)
+			{
+				alert('这是火狐内核浏览器')
+			}
+			else if(x.indexOf('chrome')!=-1){
+				alert('这是chrome内核浏览器')
+			}
+			else if(x.indexOf('trident')!=-1){
+				alert('这是IE浏览器')
+			}
+			else if(x.indexOf('opera')!=-1){
+				alert('这是opera浏览器')
+			}
+			else if(x.indexOf('safari')!=-1){
+				alert('这是safari浏览器')
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
