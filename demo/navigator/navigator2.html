@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script>
+		window.onload=function(){
+			var x = navigator.userAgent.toLowerCase();
+			console.log(x)
+			if(x.indexOf('iphone')!=-1)
+			{
+				alert('这是iphone手机')
+			}
+			else if(x.indexOf('android')!=-1){
+				alert('这是安卓手机')
+			}
+			else if(x.indexOf('windows phone')!=-1){
+				alert('这是windows手机')
+			}
+			else{
+				alert('这不是手机端')
+			}
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
