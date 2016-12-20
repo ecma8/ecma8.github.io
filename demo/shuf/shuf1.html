@@ -95,7 +95,8 @@
 			lunbo:function(box,list_li,left,right,time){
 				var flag=true;
 				var list_size=parseInt($(list_li).css('width'));
-				left.click(function(){
+				left.click(function(e){
+					e.preventDefault(); 
 					var box_left=parseInt(box.css('marginLeft'));
 					if(!flag)
 					{
@@ -110,7 +111,8 @@
 						flag=true;
 					})
 				});
-				right.click(function(){
+				right.click(function(e){
+					e.preventDefault(); 
 					var box_right=parseInt(box.css('marginLeft'));
 					if(!flag)
 					{
