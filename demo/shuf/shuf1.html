@@ -17,8 +17,8 @@
 			overflow: hidden;
 		}
 		.inner{
-			width: 1200px;
 			height: 400px;
+			width: 1200px;
 			left: 50%;
 			margin-left: -600px;
 			position: relative;
@@ -131,5 +131,14 @@
 		});
 		$('.inner').lunbo($('.box'),'.one',$('.left-button'),$('.right-button'),500)
 	})
+	function fun(callback,n)
+	{
+		var a=123;
+		console.log(n)
+		callback(a);
+	}
+	fun(function(x){
+		console.log(x)
+	},2)
 </script>
 </html>
