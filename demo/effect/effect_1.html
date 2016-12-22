@@ -56,8 +56,10 @@
 			'marginTop':400
 		},1000,function(){
 			$('img').first().appendTo($('.inner'))
-			$('img').last().animate({'marginTop':0},1000,function(){})
-			flag=true
+			$('img').last().animate({'marginTop':0},1000,function(){
+				flag=true
+			})
+			
 			$('img').each(function(i){
 				$('img').eq(i).css({
 					'left':i*100,
