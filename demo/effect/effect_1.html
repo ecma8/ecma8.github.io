@@ -9,11 +9,10 @@
 			width: 600px;
 			height: 400px;
 			margin: 100px auto;
-			transition: all 1s ease;
 		}
 		.inner{
 			width: 800px;
-			height: 400px;
+			height: 800px;
 			position: relative;
 			overflow: hidden;
 		}
@@ -21,9 +20,9 @@
 			width: 380px;
 			height: 380px;
 			position: absolute;
-			top:10px;
+			top:100px;
 			box-shadow: 0 0 10px 3px #999;
-			transition: left 1s ease;
+			transition: left 2s ease;
 		}
 	</style>
 </head>
@@ -42,7 +41,8 @@
 	$('img').each(function(i){
 		$('img').eq(i).css({
 			'left':i*100,
-			'zIndex':$('img').length-i
+			'zIndex':$('img').length-i,
+			'transform':'scale('+(1-(i/25))+')'
 		})
 	})
 	var flag=true;
@@ -59,11 +59,11 @@
 			$('img').last().animate({'marginTop':0},1000,function(){
 				flag=true
 			})
-			
 			$('img').each(function(i){
 				$('img').eq(i).css({
 					'left':i*100,
-					'zIndex':$('img').length-i
+					'zIndex':$('img').length-i,
+					'transform':'scale('+(1-(i/25))+')'
 				})
 			})
 		})
