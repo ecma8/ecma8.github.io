@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script>
+		$(function(){
+			function GetDateStr(AddDayCount) { 
+				var dd = new Date(); 
+				dd.setDate(dd.getDate()+ AddDayCount);
+				var y = dd.getFullYear(); 
+				var m = (dd.getMonth()+1).toString();
+				var d = dd.getDate().toString();
+				if(m.length==1)
+				{
+					m='0'+m;
+				}
+				if(d.length==1)
+				{
+					d='0'+d;
+				}
+				return y+"-"+m+"-"+d; 
+			}
+			$('.time1').click(function(event) {
+				$('.date1').val(GetDateStr(-3))
+				$('.date2').val(GetDateStr(0))
+				$(this).addClass('color').siblings('.time').removeClass('color')
+			});
+			$('.time2').click(function(event) {
+				$('.date1').val(GetDateStr(-7))
+				$('.date2').val(GetDateStr(0))
+				$(this).addClass('color').siblings('.time').removeClass('color')
+
+			});
+			$('.time3').click(function(event) {
+				$('.date1').val(GetDateStr(-30))
+				$('.date2').val(GetDateStr(0))
+				$(this).addClass('color').siblings('.time').removeClass('color')
+
+			});
+			$('.time4').click(function(event) {
+				$('.date1').val(GetDateStr(-90))
+				$('.date2').val(GetDateStr(0))
+				$(this).addClass('color').siblings('.time').removeClass('color')
+
+			});
+		})
+	</script>
+	<style>
+		.time.color{
+			background: #10B791;
+			color: #fff;
+			border: none;
+		}
+		.time{
+			border: none;
+			background: #ccc;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="date" class="date1">
+	<input type="date" class="date2">
+	<input type="button" class="time1 time" value="前三天">
+	<input type="button" class="time2 time" value="前七天">
+	<input type="button" class="time3 time" value="前一月">
+	<input type="button" class="time4 time" value="前三月">
+</body>
+</html>
