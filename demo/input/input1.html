@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>表格查看更多</title>
+	<link rel="stylesheet" type="text/css" href="../public/css/bootstrap.css"/>
+	<style>
+		.p1{
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		.p{
+			width: 600px;
+			line-height: 30px;
+			word-wrap: break-word;
+			margin: 0;
+		}
+		table {
+		  border-collapse: collapse;
+		  text-align: center;
+		  width: 800px!important;
+		  margin: 100px auto;
+		}
+		table tr {
+		  height: 40px;
+		  border-bottom: 1px solid #f5f5f5;
+		}
+		table tr td,table tr th{
+			text-align: center;
+		}
+		td .span-close{
+			display: block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			font-size: 22px;
+			border-radius: 10px;
+			background: #f93;
+			color: #fff;
+			font-weight: bold;
+			margin: 0 auto;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div style="width: 600px;margin: 0 auto;">
+		<input type="text" />
+		<input type="button" name="" id="" value="添加" />
+	</div>
+	<table border="1" bordercolor="#ddd" cellspacing="" cellpadding="" class="table table-striped">
+		<tr>
+			<th>内容</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>Data</td>
+			<td><a href="javascript:;">删除</a></td>
+		</tr>
+	</table>
+</body>
+<script src="../public/js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	$('input[type=button]').click(function(){
+		if($.trim($('input[type=text]').val())=='')
+		{
+			return false;
+		}
+		else{
+			$('table').append($('<tr><td>'+$('input[type=text]').val()+'</td><td><a href=javascript:;>删除</a></td></tr>'))
+		}
+	})
+	$(document).on('click','a',function(){
+		$(this).parent().parent().remove()
+	})
+</script>
+</html>
