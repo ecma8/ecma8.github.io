@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="../public/js/jquery-1.11.3.js"></script>
 	<script>
 		$(function(){
 			function GetDateStr(AddDayCount) { 
@@ -25,6 +25,7 @@
 			$('.time1').click(function(event) {
 				$('.date1').val(GetDateStr(-3))
 				$('.date2').val(GetDateStr(0))
+				console.log($('.date1')[0].value)
 				$(this).addClass('color').siblings('.time').removeClass('color')
 			});
 			$('.time2').click(function(event) {
