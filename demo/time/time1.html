@@ -11,7 +11,8 @@
 				dd.setDate(dd.getDate()+ AddDayCount);
 				var y = dd.getFullYear(); 
 				var m = (dd.getMonth()+1).toString();
-				var d = dd.getDate().toString();
+				var d = dd.getDate().toString()
+				var h = dd.getHours().toString();
 				if(m.length==1)
 				{
 					m='0'+m;
@@ -20,7 +21,7 @@
 				{
 					d='0'+d;
 				}
-				return y+"-"+m+"-"+d; 
+				return y+"-"+m+"-"+d+" "+h+':00';
 			}
 			$('.time1').click(function(event) {
 				$('.date1').val(GetDateStr(-3))
@@ -67,8 +68,8 @@
 	</style>
 </head>
 <body>
-	<input type="date" class="date1">
-	<input type="date" class="date2">
+	<input type="text" class="date1">
+	<input type="text" class="date2">
 	<input type="button" class="time1 time" value="前三天">
 	<input type="button" class="time2 time" value="前七天">
 	<input type="button" class="time3 time" value="前一月">

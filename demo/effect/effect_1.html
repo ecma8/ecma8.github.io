@@ -6,7 +6,7 @@
 	<script src="../public/js/jquery-1.11.3.js"></script>
 	<style type="text/css">
 		.box{
-			width: 1280px;
+			width: 1200px;
 			overflow: hidden;
 			margin: 100px auto;
 			perspective: 3000px;
@@ -48,8 +48,8 @@
 		$('img').eq(i).css({
 			'left':i*100,
 			'zIndex':$('img').length-i,
-			'transform':'scale('+(1-(i/25))+')',
-			'transition': 'transform 1.2s,left 1s ease '+(0.2-i/20)+'s'
+			'transform':'scale('+(1-(i/20))+')',
+			'transition': 'transform 1.2s,left 1s ease '+(i/20)+'s'
 			
 		})
 	})
@@ -72,7 +72,7 @@
 					'left':i*100,
 					'zIndex':$('img').length-i,
 					'transform':'scale('+(1-(i/20))+')',
-					'transition': 'transform 1.2s,left 1s ease '+(0.5-i/20)+'s'
+					'transition': 'transform 1.2s,left 1s ease '+(i/20)+'s'
 				})
 			})
 		})
