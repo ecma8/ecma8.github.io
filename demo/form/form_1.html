@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='../public/js/jquery-1.11.3.js'></script>
+	<link rel="stylesheet" href="../public/css/bootstrap.css">
+</head>
+<body>
+	<p class="container xxx">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+		<input type="checkbox">
+	</p>
+	<div class="box container">
+		<div style="width: 50px;margin: 5px;float: left;">
+			<input type="checkbox" id="one">
+			<label for="">单选</label>
+		</div>
+		<div style="width: 50px;margin: 5px;float: left;">
+			<input type="checkbox" id="all">
+			<label for="">全选</label>
+		</div>
+		<div style="width: 50px;margin: 5px;float: left;">
+			<input type="checkbox" id="back">
+			<label for="">反选</label>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('#one').click(function(){
+		if($(this).prop('checked'))
+		{
+			$('.xxx').find('input').prop('checked',false)
+			$('.xxx').find('input').click(function(){
+				$(this).prop('checked',true).siblings().prop('checked', false)
+			})
+		}
+		else{
+			$('.xxx').find('input').prop('checked',false)
+		}
+	});
+	$('#all').click(function(){
+		if($('#all').prop('checked'))
+		{
+			$('.xxx').find('input').prop('checked',true)
+		}
+		else{
+			$('.xxx').find('input').prop('checked',false)
+		}
+	});
+	$('#back').click(function(){
+		if($('#back').prop('checked'))
+		{
+			$('.xxx').find('input').each(function(i) {
+				if($(this).prop('checked')){
+					$(this).prop('checked',false)
+				}
+				else{
+					$(this).prop('checked',true)
+				}
+			});
+		}
+		else{
+			$('.xxx').find('input').each(function(i) {
+				if($(this).prop('checked')){
+					$(this).prop('checked',false)
+				}
+				else{
+					$(this).prop('checked',true)
+				}
+			});
+		}
+	});
+</script>
+</html>
