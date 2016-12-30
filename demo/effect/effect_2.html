@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<script src="../public/js/jquery-1.11.3.js"></script>
+	<style type="text/css">
+		body,ul,li,img{
+			margin: 0;
+			padding: 0;
+			border:none;
+			list-style: none;
+			
+
+		}
+		#warp{
+			width:100%;
+			height: 600px;
+			overflow: hidden;
+			background: #000;
+		}
+		.inner{
+			width: 1200px;
+			height: 600px;
+			left: 50%;
+			margin-left: -600px;
+			position: relative;
+		}
+		.box{
+			width: 6000px;
+			height: 600px;
+			margin-left:-2400px ;
+			background: #000;
+			
+		}
+		.box .one{
+			width: 1200px;
+			height: 500px;
+			text-align: center;
+			float: left;
+			background: #000;
+			opacity: 0.5;
+			transition: all 0.3s ease;
+			margin-top: 100px;
+		}
+		.box .one img{
+			height: 400px;
+		}
+		.box .one:nth-of-type(3)
+		{
+			opacity: 1;
+			transform: scale(1.1);
+		}
+		.left-button{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			left:0px;
+			top:50%;
+			color: #fff;
+			margin-top: -25px;
+			font-size: 100px;
+			z-index: 100;
+			cursor: pointer;
+		}
+		.right-button{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			right:0px;
+			top:50%;
+			color: #fff;
+			margin-top: -25px;
+			font-size: 100px;
+			z-index: 100;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="warp">
+		<div class="inner">
+			<div class="left-button"><</div>
+			<div class="right-button">></div>
+			<ul class="box">
+				<li class="one"><img src="../public/img/gg-1.jpg" alt="" /></li>
+				<li class="one"><img src="../public/img/gg-2.jpg" alt="" /></li>
+				<li class="one"><img src="../public/img/gg-3.jpg" alt="" /></li>
+				<li class="one"><img src="../public/img/gg-4.jpg" alt="" /></li>
+				<li class="one"><img src="../public/img/gg-5.jpg" alt="" /></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script>
+	$(function(){
+		$.fn.extend({
+			lunbo:function(box,list_li,left,right,time){
+				var flag=true;
+				var list_size=parseInt($(list_li).css('width'));
+				left.click(function(){
+					var box_left=parseInt(box.css('marginLeft'));
+					if(!flag)
+					{
+						return false;
+					}
+					flag=false;
+					box.animate({
+						'marginLeft':box_left-list_size
+					},time,function(){
+						box.find(list_li).first().appendTo(box);
+						box.css('marginLeft',-list_size*2+'px');
+						flag=true;
+					})
+				});
+				right.click(function(){
+					var box_right=parseInt(box.css('marginLeft'));
+					if(!flag)
+					{
+						return false;
+					}
+					flag=false;
+					box.animate({
+						'marginLeft':box_right+list_size
+					},time,function(){
+						box.find(list_li).last().prependTo(box);
+						box.css('marginLeft',-list_size*2+'px');
+						flag=true;
+					})
+				})
+			}
+		});
+		$('.inner').lunbo($('.box'),'.one',$('.left-button'),$('.right-button'),600)
+	})
+</script>
+</html>
