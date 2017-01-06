@@ -9,7 +9,7 @@
 			width: 1200px;
 			overflow: hidden;
 			margin: 100px auto;
-			perspective: 3000px;
+			perspective: 1000px;
 		}
 		.inner{
 			height: 800px;
@@ -48,7 +48,7 @@
 		$('img').eq(i).css({
 			'left':i*100,
 			'zIndex':$('img').length-i,
-			'transform':'scale('+(1-(i/20))+')',
+			'transform':'scale('+(1-(i/20))+') translateZ('+i*-100+'px)',
 			'transition': 'transform 1.2s,left 1s ease '+(i/20)+'s'
 			
 		})
@@ -71,7 +71,7 @@
 				$('img').eq(i).css({
 					'left':i*100,
 					'zIndex':$('img').length-i,
-					'transform':'scale('+(1-(i/20))+')',
+					'transform':'scale('+(1-(i/20))+') translateZ('+i*-100+'px)',
 					'transition': 'transform 1.2s,left 1s ease '+(i/20)+'s'
 				})
 			})

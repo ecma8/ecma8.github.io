@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/js/jquery-1.11.3.js"></script>
+    <script>
+        $(function(){
+            $.fn.extend({
+                lun:function(imgBox,imgS,left,right,num1){
+                    var imgBox=imgBox;
+                    var imgS=imgS;
+                    var imgW=imgS.width();
+                    var imgN=imgS.length;
+                    var llen=0;
+                    var rlen=imgS.length-4;
+                    imgBox.width(imgW*imgN)
+                    left.click(function(){
+                        if(llen<1)
+                        {
+                            return;
+                        }
+                        else{
+                            llen-=num1;
+                            rlen+=num1;
+                            imgBox.animate({marginLeft: "+="+imgW*num1+"px",},200)
+                        }
+                    })
+                    right.click(function(){
+                        if(rlen<1)
+                        {
+                            return;
+                        }
+                        else{
+                            llen+=num1;
+                            rlen-=num1;
+                            imgBox.animate({marginLeft: "-="+imgW*num1+"px",},200);
+                        }
+                    })
+                }
+            })
+            $('.box').lun($('.img-box'),$('.img'),$('.left'),$('.right'),3)
+        })
+    </script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li
+        {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .box
+        {
+            width:840px;
+            height:200px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+        .left
+        {
+            width: 30px;
+            height: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -25px;
+            line-height: 50px;
+            text-align: center
+        }
+        .right
+        {
+            width: 30px;
+            height: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -25px; 
+            line-height: 50px;
+            text-align: center  
+        }
+        .win
+        {
+            width: 800px;
+            height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .img-box
+        {
+            width: auto;
+            overflow: hidden;
+            height: 100%;
+
+        }
+        .img-box .img
+        {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+        .img-box .img div
+        {
+            box-sizing: border-box;
+            border: 1px solid #ff6700;
+            width: 180px;
+            height: 200px;
+            background: #ccc;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 200px;
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left"><</div>
+        <div class="win">
+            <ul class="img-box">
+                <li class="img"><div>1</div></li>
+                <li class="img"><div>2</div></li>
+                <li class="img"><div>3</div></li>
+                <li class="img"><div>4</div></li>
+                <li class="img"><div>5</div></li>
+                <li class="img"><div>6</div></li>
+                <li class="img"><div>7</div></li>
+                <li class="img"><div>8</div></li>
+                <li class="img"><div>9</div></li>
+                <li class="img"><div>10</div></li>
+                <li class="img"><div>11</div></li>
+                <li class="img"><div>12</div></li>
+                <li class="img"><div>13</div></li>
+                <li class="img"><div>14</div></li>
+            </ul>
+        </div>
+        <div class="right">></div>
+    </div>
+</body>
+</html>
