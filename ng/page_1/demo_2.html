@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="" ng-app='myapp'>
+<head>
+	<meta charset="UTF-8">
+	<title>ng特性:2.依赖注入</title>
+	<link rel="stylesheet" href="lib/bootstrap.css">
+	<script src='lib/angular.js'></script>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<input type="text" ng-model='username'>
+		<h1>你输入了：{{username}}</h1>
+	</div>
+</body>
+<script>
+	var app=angular.module('myapp',[])
+	app.controller('ctrl', ['$scope', function ($scope) {
+		$scope.username="123"
+	}])
+</script>
+</html>
