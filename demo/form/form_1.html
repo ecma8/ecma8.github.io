@@ -58,28 +58,14 @@
 		}
 	});
 	$('#back').click(function(){
-		if($('#back').prop('checked'))
-		{
-			$('.xxx').find('input').each(function(i) {
-				if($(this).prop('checked')){
-					$(this).prop('checked',false)
-				}
-				else{
-					$(this).prop('checked',true)
-				}
-			});
-		}
-		else{
-			$('.xxx').find('input').each(function(i) {
-				if($(this).prop('checked')){
-					$(this).prop('checked',false)
-
-				}
-				else{
-					$(this).prop('checked',true)
-				}
-			});
-		}
+		$('.xxx').find('input').each(function(i) {
+			if($(this).prop('checked')){
+				$(this).prop('checked',false)
+			}
+			else{
+				$(this).prop('checked',true)
+			}
+		});
 	});
 </script>
 </html>
