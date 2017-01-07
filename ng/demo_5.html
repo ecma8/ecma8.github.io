@@ -14,7 +14,7 @@
 <script>
 	var app = angular.module('myapp', []);
 	app.controller('ctrl', function($scope, $http) {
-	  $http.get("/json/index.json")
+	  $http.get("/ng/json/index.json")
 	  	.success(function (data) {
 	  		$scope.names = data.sites;
 	  	});
