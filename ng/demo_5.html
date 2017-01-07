@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="" ng-app='myapp'>
+<head>
+	<meta charset="UTF-8">
+	<title>ng-http</title>
+	<link rel="stylesheet" href="lib/bootstrap.css">
+	<script src='lib/angular.js'></script>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<div hello></div>
+	</div>
+</body>
+<script>
+	var app = angular.module('myapp', []);
+	app.controller('ctrl', function($scope, $http) {
+	  $http.get("/json/index.json")
+	  	.success(function (data) {
+	  		$scope.names = data.sites;
+	  	});
+	});
+	app.directive('hello', [function () {
+		return {
+			scope:true,
+			restrict: 'AE',
+			replace:true,
+			template:"<a ng-repeat='x in names' href='http://{{x.Url}}' >{{x.Name}} {{x.Country}}</a>"
+		};
+	}])
+</script>
+</html>
