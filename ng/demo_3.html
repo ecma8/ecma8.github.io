@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="" ng-app='myapp'>
+<head>
+	<meta charset="UTF-8">
+	<title>ng-repeat</title>
+	<link rel="stylesheet" href="lib/bootstrap.css">
+	<script src='lib/angular.js'></script>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<div ng-repeat="lists in list">
+			<span>书名</span>
+			<span>{{lists.title}}</span>
+			<span>内容</span>
+			<span>{{lists.inner}}</span>
+		</div>
+	</div>
+</body>
+<script>
+	var app=angular.module('myapp',[])
+	app.controller('ctrl', ['$scope', function ($scope) {
+		$scope.list=[
+			{title:'123',inner:'123'},
+			{title:'123',inner:'123'},
+			{title:'123',inner:'123'}
+		]
+	}])
+</script>
+</html>

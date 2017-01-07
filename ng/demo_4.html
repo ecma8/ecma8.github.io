@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="" ng-app='myapp'>
+<head>
+	<meta charset="UTF-8">
+	<title>ng作用域</title>
+	<link rel="stylesheet" href="lib/bootstrap.css">
+	<script src='lib/angular.js'></script>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<input type="text" ng-model='name.first'>
+		<input type="text" ng-model='name.last'>
+		<p>{{name.first+ " " +name.last}}</p>
+		<input type="button" ng-click="log()" value="输出">
+	</div>
+	<div ng-controller="ctrl1">
+		<input type="text" ng-model='name.first'>
+		<input type="text" ng-model='name.last'>
+		<p>{{name.first+ " " +name.last}}</p>
+		<input type="button" ng-click="log()" value="输出">
+	</div>
+</body>
+<script>
+	var app=angular.module('myapp',[])
+	app.controller('ctrl', ['$scope', function ($scope) {
+		$scope.name={
+			first:'abc',
+			last:'456'
+		}
+		$scope.log=function(){
+			console.log(this.name);
+		}
+	}])
+	app.controller('ctrl1', ['$scope', function ($scope) {
+		$scope.name={
+			first:'abc',
+			last:'456'
+		}
+		$scope.log=function(){
+			console.log(this.name);
+		}
+	}])
+</script>
+</html>
