@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="UTF-8">
+	<title>懒加载demo2</title>
+	<link rel="stylesheet" href="../public/font/iconfont.css">
+	<style>
+		ul,li{
+			list-style: none;
+		}
+		body,html,ul,li,img,a{
+			margin: 0;
+			padding: 0;
+			color: #333;
+		}
+		div,ul{
+			width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+			font-size: 0;
+			overflow: hidden;
+		}
+		li{
+
+			height: 200px;
+			width: 200px;
+			position: relative;			
+			display: inline-block;
+		}
+		img{
+			width: 200px;
+			height: 200px;
+			background: #ccc;
+			position: absolute;
+			z-index: 0;
+			left: 0;
+			top: 0;
+		}
+		span{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			text-align: center;
+			z-index: 1;
+			font-size: 50px!important;
+			animation: myfirst 0.5s linear infinite;
+			transform-origin: center: 
+		}
+		@-webkit-keyframes myfirst
+		{
+			from {
+				-webkit-transform: rotate(0deg)
+			   }
+			to {
+				-webkit-transform: rotate(360deg)
+			}
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/1.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/2.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/3.png" alt=""></li>
+		<li>
+			<span class="iconfont">&#xe6f0;</span>
+			<img data-src="../public/img/4.png" alt=""></li>
+	</ul>
+</body>
+<script src='../public/js/jquery-1.11.3.js'></script>
+<script>
+	var i=0; 
+	setInterval(function(){
+		$('span').eq(i).hide();
+		$('img').eq(i).attr('src',$('img').eq(i).attr('data-src'));
+		i++;
+		if(i==($('img').length)-1){
+			return;
+		}
+	},100)
+</script>
+</html>
