@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../public/js/jquery-1.11.3.js"></script>
+	<link rel="stylesheet" href="../public/css/bootstrap.css">
+	<style>
+		.row{
+			text-align: center
+		}
+		.row img{
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row"><img data-src="../public/img/1.png" alt=""></div>
+		<div class="row"><img data-src="../public/img/2.png" alt=""></div>
+		<div class="row"><img data-src="../public/img/3.png" alt=""></div>
+		<div class="row"><img data-src="../public/img/4.png" alt=""></div>
+		<div class="row"><img data-src="../public/img/5.png" alt=""></div>
+		<div class="row"><img data-src="../public/img/6.png" alt=""></div>
+		<div class="row"><img data-src="../public/img/7.png" alt=""></div>
+</body>
+<script>
+	$.fn.extend({
+		navScroll:function(img,height){
+			img.eq(0).attr('src',img.eq(0).attr('data-src'))
+			$(window).scroll(function(){
+				var bodyScroll=$('body').scrollTop()+height;
+
+				img.each(function(i){
+					var floorOffset=img.eq(i).offset().top;
+					if(bodyScroll>floorOffset)
+					{
+						img.eq(i).attr('src',img.eq(i).attr('data-src'))
+					}
+				})
+			})
+		}
+	})
+	$('nav').navScroll($('.row img'),440)
+</script>
+</html>
