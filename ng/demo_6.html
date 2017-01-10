@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-animate</title>
+	<link rel="stylesheet" href="lib/bootstrap.css">
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-animate.min.js"></script>
+	<style>
+		@keyframes myChange {
+		  from {
+		      height: 100px;
+		  } to {
+		      height: 0;
+		  }
+		}
+		div {
+		  height: 100px;
+		  background-color: lightblue;
+		}
+	</style>
+</head>
+<body ng-app="app">
+	<input type="checkbox" ng-model="myCheck">
+	<div ng-show="myCheck">123456</div>
+</div>
+</body>
+<script>
+	var app=angular.module('app', ['ngAnimate'])
+</script>
+</html>
