@@ -2,7 +2,7 @@
 <html lang="" ng-app='myapp'>
 <head>
 	<meta charset="UTF-8">
-	<title>ng-options</title>
+	<title>ng-http</title>
 	<link rel="stylesheet" href="lib/bootstrap.css">
 	<script src='lib/angular.js'></script>
 	<style>
@@ -21,10 +21,16 @@
 </head>
 <body>
 	<div ng-controller="ctrl">
-	<select ng-model="xxx" ng-options="x.create_time for x in data" ng-change="change()">
-	</select>
-	<div>{{xxx.title}}</div>
-	<div>{{xxx.create_time}}</div>
+<!-- 		<div hello></div>	 -->
+		<table>
+			<tr ng-repeat="x in data">
+			   	<td>{{ $index+1 }}</td>
+			    <td>{{ x.id }}</td>
+			    <td>{{ x.title }}</td>
+			    <td>{{ x.content }}</td>
+			    <td>{{ x.create_time }}</td>
+			</tr>
+		</table>
 	</div>
 </body>
 <script>
@@ -34,26 +40,6 @@
 	  	.success(function (msg) {
 	  		$scope.data = msg;
 	  	});
-	  	$scope.change=function(){
-
-	  	};
 	});
-	// app.directive('hello', [function () {
-	// 	return {
-	// 		scope:true,
-	// 		restrict: 'AE',
-	// 		replace:true,
-	// 		template:"<a ng-repeat='x in data' href='http://{{x.id}}' >{{x.title}} {{x.Country}}<br/></a>"
-	// 	};
-	// }])
-	// app.directive('xxx', [function () {
-	// 	return {
-	// 		restrict: 'AE',
-	// 		replace:true,
-	// 		link: function (scope, iElement, iAttrs) {
-				
-	// 		}
-	// 	};
-	// }])
 </script>
 </html>
