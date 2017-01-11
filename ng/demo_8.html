@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="" ng-app='myapp'>
+<head>
+	<meta charset="UTF-8">
+	<title>ng-http</title>
+	<link rel="stylesheet" href="lib/bootstrap.css">
+	<script src='lib/angular.js'></script>
+	<style>
+		table, th , td  {
+		 	border-collapse: collapse;
+		  	padding: 5px;
+		  	border: 1px solid #0ff
+		}
+		table tr:nth-child(odd) {
+		  	background-color: #f1f1f1;
+		}
+		table tr:nth-child(even) {
+		  	background-color: #ffffff;
+	}
+	</style>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<select ng-model='xxx'>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+		</select>
+		<table>
+			<tr ng-repeat="x in data">
+			   	<td>{{ $index+1 }}</td>
+			    <td>{{ x.id }}</td>
+			    <td>{{ x.title }}</td>
+			    <td>{{ x.content }}</td>
+			    <td>{{ x.create_time }}</td>
+			</tr>
+		</table>
+		<input type="button" ng-click="add()" value="添加">
+	</div>
+</body>
+<script>
+	var app = angular.module('myapp', []);
+	app.controller('ctrl', function($scope, $http) {
+	  	$http.get("/ng/json/index1.json")
+	  	.success(function (msg) {
+	  		$scope.data = msg;
+	  	});
+	  	
+	  	$scope.add=function(){
+	  		if($scope.xxx==undefined)
+	  		{
+	  			return false;
+	  		}
+	  		var html={"id":$scope.xxx,"title":"data99","content":"99","create_time":"2016-07-27 14:08:11"}
+	  		$scope.data.push(html)
+	  	}
+	});
+</script>
+</html>
