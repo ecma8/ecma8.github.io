@@ -1,0 +1,135 @@
+html #layui_layer_skinmudustylecss{display:none; position: absolute; width:1989px;}
+body .layer-ext-mudu {
+	font-size: 14px;
+	color: #787878;
+	background-color: #fff;
+	border: 1px solid #c9ccd0;
+	border-radius: 8px;
+	box-shadow: 1px 2px 2px rgba(0,0,0,.15);
+}
+body .layer-ext-mudu .layui-layer-title {
+	position: relative;
+	padding-left: 20px;
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	background-color: #3c8cd2;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+body .layer-ext-mudu .layui-layer-content {
+	padding: 0;
+	min-width: 360px;
+	font-size: 14px;
+	text-align: center;
+	box-sizing: content-box;
+	overflow: hidden;
+}
+body .layer-ext-mudu .layui-layer-content-tip {
+	border-radius: 5px;
+}
+.layui-layer-tips i.layui-layer-TipsT{
+
+}
+.layui-layer-tips i.layui-layer-TipsR{
+	left: -16px !important;
+	border-bottom-color: rgba(0, 0, 0, 0) !important;
+	border-bottom-style: dashed !important;
+}
+.layui-layer-tips i.layui-layer-TipsB{
+	
+}
+.layui-layer-tips i.layui-layer-TipsL{
+	
+}
+body .layer-ext-mudu .layui-layer-content i{
+	margin-right: 5px;
+	font-size: 16px;
+}
+body .layer-ext-mudu .layui-layer-content i.success{
+  	color: #46a037;
+}
+body .layer-ext-mudu .layui-layer-content i.warning{
+  	color: #f08700;
+}
+body .layer-ext-mudu .layui-layer-content i.error{
+  	color: #e65555;
+}
+body .layer-ext-mudu .layui-layer-btn {
+	padding: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-size: 0;
+	text-align: center;
+	background-color: #fafafa;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+body .layer-ext-mudu .layui-layer-setwin .layui-layer-close1 {
+	width: 14px; height: 14px; background:url(close.png) no-repeat;
+}
+body .layer-ext-mudu .layui-layer-setwin .layui-layer-close1:hover {
+	width: 14px; height: 14px; background:url(close-hover.png) no-repeat;
+}
+body .layer-ext-mudu .layui-layer-setwin .layui-layer-close1:active {
+	width: 14px; height: 14px; background:url(close.png) no-repeat;
+}
+body .layer-ext-mudu .layui-layer-btn a {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: 0 5px;
+	padding: 0;
+	width: 110px;
+	height: 33px;
+	line-height: 31px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	vertical-align: middle;
+}
+body .layer-ext-mudu .layui-layer-btn a::after {
+	position: absolute;
+	display: block;
+	margin: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	border-radius: 5px;
+}
+body .layer-ext-mudu .layui-layer-btn0 {
+	color: #fff;
+ 	background-color: #3c8cd2;
+  	border: 1px solid #1464aa;
+}
+body .layer-ext-mudu .layui-layer-btn0::after {
+	border-top: 1px solid #77aae0;
+}
+body .layer-ext-mudu .layui-layer-btn0:hover {
+	background-color: #50a0e6;
+}
+body .layer-ext-mudu .layui-layer-btn0:hover {
+	background-color: #3c8cd2;
+}
+
+body .layer-ext-mudu .layui-layer-btn1 {
+	color: #585858;
+  	background-color: #eff0f3;
+  	border: 1px solid #c8cbcf;
+}
+body .layer-ext-mudu .layui-layer-btn1::after {
+	border-top: 1px solid #fff;
+}
+body .layer-ext-mudu .layui-layer-btn1:hover {
+	background-color: #fff;
+}
+body .layer-ext-mudu .layui-layer-btn1:active {
+	background-color: #eff0f3;
+}
