@@ -3,89 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="jwplayer.js"></script>
-    <script src="jquery-1.11.3.js"></script>
-	<script>jwplayer.key="CvB/Dv+F8c0GVCXYH5rRNFnOeEV9PkTfpoTGJg==";</script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        video{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-	<div id="container"></div>  
-	<input type="button" class="player-play" value="播放" />  
-	<input type="button" class="player-stop" value="停止" />  
-	<input type="button" class="player-status" value="取得状态" />  
-	<input type="button" class="player-current" value="当前播放秒数" />  
-	<input type="button" class="player-goto" value="转到第30秒播放" />  
-	<input type="button" class="player-length" value="视频时长(秒)" />  
+	<video src="http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8" controls="controls"></video>
 </body>
-<script type="text/javascript">  
-    var thePlayer;  //保存当前播放器以便操作  
-    $(function() {  
-        thePlayer = jwplayer('container').setup(playerData);  
-        var playerData = {
-            act_id:actId,
-            stream:'3ekjmr',
-            url:'http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8',
-            coverImg:'http://cdn13.mudu.tv/assets/upload/148187284344335.jpg?imageView2/0/w/480/h/272/q/100',
-            live_status:'0',
-            autostart:false,
-            playerStatus:'',
-            viewNumURL : '/?c=activity&a=Analysis&id=24100&platform=mobile',
-            onlineURL : '/?c=activity&a=online&id=24100',
-            pc_logo_url: 'http://cdn13.mudu.tv/assets/upload/148187320035928.png',
-            mobile_logo_url: 'http://cdn13.mudu.tv/assets/upload/148187320035928.png',
-            logo_position: '1',
-            live_logo_status: '1',
-            vod_logo_status: '0',
-            logo_proportion: '0.261023'
-        };
-
-        //播放 暂停  
-        $('.player-play').click(function() {  
-            if (thePlayer.getState() != 'PLAYING') {  
-                thePlayer.play(true);  
-                this.value = '暂停';  
-            } else {  
-                thePlayer.play(false);  
-                this.value = '播放';  
-            }  
-        });  
-          
-        //停止  
-        $('.player-stop').click(function() { thePlayer.stop(); });  
-          
-        //获取状态  
-        $('.player-status').click(function() {  
-            var state = thePlayer.getState();  
-            var msg;  
-            switch (state) {  
-                case 'BUFFERING':  
-                    msg = '加载中';  
-                    break;  
-                case 'PLAYING':  
-                    msg = '正在播放';  
-                    break;  
-                case 'PAUSED':  
-                    msg = '暂停';  
-                    break;  
-                case 'IDLE':  
-                    msg = '停止';  
-                    break;  
-            }  
-            alert(msg);  
-        });  
-          
-        //获取播放进度  
-        $('.player-current').click(function() { alert(thePlayer.getPosition()); });  
-  
-        //跳转到指定位置播放  
-        $('.player-goto').click(function() {  
-            if (thePlayer.getState() != 'PLAYING') {    //若当前未播放，先启动播放器  
-                thePlayer.play();  
-            }  
-            thePlayer.seek(30); //从指定位置开始播放(单位：秒)  
-        });  
-          
-        //获取视频长度  
-        $('.player-length').click(function() { alert(thePlayer.getDuration()); });  
-    });  
-</script>  
-</html>
+</html> 
