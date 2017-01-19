@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<script src="jwplayer.js"></script>
+    <script src="jquery-1.11.3.js"></script>
+    <script>jwplayer.key="CvB/Dv+F8c0GVCXYH5rRNFnOeEV9PkTfpoTGJg==";</script>
+	<script src="jweixin-1.0.0.js"></script>
+    <style>
+        body,html{
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+	<div id="container" style="width: 100%"></div>  
+</body>
+<script type="text/javascript">  
+    var thePlayer;  //保存当前播放器以便操作  
+    $(function() {  
+        thePlayer = jwplayer('container').setup({  
+            flashplayer: 'jwplayer.flash.swf',  
+            file: 'http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8',  
+            width: '100%',  
+            height: 350,  
+            dock: false,
+            fullscreen:false,
+            live_status:'0',
+            autostart:false,
+            playerStatus:'',
+            viewNumURL : '/?c=activity&a=Analysis&id=24100&platform=mobile',
+            onlineURL : '/?c=activity&a=online&id=24100',
+            pc_logo_url: 'http://cdn13.mudu.tv/assets/upload/148187320035928.png',
+            mobile_logo_url: 'http://cdn13.mudu.tv/assets/upload/148187320035928.png',
+            logo_position: '1',
+            live_logo_status: '1',
+            vod_logo_status: '0',
+            logo_proportion: '0.261023'
+        });  
+    });  
+</script>  
+</html>
