@@ -8,7 +8,7 @@
 <body>
 	<form action="">
 		<input type="text" placeholder="请输入数组的长度(从0开始)" class="text" style="width: 180px;" pattern="/^\d+$/">
-		<input type="text" placeholder="请输入需要生成的数组长度" class="text" style="width: 180px;">
+		<input type="text" placeholder="请输入需要生成的数组长度" class="text1" style="width: 180px;">
 		<input type="button" value="点击生成随机数组" class="button">
 	</form>
 </body>
@@ -43,7 +43,7 @@
     	for (var i = 0; i < $('.text').val(); i++) {
     		arr.push(i);
     	}
-    	document.write(getArrayItems(arr,arr.length));
+    	document.write(getArrayItems(arr,$('.text1').val()));
     });
 </script>
 </html>
