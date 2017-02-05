@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="">
+<head>
+	<meta charset="UTF-8" />
+	<title>获取设备摄像头拍照上传</title>
+	<script src="../public/js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<video src="" id="video"></video>
+	<canvas id="canvas" width="640" height="480"></canvas>
+	<input type="button" value="拍照" id="button"/>
+	<input type="button" value="上传" id="button1"/>
+	<img src=""/>
+</body>
+<script type="text/javascript">	
+	canvas = document.getElementById("canvas"),          
+    context = canvas.getContext("2d"), 
+	navigator.getUserMedia || (navigator.getUserMedia = navigator.mozGetUserMedia ||  navigator.webkitGetUserMedia || navigator.msGetUserMedia);
+	if (navigator.getUserMedia) {
+		navigator.getUserMedia({
+		    video: { width: 640, height: 320 },
+		    audio: true
+		}, function(stream){
+			var video = document.getElementById('video');
+			if (window.URL) {
+		        video.src = window.URL.createObjectURL(stream);
+		        console.log(stream)
+		    } else {
+		        video.src = stream;
+		    }
+		
+		    video.autoplay = true;
+		}, function(){
+			alert('error')
+		});
+	} else {
+	    console.log('your browser not support getUserMedia');
+	}
+	$("#button").click(function () {          
+         context.drawImage(video, 0, 0, 640, 480);
+    });
+//  $("#button1").click(function () {     
+//  	var imgData = canvas.toDataURL();
+//  	$('img').attr('src',imgData);
+//  	$.ajax({
+//  		type:"post"
+//  		data: { "url": "value" },
+//  		success:function(){
+//  			
+//  		}
+//  	});
+//  });
+    
+    
+</script>
+</html>
