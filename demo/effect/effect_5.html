@@ -119,7 +119,7 @@
     $('.span1').eq(0).animate({'margin-left':0}, 5000 ,function(){});
     function move(){
         num++;
-        imgbox.animate({'left':-ww}, 1200,function(){
+        imgbox.animate({'left':-ww}, 2000,function(){
             $('.img:eq(0)').appendTo(imgbox);
             imgbox.css('left',0)
         });
@@ -144,7 +144,7 @@
         clearInterval(t);
         $('.dir_one').find('span').css('background','rgba(0, 0, 0, 0.7)')
         $(this).find('span').eq(0).css('background','#ccc');
-        imgbox.animate({'left':-ww*index}, 1200,function(){});
+        imgbox.animate({'left':-ww*index}, 2000,function(){});
     });
 </script>
 </html>
