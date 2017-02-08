@@ -42,14 +42,18 @@
 			color: #f93;
 		}
 		table{
-			border-spacing: 0;
 			border-collapse: collapse;
-			
 		}
+		table tr:nth-of-type(odd){
+			background: #ccc;
+		}
+/* 		table tr td:nth-of-type(odd){
+			background: #ccc;
+		} */
 	</style>
 </head>
 <body>
-	<table border="" cellspacing="" cellpadding="" id="table1">
+	<table id="table1">
 		<tr>
 			<th>Header</th>
 		</tr>
@@ -160,7 +164,7 @@
 		</tr>
 	</table>
 	<div class="tabpage" id="page1"></div>
-	<table border="" cellspacing="" cellpadding="" id="table2">
+	<table id="table2">
 		<tr>
 			<th>Header</th>
 		</tr>
