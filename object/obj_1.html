@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数VS变量</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'microsoft yahei'; 
+			font-size: 20px;
+		}
+		pre{
+			background: #000;
+			color: #fff;
+			width: 600px;
+			padding: 20px 0;
+		}
+		p{
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.1函数方式</p>
+<pre>
+	function checkName()
+	{
+		alert(123)
+	}
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.2变量方式</p>
+<pre>
+	var checkName=function()
+	{
+		alert(123)
+	}
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.3对象收集变量</p>
+<pre>
+	var checkObject={
+		checkName:function(){
+			alert(123)
+		}
+	}
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.4对象的另外一种形式</p>
+<pre>
+	var checkObject=function(){};
+	checkObject.checkName=function(){
+		alert(123)
+	}
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.5真假对象</p>
+<pre>
+	var checkObject=function(){
+		return{
+			checkName:function(){
+				alert(123)
+			}
+		}
+	}
+	var a=checkObject();
+	a.checkName();
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.6类的实现</p>
+<pre>
+	var a=checkObject=function(){
+		this.checkName=function(){
+			alert(123)
+		}
+	}
+	var a=new checkObject();
+	a.checkName();
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.7函数的原型</p>
+<pre>
+	////写法一////
+	var checkObject=function(){}
+	checkObject.prototype.checkName=function(){
+		alert(123)
+	}
+	var a=new checkObject();
+	a.checkName();
+	////写法二////
+	var checkObject=function(){}
+	checkObject.prototype={
+		checkName:function(){
+			alert(123)
+		}
+	}
+	var a=new checkObject();
+	a.checkName();
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.8链式调用</p>
+<pre>
+	var checkObject=function(){}
+	checkObject.prototype={
+		checkName:function(){
+			alert(123);
+			return this;
+
+		},
+		checkEmail:function(){
+			alert(456)
+			return this;
+		}
+	}
+	var a=new checkObject();
+	a.checkName().checkEmail();
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.9函数的祖先</p>
+<pre>
+	Function.prototype.addMethod=function(name,fn){
+		this.name=fn;
+	}
+	var methods=function(){};
+	methods.addMethod('checkName',function(){
+		alert(123)
+	})
+	methods.checkName();
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.10链式添加 链式调用</p>
+<pre>
+	Function.prototype.addMethod=function(name,fn){
+		this[name]=fn;
+		return this;
+	}
+	var methods=function(){};
+	methods.addMethod('checkName',function(){
+		alert(123)
+		return this;
+	}).addMethod('checkEmail',function(){
+		alert(456)
+		return this;
+	})
+	methods.checkName().checkEmail();
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.11类的链式添加 链式调用</p>
+<pre>
+	Function.prototype.addMethod=function(name,fn){
+		this.prototype[name]=fn;
+		return this;
+	}
+	var methods=function(){};
+	methods.addMethod('checkName',function(){
+		alert(123)
+	}).addMethod('checkEmail',function(){
+		alert(456)
+	})
+	var a=new methods();
+	a.checkName();
+	a.checkEmail();
+</pre>
+</body>
+<script>
+	
+</script>
+</html>

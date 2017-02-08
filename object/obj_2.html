@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数VS变量</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: 'microsoft yahei'; 
+			font-size: 20px;
+		}
+		pre{
+			background: #000;
+			color: #fff;
+			width: 600px;
+			padding: 20px 0;
+		}
+		p{
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2.1封装</p>
+<pre>
+	var Book=function(id,bookname,price){
+		this.id=id;
+		this.bookname=bookname;
+		this.price=price;
+	}
+	Book.prototype.display=function(){
+		alert('这本书可以看了')
+	}
+	var book=new Book(10,'javascript设计模式',50);
+	book.display();
+	console.log(book.id);
+	console.log(book.bookname);
+	console.log(book.price);
+</pre>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2.1面向对象和面向过程</p>
+<pre>
+	
+</pre>
+</body>
+<script>
+	var Book=function(id,bookname,price){
+		this.id=id;
+		this.bookname=bookname;
+		this.price=price;
+	}
+	Book.prototype.display=function(){
+		alert('这本书可以看了')
+	}
+	var book=new Book(10,'javascript设计模式',50);
+	console.log(book.id);
+	console.log(book.bookname);
+	console.log(book.price);
+</script>
+</html>
