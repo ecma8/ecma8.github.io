@@ -66,14 +66,15 @@
 	$('.button').click(function(){
 		if($.trim($('.text').val())=='')
 		{
-			return false
+			alert('不能为空')
 			$('.text').val('')
-			
+			return false
 		}
 		if($.inArray($.trim($('.text').val()),arr)!=-1)
 		{
-			return false
+			alert('不能重复')
 			$('.text').val('')
+			return false
 		}
 		else{
 			add($('.box'),'<a href="javascript:;"><span>'+$.trim($('.text').val())+'</span><b>+</b></a>');
