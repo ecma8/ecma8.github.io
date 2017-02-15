@@ -4,60 +4,123 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src='echarts.js'></script>
+	<script src='../demo/public/js/jquery-1.11.3.js'></script>
 </head>
 <body>
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div id="main" style="width: 900px;height:400px;"></div>
+    <select name="" id="">
+    	<option value="7">1</option>
+    	<option value="15">2</option>
+    	<option value="30">3</option>
+    </select>
 </body>
 <script type="text/javascript">
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
-
-    // 指定图表的配置项和数据
-    myChart.setOption({
-	    title: {
-	        text: '堆叠区域图'
-	    },
-	    tooltip : {
-	        trigger: 'axis'
-	    },
-	    legend: {
-	        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
-	    },
-	    toolbox: {
-	        feature: {
-	            saveAsImage: {}
-	        }
-	    },
-	    grid: {
-	        left: '3%',
-	        right: '4%',
-	        bottom: '3%',
-	        containLabel: true
-	    },
-	    xAxis : [
-	        {
-	            type : 'category',
-	            boundaryGap : false,
-	            data : ['周一','周二','周三','周四','周五','周六','周日']
-	        }
-	    ],
-	    yAxis : [
-	        {
-	            type : 'value'
-	        }
-	    ]
-	});
-	var str = [{"name":"\u90ae\u4ef6\u8425\u9500","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[0, 132, 101, 134, 90, 230, 210]"},{"name":"\u8054\u76df\u5e7f\u544a","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[0, 182, 191, 234, 290, 330, 310]"}] 
-	var regS = new RegExp('\\"\\[',"g");
-	var regS1 = new RegExp('\\]\\"',"g");
-	var newarr=[];
-	for(var i=0;i<str.length;i++)
-	{
-		var xx=JSON.stringify(str[i]).replace(regS,"[").replace(regS1,"]");
-		newarr.push(JSON.parse(xx))
+    Array.prototype.max = function() {  
+    	var max = this[0]; 
+    	var len = this.length;  
+	for(var i = 1; i < len; i++)
+		{  
+			if (this[i] > max) 
+				{  
+					max = this[i];  
+				}  
+			} return max;
+		} 
+   	var str = [{"name":"\u90ae\u4ef6\u8425\u9500","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[0, 132, 132,132, 132, 132, 132, 101, 134, 90, 230, 210, 90, 230, 210,0, 132, 132,132, 132, 132, 132, 101, 134, 90, 2300, 2100, 90, 230, 450]"}]
+	function regrp(str){
+		var regS = new RegExp('\\"\\[',"g");
+		var regS1 = new RegExp('\\]\\"',"g");
+		var newarr=[];
+		for(var i=0;i<str.length;i++)
+		{
+			var xx=JSON.stringify(str[i]).replace(regS,"[").replace(regS1,"]");
+			newarr.push(JSON.parse(xx));
+		}
+		return newarr;
 	}
-	myChart.setOption({
-    	series : newarr
-    });
+	var max=regrp(str)[0].data.max().toString();
+	var maxLenth='';
+	for(var i=0;i<max.length-1;i++)
+	{
+		maxLenth+='0';
+	}
+	var maxnum=(parseInt(max[0])+1)*parseInt(1+maxLenth)
+	function GetDateStr(AddDayCount) { 
+		var dd = new Date(); 
+		dd.setDate(dd.getDate()+ AddDayCount);
+		var y = dd.getFullYear(); 
+		var m = (dd.getMonth()+1).toString();
+		var d = dd.getDate().toString()
+		return y+"-"+m+"-"+d;
+	}
+    function char(arr,timedata,max){
+    	 myChart.setOption({
+		    title: {
+		        text: '堆叠区域图'
+		    },
+		    tooltip : {
+		        trigger: 'axis'
+		    },
+		    legend: {
+		        data:['\u90ae\u4ef6\u8425\u9500']
+		    },
+		    toolbox: {
+		        feature: {
+		            saveAsImage: {}
+		        }
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis : [
+		        {
+		            type : 'category',
+		            
+		            data : timedata.reverse()
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value',
+		            min: 0,
+		            max: max,
+		            // splitNumber:max/10
+		        }
+		    ],
+		    series : arr
+		});
+    }
+    
+    function dataArr(x)
+    {
+    	var timedata=[];
+    	for(var i=0;i<x;i++)
+		{
+		   	timedata.push(GetDateStr(-i));
+		}
+		return timedata
+    }
+	char(regrp(str),dataArr(7),maxnum)
+    $('select').change(function(){
+    	var timedata=[]
+    	var num=$('select').children(':selected').val();
+    	if(num==7)
+    	{
+    		char(regrp(str),dataArr(7),maxnum)
+    	}
+    	else if(num==15)
+    	{
+    		char(regrp(str),dataArr(15),maxnum)
+    	}
+    	else if(num==30)
+    	{
+    		char(regrp(str),dataArr(30),maxnum)
+    	}
+    })
     </script>
 </html>
