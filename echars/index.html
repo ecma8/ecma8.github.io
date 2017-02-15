@@ -13,7 +13,7 @@
     var myChart = echarts.init(document.getElementById('main'));
 
     // 指定图表的配置项和数据
-    var option = {
+    myChart.setOption({
 	    title: {
 	        text: '堆叠区域图'
 	    },
@@ -45,53 +45,19 @@
 	        {
 	            type : 'value'
 	        }
-	    ],
-	    series : [
-	        {
-	            name:'邮件营销',
-	            type:'line',
-	            stack: '总量',
-	            areaStyle: {normal: {}},
-	            data:[120, 132, 101, 134, 90, 230, 210]
-	        },
-	        {
-	            name:'联盟广告',
-	            type:'line',
-	            stack: '总量',
-	            areaStyle: {normal: {}},
-	            data:[220, 182, 191, 234, 290, 330, 310]
-	        },
-	        {
-	            name:'视频广告',
-	            type:'line',
-	            stack: '总量',
-	            areaStyle: {normal: {}},
-	            data:[150, 232, 201, 154, 190, 330, 410]
-	        },
-	        {
-	            name:'直接访问',
-	            type:'line',
-	            stack: '总量',
-	            areaStyle: {normal: {}},
-	            data:[320, 332, 301, 334, 390, 330, 320]
-	        },
-	        {
-	            name:'搜索引擎',
-	            type:'line',
-	            stack: '总量',
-	            label: {
-	                normal: {
-	                    show: true,
-	                    position: 'top'
-	                }
-	            },
-	            areaStyle: {normal: {}},
-	            data:[820, 932, 901, 934, 1290, 1330, 1320]
-	        }
 	    ]
-	};
-
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+	});
+	var str = [{"name":"\u90ae\u4ef6\u8425\u9500","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[0, 132, 101, 134, 90, 230, 210]"},{"name":"\u8054\u76df\u5e7f\u544a","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[0, 182, 191, 234, 290, 330, 310]"}] 
+	var regS = new RegExp('\\"\\[',"g");
+	var regS1 = new RegExp('\\]\\"',"g");
+	var newarr=[];
+	for(var i=0;i<str.length;i++)
+	{
+		var xx=JSON.stringify(str[i]).replace(regS,"[").replace(regS1,"]");
+		newarr.push(JSON.parse(xx))
+	}
+	myChart.setOption({
+    	series : newarr
+    });
     </script>
 </html>
