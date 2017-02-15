@@ -7,7 +7,10 @@
 		window.onload=function(){
 			var x = navigator.userAgent.toLowerCase();
 			console.log(x)
-			if(x.indexOf('mobile')!=-1)
+			if(x.indexOf('ipad')!=-1){
+				alert('这是ipad')
+			}
+			else if(x.indexOf('mobile')!=-1)
 			{
 				alert('这是手机端')
 			}
