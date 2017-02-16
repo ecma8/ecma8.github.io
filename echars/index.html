@@ -20,15 +20,16 @@
     Array.prototype.max = function() {  
     	var max = this[0]; 
     	var len = this.length;  
-	for(var i = 1; i < len; i++)
+		for(var i = 1; i < len; i++)
 		{  
 			if (this[i] > max) 
 				{  
 					max = this[i];  
 				}  
-			} return max;
+			} 
+			return max;
 		} 
-   	var str = [{"name":"\u90ae\u4ef6\u8425\u9500","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[0, 132, 132,132, 132, 132, 132, 101, 134, 90, 230, 210, 90, 230, 210,0, 132, 132,132, 132, 132, 132, 101, 134, 90, 2300, 2100, 90, 230, 450]"}]
+   	var str = [{"name":"\u90ae\u4ef6\u8425\u9500","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[1000, 1302, 1302,1302, 1320, 1320, 1232, 101, 134, 90, 230, 210, 90, 230, 210, 800, 132, 132,132, 132, 132, 132, 1010, 134, 90, 230, 420, 90, 23, 1000]"}]
 	function regrp(str){
 		var regS = new RegExp('\\"\\[',"g");
 		var regS1 = new RegExp('\\]\\"',"g");
@@ -79,6 +80,7 @@
 		    },
 		    xAxis : [
 		        {
+		        	name :'这是x轴',
 		            type : 'category',
 		            
 		            data : timedata.reverse()
@@ -86,10 +88,11 @@
 		    ],
 		    yAxis : [
 		        {
+		        	name :'这是x轴',
 		            type : 'value',
 		            min: 0,
 		            max: max,
-		            // splitNumber:max/10
+		            splitNumber:10
 		        }
 		    ],
 		    series : arr
