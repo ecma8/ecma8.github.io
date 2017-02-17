@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .clock
+        {
+            width: 200px;
+            height: 200px;
+            border:2px solid #888;
+            background: repeating-radial-gradient(#fff,#ccc);
+            border-radius: 100px;
+            margin: 100px auto;
+            position: relative;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var t;
+            var clock=document.getElementsByTagName("div")[0];
+            dragMark(clock);
+            var time=new Date();
+            var ha=time.getHours()*30-90+(time.getMinutes()*6/12);
+            var ma=time.getMinutes()*6-90;
+            var sa=time.getSeconds()*6-90;
+            var h=dragpointer(clock,ha,50,7,"#000");
+            var m=dragpointer(clock,ma,70,4,"#000");
+            var s=dragpointer(clock,sa,90,2,"red");
+            t=setInterval(move,1000);
+            function move(){
+                time=new Date();
+                ha=time.getHours()*30-90+(time.getMinutes()*6/12);
+                ma=time.getMinutes()*6-90;
+                sa=time.getSeconds()*6-90;
+                h.style.transform="rotate("+ha+"deg)";
+                m.style.transform="rotate("+ma+"deg)";
+                s.style.transform="rotate("+sa+"deg)";
+                if(sa==-90||flag==true)
+                {
+                    s.style.transition="";
+                    flag=false;
+                }
+                else
+                {
+                    s.style.transition="all 0.3s cubic-bezier(.88,-0.75,.02,1.49)"
+                }
+            }
+            var flag=false;
+            window.onblur=function(){
+                clearInterval(t);
+            };
+            window.onfocus=function(){
+                flag=true;
+                t=setInterval(move,1000);
+            };
+            function dragMark(clock)
+            {
+
+                for(var i=0;i<60;i++)
+                {
+                    var widths,heights;
+                    if(i%5==0)
+                    {
+                        widths=4;
+                        heights=10;
+                    }
+                    else
+                    {
+                        widths=3;
+                        heights=5;
+                    }
+                    var div=document.createElement("div");
+                    div.style.cssText="width:"+widths+"px;height:"+heights+"px;background:#aaa;position:absolute;top:0;left:0;transform:translate(100px,0) rotate("+i*6+"deg);transform-origin:0 100px";
+                    clock.appendChild(div);
+                }
+            }
+            function dragpointer(clock,a,w,h,c)
+            {
+                var a=a||0;
+                var w=w||40;
+                var h=h||10;
+                var c=c||"#000";
+                var pointer=document.createElement("div");
+                pointer.style.cssText="width:"+w+"px;height:"+h+"px;background:"+c+";position:absolute;top:50%;left:50%;transform:rotate("+a+"deg);transform-origin:left center";
+                clock.appendChild(pointer);
+                return pointer;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="clock">
+        
+    </div>
+</body>
+</html>

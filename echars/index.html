@@ -7,7 +7,7 @@
 	<script src='../demo/public/js/jquery-1.11.3.js'></script>
 </head>
 <body>
-    <div id="main" style="width: 900px;height:400px;"></div>
+    <div id="main" style="width: 1000px;height:400px;"></div>
     <select name="" id="">
     	<option value="7">1</option>
     	<option value="15">2</option>
@@ -29,7 +29,13 @@
 			} 
 			return max;
 		} 
-   	var str = [{"name":"\u90ae\u4ef6\u8425\u9500","type":"line","stack":"\u603b\u91cf","smooth":true,"data":"[1000, 1302, 1302,1302, 1320, 1320, 1232, 101, 134, 90, 230, 210, 90, 230, 210, 800, 132, 132,132, 132, 132, 132, 1010, 134, 90, 230, 420, 90, 23, 1000]"}]
+   	var str = [
+   		{"name":"\u90ae\u4ef6\u8425\u9500",
+   		"type":"line",
+   		"stack":"\u603b\u91cf",
+   		"smooth":true,
+   		"data":"[12,13,14,15,1,1,16,55,99,0,2,2,9,2,2,7,1,1,1,2,2,1,1,1,0,2,4,9,3,1]"}
+   	]
 	function regrp(str){
 		var regS = new RegExp('\\"\\[',"g");
 		var regS1 = new RegExp('\\]\\"',"g");
@@ -42,12 +48,14 @@
 		return newarr;
 	}
 	var max=regrp(str)[0].data.max().toString();
-	var maxLenth='';
+	var maxLenths='';
 	for(var i=0;i<max.length-1;i++)
 	{
-		maxLenth+='0';
+		maxLenths+='0';
 	}
-	var maxnum=(parseInt(max[0])+1)*parseInt(1+maxLenth)
+	var maxFlort=parseInt(max)/parseInt(1+maxLenths);
+	var maxCeil=Math.ceil(maxFlort);
+	var maxnum=maxCeil*parseInt(1+maxLenths);
 	function GetDateStr(AddDayCount) { 
 		var dd = new Date(); 
 		dd.setDate(dd.getDate()+ AddDayCount);
