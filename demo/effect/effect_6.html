@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="轮播进度条">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/js/jquery-1.11.3.js"></script>
+    <style>
+        .box{
+            width: 390px;
+            height: 160px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .warp{
+            width: auto;
+            overflow: hidden;
+            width: 390px;
+            height: 160px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .warp .img{
+            width: 100%;
+            height: 160px;
+            text-align: center;
+            display: table-cell;
+            vertical-align:middle;
+            position: absolute;
+        }
+        .warp .img img{
+            width: 100%;
+            vertical-align: middle;
+        }
+        .left{
+            position: absolute;
+            width: 30px;
+            left: 0;
+            height: 50px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            top: 50%;
+            margin-top: -25px;
+            z-index: 100;
+
+        }
+        .right{
+            position: absolute;
+            width: 30px;
+            right: 0;
+            height: 50px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            top: 50%;
+            margin-top: -25px;
+            z-index: 100;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="warp">
+            <div class="img"><img src="../public/img/gg-1.jpg" alt=""></div>
+            <div class="img"><img src="../public/img/gg-2.jpg" alt=""></div>
+            <div class="img"><img src="../public/img/gg-3.jpg" alt=""></div>
+            <div class="img"><img src="../public/img/gg-4.jpg" alt=""></div>
+            <div class="img"><img src="../public/img/gg-5.jpg" alt=""></div>
+        </div>
+        <div class="left"><</div>
+        <div class="right">></div>
+    </div>
+</body>
+<script>
+    var box=$('.box');
+    var imgbox=$('.warp')
+    var img=$('.img');
+    var imgl=img.length;
+    for(var i=0;i<imgl;i++)
+    {
+        img.eq(i).css('z-index',(imgl-i))
+    }
+    var num=0;
+    $('.left').click(function(event) {
+        num++;
+        if(num==imgl)
+        {
+            num=0;
+        }
+        img.eq(num).fadeIn(200).siblings().fadeOut(200);
+    });
+    $('.right').click(function(event) {
+        num--;
+        if(num<0)
+        {
+            num=imgl-1
+            img.eq(imgl-1).fadeIn(200).siblings().fadeOut(200);
+        }
+        else{
+            img.eq(num).fadeIn(200).siblings().fadeOut(200);
+        }  
+    });
+</script>
+
+</html>
