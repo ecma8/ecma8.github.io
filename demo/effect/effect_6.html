@@ -64,6 +64,34 @@
             margin: 0;
             padding: 0;
         }
+        .swipe{
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 1000; 
+            position: absolute;
+        }
+        .swipe span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            line-height: 20px;
+            text-align: center;
+            background: #ccc;
+            color: #fff;
+            z-index: 1000;
+           
+        }
+        .swipe .span{
+            color: #000;
+            background: #009494;
+        }
     </style>
 </head>
 <body>
@@ -77,38 +105,62 @@
         </div>
         <div class="left"><</div>
         <div class="right">></div>
+        <div class="swipe">
+            <span class="span">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
     </div>
 </body>
 <script>
     var box=$('.box');
     var imgbox=$('.warp')
     var img=$('.img');
+    var span=$('.swipe span');
     var imgl=img.length;
-    for(var i=0;i<imgl;i++)
-    {
-        img.eq(i).css('z-index',(imgl-i))
-    }
     var num=0;
-    $('.left').click(function(event) {
+    var t=setInterval(move,2000);
+    function move(){
         num++;
         if(num==imgl)
         {
             num=0;
         }
         img.eq(num).fadeIn(200).siblings().fadeOut(200);
-    });
+        span.eq(num).addClass('span').siblings().removeClass('span')
+    }
+    for(var i=0;i<imgl;i++)
+    {
+        img.eq(i).css('z-index',(imgl-i))
+    }
+    
     $('.right').click(function(event) {
+        num++;
+        if(num==imgl)
+        {
+            num=0;
+        }
+        img.eq(num).fadeIn(200).siblings().fadeOut(200);
+        span.eq(num).addClass('span').siblings().removeClass('span')
+        
+    });
+    $('.left').click(function(event) {
         num--;
         if(num<0)
         {
             
             num=imgl-1
             img.eq(imgl-1).fadeIn(200).siblings().fadeOut(200);
+            span.eq(imgl-1).addClass('span').siblings().removeClass('span')
         }
         else{
             img.eq(num).fadeIn(200).siblings().fadeOut(200);
+            span.eq(num).addClass('span').siblings().removeClass('span')
         }  
     });
+
 </script>
 
 </html>
