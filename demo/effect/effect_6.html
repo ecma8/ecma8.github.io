@@ -131,6 +131,12 @@
         img.eq(num).fadeIn(200).siblings().fadeOut(200);
         span.eq(num).addClass('span').siblings().removeClass('span')
     }
+    $('.box').hover(function() {
+        
+        clearInterval(t)
+    }, function() {
+        t=setInterval(move,2000);
+    });
     for(var i=0;i<imgl;i++)
     {
         img.eq(i).css('z-index',(imgl-i))
@@ -160,7 +166,12 @@
             span.eq(num).addClass('span').siblings().removeClass('span')
         }  
     });
-
+    span.click(function(event) {
+        var index=$(this).index();
+        num=index;
+        img.eq(index).fadeIn(200).siblings().fadeOut(200);
+        span.eq(index).addClass('span').siblings().removeClass('span')
+    });
 </script>
 
 </html>
