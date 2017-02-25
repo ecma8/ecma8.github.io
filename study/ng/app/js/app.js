@@ -10,7 +10,7 @@ bookStoreApp.config(function($routeProvider) {
     }).when('/list',{
     	templateUrl:'tpls/bookList.html',
     	controller:'BookListCtrl'
-    }).when('/Detail/:id', {
+    }).when('/detail/:id', {
           templateUrl: 'tpls/detail.html',
           controller: 'DetailCtrl'
     }).otherwise({
