@@ -1,0 +1,160 @@
+@import 'public.scss';
+.logo{
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  .logo-box{
+    width: $w1;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+    .logo-left{
+      float: left;
+      margin-right: 40px;
+      img{
+        width: auto;
+        height: 40px;
+        margin-top: 20px;
+      }
+    }
+    .logo-right{
+      float: left;
+      ul{
+        overflow: hidden;
+        li{
+          text-align: center;
+          float: left;
+          height: 80px;
+          line-height: 80px;
+          font-size: 20px;
+          a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-bottom: 3px solid rgba(0,0,0,0);
+            box-sizing: border-box;
+            transition: all 0.5s ease;
+            padding:0 20px;
+          }
+          a:hover{
+            color: $color;
+            border-bottom: 3px solid $color;
+          }
+          .nav-color{
+            color: $color;
+            border-bottom: 3px solid $color;
+          }
+          //a:visited{
+          //  color: $color;
+          //  border-bottom: 3px solid $color;
+          //}
+        }
+      }
+    }
+  }
+}
+.nav-title{
+  width: $w1;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+}
+.list{
+  width:1200px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  .list-box{
+    width:800px;
+    float: left;
+    background: #fff;
+    ul{
+      overflow: hidden;
+      li{
+        height: 100px;
+        width: 800px;
+        float: left;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        transition: all 0.5s ease;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          .list-img{
+            width: auto;
+            overflow: hidden;
+            height: 100px;
+            float: left;
+            img{
+              width: 160px;
+              height: 100px;
+              margin-left: 10px;
+              margin-right: 10px;
+              float: left;
+            }
+          }
+          .list-jianjie{
+            float: left;
+            width: 400px;
+          }
+        }
+      }
+      li:hover{
+        background: #eee;
+      }
+    }
+    .page{
+      clear: both;
+      text-align: center;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  .list-add{
+    width: 370px;
+    float: right;
+
+    height: auto;
+    overflow: hidden;
+    .add-one{
+      width: 370px;
+      height: 370px;
+      margin-bottom: 30px;
+      background: #fff;
+    }
+  }
+}
+footer{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  .footer-box{
+    width: $w1;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    .fenxiang{
+      height: 200px;
+    }
+    .content-us{
+      height: 40px;
+      ul{
+        text-align: center;
+        li{
+          display: inline-block;
+          padding: 0 10px;
+        }
+      }
+    }
+    .host{
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+}

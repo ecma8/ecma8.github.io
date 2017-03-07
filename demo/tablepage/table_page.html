@@ -43,9 +43,13 @@
 		}
 		table{
 			border-collapse: collapse;
+/* 			border: 1px solid #ccc; */
 		}
 		table tr:nth-of-type(odd){
-			background: #ccc;
+			/* background: #ccc; */
+		}
+		table tr{
+			border: 1px solid #ccc;
 		}
 /* 		table tr td:nth-of-type(odd){
 			background: #ccc;
@@ -367,5 +371,8 @@
 	//len 每页显示的数量
 	$('#table1').tabPage('#table1','#page1',4);
 	$('#table2').tabPage('#table2','#page2',7);
+	var str='<a href="abc">1234</a><a>123</a><a>123</a><a>123</a><a>123</a><a>123</a><a>123</a>'
+	var x=str.replace(/<.+?>/g,'')
+	console.log(x)
 </script>
 </html>
