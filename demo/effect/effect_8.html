@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="轮播进度条">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/js/jquery-1.11.3.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #f00;
+            overflow: hidden;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+<script>
+    $(document).keyup(function(e) {
+        var x=e.keyCode;
+        var box=$('.box');
+        var num=5;
+        if(x==38)
+        {
+            box.css('top',parseInt(box.css('top'))-num)
+        }
+        if(x==40)
+        {
+            box.css('top',parseInt(box.css('top'))+num)
+        }
+        if(x==37)
+        {
+            box.css('left',parseInt(box.css('left'))-num)
+        }
+        if(x==39)
+        {
+            box.css('left',parseInt(box.css('left'))+num)
+        }
+    });
+</script>
+
+</html>
