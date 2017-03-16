@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="轮播进度条">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../public/js/jquery-1.11.3.js"></script>
+    <style>
+        .box{
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+        .box div{
+            width: 30px;
+            height: 10px;
+            float: left;
+            background: #f00;
+        }
+        .box div:nth-of-type(1)
+        {
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+<script>
+    var num = 0;
+    var img = $('.box div');
+    var t=setInterval(function(){
+        num++;
+        img.eq(num).css('background','#0f0')
+        if(num==img.size())
+        {
+            alert(1)
+            clearInterval(t);
+        }
+        console.log(num)
+    },300)
+</script>
+
+</html>
