@@ -13,11 +13,9 @@
 </body>
 <script>
 	 window.addEventListener("deviceorientation", function(event) {
-      setInterval(function(){
       	$('p').eq(0).text(event.alpha)
       	$('p').eq(1).text(event.beta)
       	$('p').eq(2).text(event.gamma)
-      },2000)
   }, true);
 </script>
 </html>
