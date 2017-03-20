@@ -7,19 +7,17 @@
 	<script src='../demo/public/js/jquery-1.11.3.js'></script>
 </head>
 <body>
-	<p></p>
-	<p></p>
-	<p></p>
-	<p></p>
+	X:<p></p>
+	Y:<p></p>
+	Z:<p></p>
 </body>
 <script>
 	 window.addEventListener("deviceorientation", function(event) {
       setInterval(function(){
-      	$('p').eq(0).text(event.absolute)
-      	$('p').eq(1).text(event.alpha)
+      	$('p').eq(0).text(event.alpha)
+      	$('p').eq(1).text(event.beta)
       	$('p').eq(2).text(event.beta)
-      	$('p').eq(3).text(event.beta)
-      },100)
+      },2000)
   }, true);
 </script>
 </html>
