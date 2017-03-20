@@ -4,13 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<title>手机重力感应</title>
+	<script src='../demo/public/js/jquery-1.11.3.js'></script>
 </head>
 <body>
-	
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
 </body>
 <script>
 	 window.addEventListener("deviceorientation", function(event) {
-      document.write('A:'+event.alpha+'<br>X:'+event.alpha+'<br>Y:'+event.beta+'<br>Z:'+event.gamma)
+      setInterval(function(){
+      	$('p').eq(0).text(event.absolute)
+      	$('p').eq(1).text(event.alpha)
+      	$('p').eq(2).text(event.beta)
+      	$('p').eq(3).text(event.beta)
+      },100)
   }, true);
 </script>
 </html>
