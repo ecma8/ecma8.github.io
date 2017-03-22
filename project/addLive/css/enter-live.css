@@ -1,0 +1,121 @@
+.live-tab-title {
+  width: 100%;
+  height: 63px;
+  line-height: 60px;
+}
+.live-tab-title div {
+  float: left;
+  width: 150px;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  font-size: 18px;
+  cursor: po;
+}
+.live-tab-title .tab-color {
+  border-bottom: 3px solid #f93;
+  color: #f93;
+}
+
+.enter-live {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.enter-live .enter-live-left {
+  width: 440px;
+  float: left;
+  margin-left: 20px;
+}
+.enter-live .enter-live-left h3 {
+  margin-top: 160px;
+}
+.enter-live .enter-live-left p {
+  line-height: 30px;
+}
+.enter-live .enter-live-left .caozuo {
+  line-height: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+.enter-live .enter-live-left .caozuo input {
+  width: 70px;
+  height: 30px;
+  float: left;
+  margin-right: 30px;
+}
+.enter-live .enter-live-left:last-child {
+  line-height: 50px;
+}
+.enter-live .enter-live-right {
+  width: 480px;
+  float: left;
+  text-align: center;
+}
+.enter-live .enter-live-right img {
+  width: 400px;
+  padding: 40px;
+}
+
+.wx-live {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.wx-live h3 {
+  margin-top: 30px;
+}
+.wx-live p:nth-of-type(1) {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+}
+.wx-live p:nth-of-type(1) input {
+  height: 30px;
+  line-height: 30px;
+  width: 800px;
+  padding-left: 10px;
+  float: left;
+  margin-top: 10px;
+}
+.wx-live p:nth-of-type(1) span {
+  float: left;
+  height: 50px;
+  margin-left: 10px;
+}
+.wx-live p:nth-of-type(2) {
+  height: 100px;
+}
+.wx-live p:nth-of-type(2) img {
+  height: 80px;
+  width: 80px;
+  float: left;
+  margin-top: 10px;
+}
+.wx-live p:nth-of-type(2) textarea {
+  height: 80px;
+  line-height: 20px;
+  width: 710px;
+  padding: 10px;
+  float: left;
+  margin-top: 10px;
+  box-sizing: border-box;
+  resize: none;
+  margin-left: 20px;
+}
+.wx-live p:nth-of-type(2) span {
+  float: left;
+  height: 80px;
+  line-height: 80px;
+  margin-left: 10px;
+}
+.wx-live p:nth-of-type(3) {
+  text-align: center;
+  height: 100px;
+  margin-top: 20px;
+}
+.wx-live p:nth-of-type(3) input {
+  width: 70px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=enter-live.css.map */
