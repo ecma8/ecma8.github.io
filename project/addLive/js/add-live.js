@@ -6,9 +6,19 @@ $(document).ready(function(){
         $('.live-inner').eq(index).show().siblings('.live-inner').hide();
     });
     /*播放窗口页面切换*/
-    $('.button-list input').click(function(){
-        var index=$(this).index();
+    $('.live-img').click(function(){
+        var index=$('.live-img').index(this);
         $('.img-list img').eq(index).show().siblings().hide();
+    });
+    //上传图片显示
+    $('.upload-img-show').click(function(event) {
+        $('.live-mask').show();
+        $('.upload-img').show();
+    });
+    //上传按钮保存操作
+    $('#save_img').click(function(event) {
+        $('.live-mask').hide();
+        $('.upload-img').hide();
     });
     //菜单菜单内容切换
     $("#menu-list").on('click','.menu-left',function(){
@@ -29,8 +39,6 @@ $(document).ready(function(){
             $('.live-box-one[box-name=参展商]').show().siblings('.live-box-one').hide();
         }
     })
-    //菜单排序
-
     var arr_4=[];//菜单数组
     var arr_1=[];//流程数组
     var arr_2=[];//活动介绍数组
@@ -38,7 +46,16 @@ $(document).ready(function(){
     var liucheng_num=0;//流程序号
     var jieshao_num=0;//活动介绍序号
     var logo_num=0;//参展商序号
-    /*自定义菜单添加*/
+    //互动列表模拟添加
+    function add_Hudong_List(src,name,time,miaoshu,list){
+        var str='<li><div class=wx-img><img src='+src+'></div><div class=ding><p><span>'+name+'</span><b class=time>'+time+'</b></p><p>'+miaoshu+'</p></div></li>'
+        list.append(str);
+    }
+    //图文直播列表模拟添加
+    function add_Tuwen_List(src,name,time,miaoshu,list){
+        var str='<li><div class=wx-img><img src='+src+'></div><div class=ding><p><span>'+name+'</span><b class=time>'+time+'</b></p><p>'+miaoshu+'</p></div><div class="tuwen-img"><img src='+src+'></div></li>'
+        list.append(str);
+    }
     $('#menu-select').change(function(){
         var index=$(this).children(':selected').val();
         var text=$(this).children(':selected').text();
@@ -49,23 +66,32 @@ $(document).ready(function(){
             $('.menu-inner-one').eq(index).show();
             return false;
         }
-        if(arr_4.indexOf('互动') >-1 || arr_4.indexOf('图文直播') >-1)
+        // if(arr_4.indexOf('互动') >-1 || arr_4.indexOf('图文直播') >-1)
+        // {
+        //     layer.alert('只可添加互动 图文直播其中一项');
+        //     return false;
+        // }
+        // else{
+        if(index==0)
         {
-            layer.alert('只可添加互动 图文直播其中一项');
-            return false;
-        }
-        else{
-            if(index==0)
+            $('.live-mask').show();
+            $('.menu-inner-one').eq(index).show();
+            $('.guanfang').show();
+            for(var i=0;i<10;i++)
             {
-                $('.live-mask').show();
-                $('.menu-inner-one').eq(index).show();
-            }
-            if(index==1)
-            {
-                $('.live-mask').show();
-                $('.menu-inner-one').eq(index).show();
+                add_Hudong_List('','这是测试文字','14:00:00','这是测试文字',$('#hudong_ul_list'))
             }
         }
+        if(index==1)
+        {
+            $('.live-mask').show();
+            $('.menu-inner-one').eq(index).show();
+            for(var j=0;j<10;j++)
+            {
+                add_Tuwen_List('','这是测试文字','14:00:00','这是测试文字',$('#tuwen_ul_list_1'))
+            }
+        }
+        // }
     });
     /*菜单列表添加*/
     function add_Menu_List(val){
@@ -101,7 +127,9 @@ $(document).ready(function(){
                     arr_4.splice(arr_index,1);
                     $("#btn_hudong").attr('data-num',0);
                     $('#dialog').children().remove();
+                    $('#hudong_ul_list').children().remove();
                     $('.guanfang').hide();
+                    $('.sendmessage').hide();
                     $('#hudong_name').val('');
                     $('#hudong_miaoshu').val('');
                     layer.msg('已删除', {icon: 1});
@@ -121,6 +149,7 @@ $(document).ready(function(){
                     arr_4.splice(arr_index,1);
                     $("#btn_tuwen").attr('data-num',0);
                     $('#tuwen_ul_list').children().remove();
+                    $('#tuwen_ul_list_1').children().remove();
                     layer.msg('已删除', {icon: 1});
                 }, function(){
             });
@@ -198,59 +227,7 @@ $(document).ready(function(){
             });
         }
     })
-
-
-    function add_Hudong_List(src,name,time,miaoshu){
-        var str='<li><div class=wx-img><img src='+src+'></div><div class=ding><p><span>'+name+'</span><b class=time>'+time+'</b></p><p>'+miaoshu+'</p></div></li>'
-        $('#dialog').append(str);
-    }
-    function add_Tuwen_List(src,name,time,miaoshu){
-        var str='<li><div class=wx-img><img src='+src+'></div><div class=ding><p><span>'+name+'</span><b class=time>'+time+'</b></p><p>'+miaoshu+'</p></div><div class="tuwen-img"><img src='+src+'></div></li>'
-        $('#tuwen_ul_list').append(str);
-    }
-
-    /*互动页面提交按钮操作*/
-    $("#btn_hudong").click(function(){
-        var hudong_menu=$('#hudong_menu').val();
-        var hudong_name=$('#hudong_name').val();
-        var hudong_miaoshu=$('#hudong_miaoshu').val();
-        var hudong_img=$('#hudong_img').attr('src');
-        var num=parseInt($(this).attr('data-num'));
-        $('#hudong_name_1').text(hudong_name)
-        $('#hudong_miaoshu_1').text(hudong_miaoshu)
-        $('#hudong_img_1').attr('src',hudong_name)
-        if(num==0)
-        {
-            $('.guanfang').show();
-            for(var i=0;i<10;i++)
-            {
-                add_Hudong_List('','这是测试文字','14:00:00','这是测试文字')
-            }
-        }
-        else{
-            return false;
-        }
-    });
-    /*互动页面提交按钮操作*/
-    $("#btn_tuwen").click(function(){
-        var tuwen_menu=$('#tuwen_menu').val();
-        var tuwen_name=$('#tuwen_name').val();
-        var tuwen_img=$('#tuwen_img').attr('src');
-        var num=parseInt($(this).attr('data-num'));
-        $('#tuwen_name_1').text(tuwen_name);
-        $('#tuwen_img_1').attr('src',tuwen_name);
-        if(num==0)
-        {
-            for(var i=0;i<10;i++)
-            {
-                add_Tuwen_List('','这是测试文字','14:00:00','这是测试文字')
-            }
-        }
-        else{
-            return false;
-        }
-    });
-    /****************保存按钮操作********************/
+    /*保存按钮操作*/
     $(".btn_save").click(function(){
         var val=$(this).attr('data-val');
         var num=parseInt($(this).attr('data-num'));
@@ -269,44 +246,80 @@ $(document).ready(function(){
         }
         $('.live-box-one').eq(index).show().siblings('.live-box-one').hide();
     });
-    // $("#btn_liucheng").click(function(){
-    //     var val=$(this).attr('data-val');
-    //     arr_4.push(val);
-    //     add_Menu_List(val);
-    //     $('.live-mask').hide();
-    //     $('.menu-inner-one').hide();
-    // })
-    // $("#btn_jieshao").click(function(){
-    //     var val=$(this).attr('data-val');
-    //     arr_4.push(val);
-    //     add_Menu_List(val);
-    //     $('.live-mask').hide();
-    //     $('.menu-inner-one').hide();
-    // })
-    // $("#btn_logo").click(function(){
-    //     var val=$(this).attr('data-val');
-    //     arr_4.push(val);
-    //     add_Menu_List(val);
-    //     $('.live-mask').hide();
-    //     $('.menu-inner-one').hide();
-    // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /*互动页面提交按钮操作*/
+    $("#btn_hudong").click(function(){
+        var hudong_menu=$('#hudong_menu').val();
+        var hudong_name=$('#hudong_name').val();
+        var hudong_miaoshu=$('#hudong_miaoshu').val();
+        var hudong_img=$('#hudong_img').attr('src');
+        var num=parseInt($(this).attr('data-num'));
+        $('#hudong_name_1').text(hudong_name)
+        $('#hudong_miaoshu_1').text(hudong_miaoshu)
+        $('#hudong_img_1').attr('src',hudong_name)
+        $('#hudong_name_2').text(hudong_name)
+        $('#hudong_miaoshu_2').text(hudong_miaoshu)
+        $('#hudong_img_2').attr('src',hudong_name)
+        if(num==0)
+        {
+            $('#dialog').children().remove();
+            $('#hudong_ul_list').children().remove();
+            $('.guanfang').show();
+            $('.sendmessage').show();
+            for(var i=0;i<10;i++)
+            {
+                add_Hudong_List('src','这是测试文字','14:00:00','这是测试文字',$('#dialog'))
+                add_Hudong_List('src','这是测试文字','14:00:00','这是测试文字',$('#hudong_ul_list'))
+            }
+        }
+        else{
+            
+            $('#dialog').children().remove();
+            $('#hudong_ul_list').children().remove();
+            $('.guanfang').show();
+            $('.sendmessage').show();
+            for(var i=0;i<10;i++)
+            {
+                add_Hudong_List('src','这是测试文字','14:00:00','这是测试文字',$('#dialog'))
+                add_Hudong_List('src','这是测试文字','14:00:00','这是测试文字',$('#hudong_ul_list'))
+            }
+            return false;
+        }
+    });
+    /*图文直播页面提交按钮操作*/
+    $("#btn_tuwen").click(function(){
+        var tuwen_menu=$('#tuwen_menu').val();
+        var tuwen_name=$('#tuwen_name').val();
+        var tuwen_img=$('#tuwen_img').attr('src');
+        var num=parseInt($(this).attr('data-num'));
+        $('#tuwen_name_1').text(tuwen_name);
+        $('#tuwen_img_1').attr('src',tuwen_name);
+        if(num==0)
+        {
+            $('#tuwen_ul_list').children().remove();
+            $('#tuwen_ul_list_1').children().remove();
+            for(var i=0;i<10;i++)
+            {
+                add_Tuwen_List('src',tuwen_name,'14:00:00','这是测试文字',$('#tuwen_ul_list'))
+                add_Tuwen_List('src',tuwen_name,'14:00:00','这是测试文字',$('#tuwen_ul_list_1'))
+            }
+        }
+        else{
+            $('#tuwen_ul_list').children().remove();
+            $('#tuwen_ul_list_1').children().remove();
+            for(var i=0;i<10;i++)
+            {
+                add_Tuwen_List('src',tuwen_name,'14:00:00','这是测试文字',$('#tuwen_ul_list'))
+                add_Tuwen_List('src',tuwen_name,'14:00:00','这是测试文字',$('#tuwen_ul_list_1'))
+            }
+            return false;
+        }
+    });
+    $("#btn_liucheng").click(function(){
+    })
+    $("#btn_jieshao").click(function(){
+    })
+    $("#btn_logo").click(function(){
+    })
     //直播介绍切换
     $('#jieshao_list').change(function(){
         var index=$(this).children(':selected').val();
@@ -318,6 +331,8 @@ $(document).ready(function(){
         $('.live-mask').hide();
         $('.menu-inner-one').hide();
         $('.menu-paixu').hide();
+        $('.upload-img').hide();
+        $('.guanfang').hide();
     });
     //移除table元素
     function del(obj){
@@ -564,6 +579,7 @@ $(document).ready(function(){
         p.append(span).append(input);
         obj.append(p)   
     }
+    //排序弹出层
     $('#paixu_alert').click(function(event) {
         $('.live-mask').show();
         $('.menu-paixu').show();
@@ -575,10 +591,12 @@ $(document).ready(function(){
             $('.paixu-list input').eq(i).siblings('span').attr('data-val',(i+1))
         }   
     });
+    //排序操作
     $('.paixu-list').on('blur','input',function(){
         var index=$('.paixu-list input').index(this);
         $('.paixu-list input').eq(index).siblings('span').attr('data-val',$('.paixu-list input').eq(index).val())
     })
+    //排序保存按钮操作
     $('#btn_paixu').click(function(event) {
         var input=$('.paixu-list input');
         var arr_5=[];

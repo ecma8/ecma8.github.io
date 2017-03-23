@@ -34,24 +34,29 @@
                 </div>
                 <div class="enter-live-right">
                     <img src="img/yindao.png" alt="">
+                    <img src="" alt="">
+                    <p>这是直播名称</p>
                 </div>
             </div>
         </div>
         <div class="live-inner" style="display: none">
             <div class="wx-live">
                 <h3>发送给朋友或分享到朋友圈（如不做更改可不编辑）</h3>
-                <p>
+                <p class="wx-title">
                     <input type="text" placeholder="请输入分享标题">
                     <span>0/30</span>
                 </p>
-                <p>
-                    <img src="" alt="">
+                <div class="wx-input">
+                    <p>
+                        <img src="" alt="">
+                        <input type="button" value="上传">
+                    </p>
                     <textarea name="" id="" cols="30" rows="10" placeholder="请输入分享描述"></textarea>
                     <span>0/120</span>
-                </p>
-                <p>
+                </div>
+                <div class="wx-sub">
                     <input type="button" value="保存">
-                </p>
+                </div>
             </div>
         </div>
         <div class="live-inner" style="display: none">
@@ -65,11 +70,14 @@
                 <div class="video">
                     <div class="img-list">
                         <img src="img/img_1 (1).png" alt="">
-                        <img src="img/img_1 (2).png" alt="">
+                        <img src="img/img_1 (2).png" alt="" style="display: none">
+                        <img src="img/img_1 (3).png" alt="" style="display: none">
                     </div>
                     <div class="button-list">
-                        <input type="button" value="直播中">
-                        <input type="button" value="直播结束">
+                        <input type="button" class="upload-img-show" value="上传图片">
+                        <input type="button" class="live-img" value="即将开始">
+                        <input type="button" class="live-img" value="直播中">
+                        <input type="button" class="live-img" value="直播结束">
                     </div>
                 </div>
                 <div class="live-menu">
@@ -86,7 +94,7 @@
                     </div>
                 </div>
                 <div class="live-box">
-                    <div box-name="互动" class="live-box-one" style="display: none;">
+                    <div box-name="互动" class="live-box-one" style="display: none">
                         <div class="guanfang">
                             <div class="wx-img">
                                 <img src="" alt="" id="#hudong_img_1">
@@ -100,7 +108,7 @@
                                 <p id="hudong_miaoshu_1"></p>
                             </div>
                         </div>
-                        <ul id="dialog">
+                        <ul id="dialog" style="height: 4.4rem">
                             <!--<li>-->
                                 <!--<div class="wx-img">-->
                                     <!--<img src="layer/skin/default/loading-2.gif" alt="">-->
@@ -114,8 +122,12 @@
                                 <!--</div>-->
                             <!--</li>-->
                         </ul>
+                        <div class="sendmessage">
+                            <textarea name="" rows="" cols="" placeholder="请输入聊天内容"></textarea>
+                            <input type="submit" id="send" value="发送" />
+                        </div>
                     </div>
-                    <div  box-name="图文" class="live-box-one" style="display: none">
+                    <div box-name="图文直播" class="live-box-one" style="display: none;">
                         <ul id="tuwen_ul_list">
                             <!--<li>-->
                                 <!--<div class="wx-img">-->
@@ -174,9 +186,28 @@
         </div>
 
     </div>
-    <div class="live-mask" style="display: none;">
+    <div class="live-mask" style="display: none">
         <div class="live-close">
             +
+        </div>
+        <div class="upload-img" style="display: none">
+            <h3>封面图上传</h3>
+            <div class="upload-img-one">
+                <p>即将开始封面图</p>
+                <img src="" alt="">
+                <input type="button" value="上传">
+            </div>
+            <div class="upload-img-one">
+                <p>直播中封面图</p>
+                <img src="" alt="">
+                <input type="button" value="上传">
+            </div>
+            <div class="upload-img-one">
+                <p>直播结束封面图</p>
+                <img src="" alt="">
+                <input type="button" value="上传">
+            </div>
+            <p><input type="button" value="保存" id="save_img"></p>
         </div>
         <div class="menu-paixu" style="display: none">
             <h3>菜单排序</h3>
@@ -190,6 +221,26 @@
         </div>
         <div class="live-menu-inner">
             <div class="menu-inner-one" style="display: none">
+                <div class=hudong-right>
+                    <div class="hudong-box">
+                        <div class="guanfang" style="display: none">
+                            <div class="wx-img">
+                                <img src="" alt="" id="#hudong_img_2">
+                            </div>
+                            <div class="ding">
+                                <p>
+                                    <span id="hudong_name_2"></span>
+                                    <span>官方</span>
+                                    <span>顶</span>
+                                </p>
+                                <p id="hudong_miaoshu_2"></p>
+                            </div>
+                        </div>
+                        <ul id="hudong_ul_list">
+
+                        </ul>
+                    </div>
+                </div>
                 <div class="inner-left">
                     <div class="inner-input">
                         <h1>互动页面编辑</h1>
@@ -197,7 +248,7 @@
                             <span>
                                 菜单名称：
                             </span>
-                            <input type="text" placeholder="请输入菜单名称" id="hudong_menu">
+                            <input type="text" placeholder="请输入菜单名称" id="hudong_menu" maxlength="4">
                             <div class="tishi">
                                 不超过四个汉字
                             </div>
@@ -230,15 +281,36 @@
                     </div>
                 </div>
             </div>
-            <div class="menu-inner-one" style="height: 5rem;display: none">
-                <div class="inner-left"  style="height: 4rem">
+            <div class="menu-inner-one" style="display: none">
+                <div class="tuwen-right">
+                    <ul id="tuwen_ul_list_1">
+                        <!--<li>-->
+                        <!--<div class="wx-img">-->
+                        <!--<img src="" alt="" id="tuwen_img_1">-->
+                        <!--</div>-->
+                        <!--<div class="ding">-->
+                        <!--<p>-->
+                        <!--<span id="tuwen_name_1">123</span>-->
+                        <!--<b class="time"  id="tuwen_time_1">123</b>-->
+                        <!--</p>-->
+                        <!--<p id="tuwen_miaoshu_1">-->
+                        <!--123-->
+                        <!--</p>-->
+                        <!--</div>-->
+                        <!--<div class="tuwen-img">-->
+                        <!--<img src="" alt="" id="tuwen_img_2">-->
+                        <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+                <div class="inner-left">
                     <div class="inner-input">
                         <h1>图文直播页面编辑</h1>
                         <div class="inner-input-one">
                             <span>
                                 菜单名称：
                             </span>
-                            <input type="text" placeholder="请输入菜单名称" id="tuwen_menu">
+                            <input type="text" placeholder="请输入菜单名称" id="tuwen_menu" maxlength="4">
                             <div class="tishi">
                                 不超过四个汉字
                             </div>
@@ -359,7 +431,7 @@
                                 <span>
                                     菜单名称：
                                 </span>
-                                <input type="text" placeholder="请输入菜单名称">
+                                <input type="text" placeholder="请输入菜单名称" maxlength="4">
                                 <div class="tishi">
                                     不超过四个汉字
                                 </div>
@@ -368,7 +440,7 @@
                                 <span>
                                     介绍名称：
                                 </span>
-                                <input type="text" placeholder="请输入介绍名称" id="jieshao_name">
+                                <input type="text" placeholder="请输入介绍名称" id="jieshao_name" maxlength="10">
                                 <div class="tishi">
                                     不超过十个汉字
                                 </div>
@@ -410,7 +482,7 @@
                             <span>
                                 菜单名称：
                             </span>
-                                <input type="text" placeholder="请输入菜单名称">
+                                <input type="text" placeholder="请输入菜单名称" maxlength="4">
                                 <div class="tishi">
                                     不超过四个汉字
                                 </div>

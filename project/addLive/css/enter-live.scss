@@ -47,10 +47,39 @@
   .enter-live-right{
     width: 480px;
     float: left;
+    height: 730px;
     text-align: center;
-    img{
+    position: relative;
+    overflow: hidden;
+    background: #ccc;
+    img:nth-of-type(1){
       width: 400px;
       padding: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    img:nth-of-type(2)
+    {
+      position: absolute;
+      left:0;
+      right:0;
+      margin: 0 auto;
+      top:60px;
+      background: #ccc;
+      width: 100px;
+      height: 100px;
+    }
+    p{
+      position: absolute;
+      left:0;
+      right:0;
+      margin: 0 auto;
+      top:300px;
+      background: #ccc;
+      height: 100px;
+      line-height: 100px;
+      font-size: 20px;
     }
   }
 }
@@ -61,7 +90,7 @@
   h3{
     margin-top: 30px;
   }
-  p:nth-of-type(1){
+  .wx-title{
     height: 50px;
     line-height: 50px;
     margin-top: 20px;
@@ -79,16 +108,28 @@
       margin-left: 10px;
     }
   }
-  p:nth-of-type(2){
-    height: 100px;
-    img{
+  .wx-input{
+    height: auto;
+    overflow: hidden;
+    p{
       height: 80px;
       width: 80px;
       float: left;
       margin-top: 10px;
+      text-align: center;
+      font-size: 0;
+      img{
+        height: 80px;
+        width: 80px;
+      }
+      input{
+        width: 80px;
+        height: 30px;
+        margin-top: 10px;
+      }
     }
     textarea{
-      height: 80px;
+      height: 120px;
       line-height: 20px;
       width: 710px;
       padding: 10px;
@@ -105,7 +146,7 @@
       margin-left: 10px;
     }
   }
-  p:nth-of-type(3){
+  .wx-sub{
     text-align: center;
     height: 100px;
     margin-top: 20px;

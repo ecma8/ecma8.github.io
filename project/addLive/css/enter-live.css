@@ -9,7 +9,7 @@
   text-align: center;
   border-bottom: 3px solid transparent;
   font-size: 18px;
-  cursor: po;
+  cursor: pointer;
 }
 .live-tab-title .tab-color {
   border-bottom: 3px solid #f93;
@@ -49,11 +49,39 @@
 .enter-live .enter-live-right {
   width: 480px;
   float: left;
+  height: 730px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #ccc;
 }
-.enter-live .enter-live-right img {
+.enter-live .enter-live-right img:nth-of-type(1) {
   width: 400px;
   padding: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.enter-live .enter-live-right img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 60px;
+  background: #ccc;
+  width: 100px;
+  height: 100px;
+}
+.enter-live .enter-live-right p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 300px;
+  background: #ccc;
+  height: 100px;
+  line-height: 100px;
+  font-size: 20px;
 }
 
 .wx-live {
@@ -64,12 +92,12 @@
 .wx-live h3 {
   margin-top: 30px;
 }
-.wx-live p:nth-of-type(1) {
+.wx-live .wx-title {
   height: 50px;
   line-height: 50px;
   margin-top: 20px;
 }
-.wx-live p:nth-of-type(1) input {
+.wx-live .wx-title input {
   height: 30px;
   line-height: 30px;
   width: 800px;
@@ -77,22 +105,34 @@
   float: left;
   margin-top: 10px;
 }
-.wx-live p:nth-of-type(1) span {
+.wx-live .wx-title span {
   float: left;
   height: 50px;
   margin-left: 10px;
 }
-.wx-live p:nth-of-type(2) {
-  height: 100px;
+.wx-live .wx-input {
+  height: auto;
+  overflow: hidden;
 }
-.wx-live p:nth-of-type(2) img {
+.wx-live .wx-input p {
   height: 80px;
   width: 80px;
   float: left;
   margin-top: 10px;
+  text-align: center;
+  font-size: 0;
 }
-.wx-live p:nth-of-type(2) textarea {
+.wx-live .wx-input p img {
   height: 80px;
+  width: 80px;
+}
+.wx-live .wx-input p input {
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+}
+.wx-live .wx-input textarea {
+  height: 120px;
   line-height: 20px;
   width: 710px;
   padding: 10px;
@@ -102,18 +142,18 @@
   resize: none;
   margin-left: 20px;
 }
-.wx-live p:nth-of-type(2) span {
+.wx-live .wx-input span {
   float: left;
   height: 80px;
   line-height: 80px;
   margin-left: 10px;
 }
-.wx-live p:nth-of-type(3) {
+.wx-live .wx-sub {
   text-align: center;
   height: 100px;
   margin-top: 20px;
 }
-.wx-live p:nth-of-type(3) input {
+.wx-live .wx-sub input {
   width: 70px;
   height: 30px;
 }
