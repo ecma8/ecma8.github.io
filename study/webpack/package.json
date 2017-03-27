@@ -1,0 +1,13 @@
+{
+  "name": "webpack-sample-project",
+  "version": "1.0.0",
+  "description": "Sample webpack project",
+  "scripts": {
+    "start": "webpack" //配置的地方就是这里啦，相当于把npm的start命令指向webpack命令
+  },
+  "author": "zhang",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  }
+}
