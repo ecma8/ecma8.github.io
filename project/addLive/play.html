@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/m-public.css">
+    <link rel="stylesheet" href="css/play.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/play.js"></script>
+    <script src="layer/layer.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div class="video" style="height: 4.2rem">
+            <video src="" controls="controls"  poster="/img/img_1%20(1).png" style="background: url('img/img_1 (1).png')"></video>
+            <div class="video-button">
+                <input type="button" class="button-color" value="嘉宾" data-val="295">
+                <input type="button" value="屏幕" data-val="296">
+            </div>
+        </div>
+        <div class="live-menu">
+            <ul>
+                <li>
+                    <div data-val="互动" class="menu-color">互动</div>
+                </li>
+                <li>
+                    <div data-val="图文直播">图文直播</div>
+
+                </li>
+                <li>
+                    <div data-val="流程">流程</div>
+                </li>
+                <li>
+                    <div data-val="活动介绍">活动介绍</div>
+                </li>
+                <!--<li>-->
+                    <!--<div data-val="参展商">参展商</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="live-box">
+            <div box-name="互动" class="live-box-one">
+                <div class="guanfang">
+                    <div class="wx-img">
+                        <img src="" alt="" id="#hudong_img_1">
+                    </div>
+                    <div class="ding">
+                        <p>
+                            <span>无锡</span>
+                            <span>官方</span>
+                            <span>顶</span>
+                        </p>
+                        <p>是信息这是信息这是信息这是信息这是信息</p>
+                    </div>
+                </div>
+                <ul id="dialog" style="height: 4.4rem">
+                    <li>
+                        <div class="wx-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="ding">
+                            <p>
+                                <span>烟台</span>
+                                <span class="time">14:00:00</span>
+                            </p>
+                            <p>这是信息这是信息这是信息这是信息</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sendmessage">
+                    <textarea name="" rows="" cols="" placeholder="请输入聊天内容"></textarea>
+                    <input type="submit" id="send" value="发送" />
+                </div>
+            </div>
+            <div box-name="图文直播" class="live-box-one" style="display: none">
+                <ul id="tuwen_ul_list" class="ul-list">
+                    <li>
+                        <p class="tuwen-time">
+                            <span>2017-01-01 14:00:00</span>
+                        </p>
+                        <div class="wx-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="ding">
+                            <p>
+                                <span>这是名字</span>
+                            </p>
+                            <p>
+                                这是图文描述
+                            </p>
+                        </div>
+                        <div class="tuwen-img">
+                            <img src="img/img_1%20(1).png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <p class="tuwen-time">
+                            <span>2017-01-01 14:00:00</span>
+                        </p>
+                        <div class="wx-img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="ding">
+                            <p>
+                                <span>这是名字</span>
+                            </p>
+                            <p>
+                                这是图文描述
+                            </p>
+                        </div>
+                        <div class="tuwen-img">
+                            <img src="img/img_1%20(1).png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div box-name="流程" class="live-box-one" style="display: none">
+                <ul id="liucheng_ul_list" class="ul-list">
+                    <li>
+                        <div class="liucheng-list">
+                            <h1>2017-11-11</h1>
+                            <p>17:00-18:00</p>
+                            <p>CEO讲话</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liucheng-list">
+                            <h1>2017-11-11</h1>
+                            <p>17:00-18:00</p>
+                            <p>CEO讲话</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="liucheng-list">
+                            <h1>2017-11-11</h1>
+                            <p>17:00-18:00</p>
+                            <p>CEO讲话</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div box-name="介绍" class="live-box-one" style="display: none">
+                <ul id="jieshao_ul_list" class="ul-list">
+                    <li>
+                        <div class="jieshao-list">
+                            <h1>培训内容</h1>
+                            <img src="img/img_1%20(1).png">
+                            <p>培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="jieshao-list">
+                            <h1>培训内容</h1>
+                            <img src="img/img_1%20(1).png">
+                            <p>培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="jieshao-list">
+                            <h1>培训内容</h1>
+                            <img src="img/img_1%20(1).png">
+                            <p>培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容培训内容</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div box-name="参展商" class="live-box-one" style="display: none">
+                <ul id="logo_ul_list" class="ul-list">
+                    <li>
+                        <div class="logo-list">
+                            <img src="img/img_1%20(1).png">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo-list">
+                            <img src="img/img_1%20(1).png">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="logo-list">
+                            <img src="img/img_1%20(1).png">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

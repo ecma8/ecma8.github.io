@@ -1,0 +1,15 @@
+.new-doc-right{
+  width: 940px;
+  background: #fff;
+  min-height: 620px;
+  float: left;
+  padding: 20px;
+  .doc-title{
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-size: 20px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+  }
+}

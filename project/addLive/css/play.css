@@ -1,0 +1,322 @@
+.video {
+  width: 6.4rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #333;
+  position: relative;
+  font-size: 0;
+}
+.video video {
+  height: 3.5rem;
+  width: 6.4rem;
+  background-size: 6.4rem 3.5rem !important;
+}
+.video .video-button {
+  background: #333;
+  width: 6rem;
+  margin: 0 auto;
+  height: 0.7rem;
+  text-align: right;
+  font-size: 0;
+}
+.video .video-button input {
+  margin-left: 0.3rem;
+  margin-top: 0.1rem;
+  height: 0.5rem;
+  border-radius: 0.24rem;
+  width: auto;
+  padding: 0 0.2rem;
+  line-height: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  background: #333;
+  font-size: 0.24rem;
+}
+.video .video-button .button-color {
+  color: #333;
+  background: #fff;
+  border-color: #333;
+}
+
+.live-box {
+  width: 6.4rem;
+  height: 6.4rem;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.live-box .live-box-one {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  background: #f5f5f5;
+  line-height: 0.4rem;
+  overflow: hidden;
+  position: relative;
+}
+.live-box .live-box-one .sendmessage {
+  width: 6rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.live-box .live-box-one .sendmessage textarea {
+  width: 4rem;
+  height: 0.3rem;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0.15rem;
+  background: #f5f5f5;
+  font-size: 0.24rem;
+  resize: none;
+}
+.live-box .live-box-one .sendmessage input {
+  width: 1.2rem;
+  height: 0.6rem;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  background: #FF921A;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.24rem;
+  margin-left: 0.4rem;
+}
+.live-box .live-box-one .guanfang {
+  height: auto;
+  overflow: hidden;
+  margin-top: 0.1rem;
+}
+.live-box .live-box-one .guanfang .wx-img {
+  width: 0.7rem;
+  height: 0.7rem;
+  float: left;
+  margin-bottom: 0.1rem;
+}
+.live-box .live-box-one .guanfang .wx-img img {
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #ccc;
+  border: none;
+}
+.live-box .live-box-one .guanfang .ding {
+  float: left;
+  width: 5.2rem;
+  margin-bottom: 0.1rem;
+}
+.live-box .live-box-one .guanfang .ding p {
+  float: left;
+  width: 5.2rem;
+  margin-left: 0.1rem;
+  overflow: hidden;
+  line-height: 0.3rem;
+}
+.live-box .live-box-one .guanfang .ding p:nth-of-type(2) {
+  font-size: 0.2rem;
+  word-wrap: break-word;
+  line-height: 0.4rem;
+}
+.live-box .live-box-one .guanfang .ding p:nth-of-type(1) {
+  line-height: 0.3rem;
+  font-size: 0.2rem;
+}
+.live-box .live-box-one .guanfang .ding p:nth-of-type(1) span {
+  float: left;
+  margin-right: 0.1rem;
+}
+.live-box .live-box-one .guanfang .ding p:nth-of-type(1) span:nth-of-type(1) {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  color: #999;
+}
+.live-box .live-box-one .guanfang .ding p:nth-of-type(1) span:nth-of-type(2) {
+  color: #fff !important;
+  background: linear-gradient(to bottom, #15b5ff, #00a3ff);
+  width: 0.5rem;
+  height: 0.3rem;
+  line-height: 0.33rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0.18rem;
+}
+.live-box .live-box-one .guanfang .ding p:nth-of-type(1) span:nth-of-type(3) {
+  color: #fff;
+  background: linear-gradient(to bottom, #ff991d, #ff8000);
+  width: 0.3rem;
+  height: 0.3rem;
+  line-height: 0.33rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0.18rem;
+}
+.live-box .live-box-one ul {
+  height: 5rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.live-box .live-box-one ul li {
+  height: auto;
+  overflow: hidden;
+  width: 6rem;
+}
+.live-box .live-box-one ul li .wx-img {
+  width: 0.7rem;
+  height: 0.7rem;
+  float: left;
+  margin-bottom: 0.1rem;
+}
+.live-box .live-box-one ul li .wx-img img {
+  width: 0.7rem;
+  height: 0.7rem;
+  background: #ccc;
+  border: none;
+}
+.live-box .live-box-one ul li .ding {
+  float: left;
+  width: 5.2rem;
+  margin-bottom: 0.1rem;
+}
+.live-box .live-box-one ul li .ding p {
+  float: left;
+  width: 5.2rem;
+  margin-left: 0.1rem;
+  overflow: hidden;
+  line-height: 0.3rem;
+}
+.live-box .live-box-one ul li .ding p:nth-of-type(2) {
+  font-size: 0.2rem;
+  word-wrap: break-word;
+  line-height: 0.4rem;
+}
+.live-box .live-box-one ul li .ding p:nth-of-type(1) {
+  line-height: 0.3rem;
+  font-size: 0.2rem;
+}
+.live-box .live-box-one ul li .ding p:nth-of-type(1) span {
+  float: left;
+  margin-right: 0.1rem;
+  color: #999;
+}
+.live-box .live-box-one ul li .ding p:nth-of-type(1) span:nth-of-type(1) {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+}
+.live-box .live-box-one ul li .ding p:nth-of-type(1) .time {
+  float: right;
+  overflow: hidden;
+  text-align: right;
+  font-size: 0.18rem;
+}
+.live-box .live-box-one ul li .tuwen-time {
+  color: #f60;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-size: 0.18rem;
+  margin-top: 0.1rem;
+}
+.live-box .live-box-one ul li .tuwen-time span {
+  color: #f60;
+}
+.live-box .live-box-one ul li .tuwen-img {
+  float: left;
+  width: 100%;
+}
+.live-box .live-box-one ul li .tuwen-img img {
+  width: 100%;
+}
+.live-box .live-box-one ul li .liucheng-list {
+  width: 6rem;
+  text-align: center;
+  margin: 0.2rem auto 0;
+}
+.live-box .live-box-one ul li .liucheng-list h1 {
+  line-height: 0.5rem;
+  font-size: 0.3rem;
+  height: 0.5rem;
+}
+.live-box .live-box-one ul li .liucheng-list p:nth-of-type(1) {
+  background: url("../img/liucheng_bg.png") center;
+  background-size: 6rem 0.4rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #ff991d;
+  width: 6rem;
+  font-size: 0.22rem;
+}
+.live-box .live-box-one ul li .liucheng-list p:nth-of-type(2) {
+  text-align: center;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.28rem;
+}
+.live-box .live-box-one ul li .jieshao-list {
+  width: 6rem;
+  text-align: center;
+  margin: 0 auto 0.2rem;
+}
+.live-box .live-box-one ul li .jieshao-list h1 {
+  line-height: 0.7rem;
+  font-size: 0.3rem;
+  height: 0.7rem;
+}
+.live-box .live-box-one ul li .jieshao-list p {
+  line-height: 0.4rem;
+  font-size: 0.2rem;
+  text-align: left;
+}
+.live-box .live-box-one ul li .jieshao-list img {
+  width: 6rem;
+}
+.live-box .live-box-one ul li .logo-list {
+  text-align: center;
+  margin: 0.2rem auto 0;
+  height: auto;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+.live-box .live-box-one ul li .logo-list img {
+  width: 6rem;
+}
+
+.live-menu {
+  width: 6.4rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  background: #eee;
+}
+.live-menu ul {
+  height: 0.7rem;
+  overflow: hidden;
+}
+.live-menu ul li {
+  float: left;
+  width: 1.2rem;
+  height: 0.7rem;
+  text-align: center;
+}
+.live-menu ul li div {
+  width: 60%;
+  line-height: 0.7rem;
+  border-bottom: 4px solid transparent;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height: 0.7rem;
+  font-size: 0.24rem;
+}
+.live-menu ul li .menu-color {
+  border-bottom-color: #f93;
+  color: #f93;
+}
+
+/*# sourceMappingURL=play.css.map */
