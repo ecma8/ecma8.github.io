@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Node JS 实例</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+$.get("http://127.0.0.1:8888/", function(data){ 
+    //$("#feeds").html(data);
+    var dataObj=eval('('+data+')');
+    $("#id").html("编号："+dataObj.id);
+    $("#name").html("姓名："+dataObj.name);
+    $("#arg").html("年龄："+dataObj.arg);
+    $("span").html(dataObj.remark);
+});
+</script>
+</head>
+<body> 
+    <div id="feeds"></div>
+    <div id=id></div>
+    <div id=name></div>
+    <div id=arg></div>
+</body>
+</html>
