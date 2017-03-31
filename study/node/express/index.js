@@ -20,10 +20,10 @@ app.all('*', function(req, res, next) {
 // 创建 application/x-www-form-urlencoded 编码解析
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.get('/index', function (req, res) {
-    res.sendFile( __dirname + "/" + "index.html" );
+    res.sendFile( __dirname + "/" + "/page/index.html" );
 })
 app.get('/list', function (req, res) {
-    res.sendFile( __dirname + "/" + "list.html" );
+    res.sendFile( __dirname + "/" + "/page/list.html" );
 })  
 app.get('/list1', function (req, res) {
     connection.query('select * from  think_form limit '+req.query.id*10 +',10', function(err, rows, fields) {
