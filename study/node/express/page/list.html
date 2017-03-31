@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>表单渲染</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="/public/index.css">
+</head>
+<style>
+	table tr td,th{
+		text-align: center;
+	}
+</style>
+<body>
+	<table>
+		<tr>
+			<td>id</td>
+			<td>title</td>
+			<td>content</td>
+			<td>create_time</td>
+		</tr>
+	</table>
+</body>
+<script>
+	var url=document.URL.split('?')[1];
+	if(url==undefined)
+	{
+		document.write('暂无更多数据');
+
+	}
+	else{
+		$.ajax({
+			url:'/list1?'+url,
+			type:'get',
+			success:function(data){
+				for(var i=0;i<data.length;i++)
+				{
+					var str=$('<tr><td>'+data[i].id+'</td><td>'+data[i].title+'</td><td>'+data[i].content+'</td><td>'+data[i].create_time+'</td></tr>')
+					$('table').append(str);
+				}
+			}
+		})
+	}
+</script>
+</html>
