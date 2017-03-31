@@ -24,6 +24,14 @@ app.get('/index', function (req, res) {
 })
 app.get('/list', function (req, res) {
     res.sendFile( __dirname + "/" + "/page/list.html" );
+}) 
+app.get('/list_1/:key', function (req, res) {
+    console.log(req.params.key)
+    connection.query('select * from  think_form limit '+req.params.key+',1', function(err, rows, fields) {
+        if (err) throw err;
+        res.send(rows)
+    });
+    connection.end();
 })  
 app.get('/list1', function (req, res) {
     connection.query('select * from  think_form limit '+req.query.id*10 +',10', function(err, rows, fields) {
