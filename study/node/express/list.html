@@ -3,7 +3,7 @@
 <head>
     <title>表单渲染</title>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-
+	<link rel="stylesheet" href="/public/index.css">
 </head>
 <style>
 	table tr td,th{
@@ -18,12 +18,6 @@
 			<td>content</td>
 			<td>create_time</td>
 		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
 	</table>
 </body>
 <script>
@@ -32,7 +26,6 @@
 		url:'/list1?'+document.URL.split('?')[1],
 		type:'get',
 		success:function(data){
-			console.log(data);
 			for(var i=0;i<data.length;i++)
 			{
 				var str=$('<tr><td>'+data[i].id+'</td><td>'+data[i].title+'</td><td>'+data[i].content+'</td><td>'+data[i].create_time+'</td></tr>')

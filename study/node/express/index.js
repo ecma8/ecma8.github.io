@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-//连接数据库
 var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
@@ -9,12 +8,17 @@ var connection = mysql.createConnection({
     password: '',
     database:'thinkphp'
 });
- 
+app.use('/public',express.static(__dirname+'/public'));
+app.all('*', function(req, res, next) {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+   res.header("X-Powered-By",' 3.2.1');
+   //res.header("Content-Type", "application/json;charset=utf-8");
+   next();
+});
 // 创建 application/x-www-form-urlencoded 编码解析
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
- 
-app.use(express.static('public'));
- 
 app.get('/index', function (req, res) {
     res.sendFile( __dirname + "/" + "index.html" );
 })
@@ -27,7 +31,10 @@ app.get('/list1', function (req, res) {
         res.send(rows)
     });
     connection.end();
-})   
+})
+
+
+
 app.post('/process_post', urlencodedParser, function (req, res) {
  
    // 输出 JSON 格式
@@ -37,6 +44,8 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     };
     res.end(JSON.stringify(response));
 })
+
+
 var server = app.listen(8081, function () {
  
   var host = server.address().address
