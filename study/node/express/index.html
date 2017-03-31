@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>node.js表单提交</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+</head>
+<body> 
+	<p><input type="text" id="first_name" placeholder="firstName"></p>
+	<p><input type="text" id="last_name" placeholder="lastName"></p>
+	<p><input type="button" id="button" value="提交"></p>
+	<p>
+		firstname
+		<span class="first"></span>
+	</p>
+	<p>
+		lastname
+		<span class="last"></span>
+	</p>
+</body>
+<script>
+$('#button').click(function(event) {
+	/* Act on the event */
+		$.ajax({
+		url:'/process_post',
+		type:'post',
+		data:{first_name:$('#first_name').val(),last_name:$('#last_name').val()},
+		dataType:'json',
+		success:function(data){
+			$('.first').text(data.first_name)
+			$('.last').text(data.last_name)
+		}
+	})
+});
+</script>
+</html>
