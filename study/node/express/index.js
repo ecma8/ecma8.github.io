@@ -2,11 +2,19 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
+var fs = require('fs');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
     database:'thinkphp'
+});
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+  console.log('connected as id ' + connection.threadId);
 });
 app.use('/public',express.static(__dirname+'/public'));
 app.all('*', function(req, res, next) {
@@ -25,24 +33,21 @@ app.get('/index', function (req, res) {
 app.get('/list', function (req, res) {
     res.sendFile( __dirname + "/" + "/page/list.html" );
 }) 
+app.get('/upload', function (req, res) {
+    res.sendFile( __dirname + "/" + "/page/upload.html" );
+}) 
 app.get('/list_1/:key', function (req, res) {
-    console.log(req.params.key)
-    connection.query('select * from  think_form limit '+req.params.key+',1', function(err, rows, fields) {
+    connection.query('select * from  think_form limit '+req.params.key +',1', function(err, rows, fields) {
         if (err) throw err;
         res.send(rows)
     });
-    connection.end();
 })  
 app.get('/list1', function (req, res) {
     connection.query('select * from  think_form limit '+req.query.id*10 +',10', function(err, rows, fields) {
         if (err) throw err;
         res.send(rows)
     });
-    connection.end();
 })
-
-
-
 app.post('/process_post', urlencodedParser, function (req, res) {
  
    // 输出 JSON 格式
@@ -52,12 +57,10 @@ app.post('/process_post', urlencodedParser, function (req, res) {
     };
     res.end(JSON.stringify(response));
 })
-
-
 var server = app.listen(8081, function () {
  
-  var host = server.address().address
-  var port = server.address().port
+  var host = server.address().address;
+  var port = server.address().port;
  
   console.log("应用实例，访问地址为 http://%s:%s", host, port)
  
