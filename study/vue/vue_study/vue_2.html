@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+</head>
+<body>
+<div id="xxx">
+	<ul>
+		<li v-for="item in arr">
+			<div v-for="value in item">
+				{{$key}}
+				{{value}}
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+			arr:{
+				a:{
+					a:1,
+					b:2,
+					c:3
+				},
+				b:{
+					d:1,
+					e:2,
+					f:3
+				},
+				c:{
+					g:1,
+					h:2,
+					i:3,
+				},
+				d:{
+					j:1,
+					k:2,
+					l:3
+				}
+			}
+		}
+	})
+</script>
+</html>

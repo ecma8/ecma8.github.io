@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+</head>
+<body>
+<div id="xxx">
+	<input type="button" value="按钮" v-on:click='show()'>
+	<div v-show='flag'>
+		123
+	</div>
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+			msg:"123",
+			arr:[1,2,3,4,5,6],
+			flag:true
+		},
+		methods:{
+			show:function(){
+				if(this.flag)
+				{
+					this.flag=false;
+				}
+				else{
+					this.flag=true;
+				}
+			}
+		}
+	})
+</script>
+</html>

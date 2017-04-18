@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+	<script src='jquery.min.js'></script>
+	<script src='bootstrap.min.js'></script>
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="container" id="box">
+        <h1 class="h2">留言板效果</h1>
+        <hr>
+        <form role="form">
+            <div class="form-group">
+                <label for="username">姓名</label>
+                <input type="text" id="username" class="form-control" placeholder="请输入用户名" v-model="username"/>
+            </div>
+            <div class="form-group">
+                <label for="username">年龄</label>
+                <input type="text" id="age" class="form-control" placeholder="请输入年龄" v-model="age"/>
+            </div>
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" value="{{btnText}}" v-on:click="add()"/>
+                <input type="reset" class="btn btn-danger" value="重置"/>
+            </div>
+        </form>
+        <hr>
+        <table class="table table-bordered table-hover">
+            <caption class="h2 text-info">用户信息表</caption>
+            <tr>
+                <th class="text-center">序号</th>
+                <th class="text-center">名字</th>
+                <th class="text-center">年龄</th>
+                <th class="text-center">操作</th>
+            </tr>
+            <tr class="text-center" v-for="item in mydata">
+                <td>{{$index+1}}</td>
+                <td>{{item.username}}</td>
+                <td>{{item.age}}</td>
+                <td>
+                    <button class="btn btn-danger btn-xs" v-on:click="set($index)">编辑</button>
+                    <button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#layer"
+                            v-on:click="nowIndex=$index,title='确认删除么'">删除</button>
+                </td>
+            </tr>
+            <tr class="text-right" v-show="mydata.length!=0">
+                <td colspan="4">
+                    <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#layer"
+                            v-on:click="nowIndex=-2,title='确认删除全部么'">全部删除</button>
+                </td>
+            </tr>
+            <tr class="text-center" v-show="mydata.length==0">
+                <td colspan="4" class="text-muted">
+                    暂无数据
+                </td>
+            </tr>
+        </table>
+        <!--弹出框-->
+        <div role="dialog" class="modal fade" id="layer" data-index="{{nowIndex}}">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">
+                            &times;
+                        </button>
+                        <h4 class="modal-title">{{title}}</h4>
+                    </div>
+                    <div class="modal-body text-right">
+                        <button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
+                        <button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="delMsg(nowIndex)">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script>
+        new Vue({
+            el:'#box',
+            data:{
+                mydata:[
+	                {
+	                    username:'xxx1',
+	                    age:'xxx1'
+	                },
+	                {
+	                    username:'xxx2',
+	                    age:'xxx2'
+	                },
+	                {
+	                    username:'xxx3',
+	                    age:'xxx3'
+	                }
+                ],
+                username:'',
+                age:'',
+                title:'确认删除么',
+                nowIndex:-100,
+                btnText:'提交'
+            },
+            methods:{
+                add:function(){
+                    if(this.username=='' || this.age=='')
+                    {
+                        alert('信息不能为空');
+                        return false;
+                    }
+                    if(this.btnText=='保存当前选项')
+                    {
+                        this.mydata[this.nowIndex].username=this.username;
+                        this.mydata[this.nowIndex].age=this.age;
+
+                        this.username='';
+                        this.age='';
+                        this.btnText='提交';
+                    }
+                    else{
+                        this.mydata.push({
+                            username:this.username,
+                            age:this.age
+                        });
+                        this.username='';
+                        this.age='';
+                    }
+                    console.log(this.mydata);
+                },
+                delMsg:function(n){
+                    if(n==-2)
+                    {
+                        this.mydata=[];
+                    }
+                    else {
+                        this.mydata.splice(n, 1);
+                    }
+                },
+                set:function(index){
+                	this.nowIndex=index;
+                    this.username=this.mydata[index].username;
+                    this.age=this.mydata[index].age;
+                    this.btnText='保存当前选项'
+                }
+                //,
+                // delAlert:function(x)
+                // {
+                // 	this.nowIndex=x;
+                // 	this.title='确认删除么？'
+
+                // },
+                // delAll:function(){
+                // 	this.nowIndex=-2;
+                // 	this.title='确认删除全部么？'
+                // }
+            }
+        })
+    </script>
+</body>
+</html>

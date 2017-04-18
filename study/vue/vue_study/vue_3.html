@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+</head>
+<body>
+<div id="xxx">
+	<input type="button" value="按钮" v-on:click='show()'>
+	<ul>
+		<li v-for='item in arr'>
+			{{item}}
+		</li>
+	</ul>
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+			msg:"123",
+			arr:[1,2,3,4,5,6]
+		},
+		methods:{
+			show:function(){
+				this.arr.push(this.arr[this.arr.length-1]+1)
+			}
+		}
+	})
+</script>
+</html>
