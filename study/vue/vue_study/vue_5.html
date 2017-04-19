@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+</head>
+<body>
+<div id="xxx" >
+    <div @click="show2()">
+        <input type="button" value="按钮" @contextmenu.prevent='show()'>
+    </div>
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+			msg:"123",
+			flag:true
+		},
+		methods:{
+			show:function(ev){
+			    alert(1);
+			},
+            show2:function(){
+                alert(2)
+            }
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+    <script src="vue-resource.js"></script>
+    <style>
+        .red{
+            color: #f00;
+        }
+        .size{
+            font-size: 100px;
+        }
+        .gray{
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div id="xxx" >
+    <input type="text" v-model="text" @keyup="get($event)" @keydown.down="change()" @keydown.up.prevent="changeUp()">
+    <ul>
+        <li v-for="item in mydata" :class="{gray:$index==now}">
+            {{item}}
+        </li>
+    </ul>
+    <p v-show="mydata.length==0">暂无更多数据</p>
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+            text:'',
+            mydata:[],
+            now:-1
+        },
+        methods:{
+            get:function(ev){
+                if(ev.keyCode==38 || ev.keyCode==40)return;
+                if(ev.keyCode==13)
+                {
+                    window.open('https://www.baidu.com/s?wd='+this.text);
+                    this.text='';
+                }
+                this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                    wd:this.text
+                },{
+                    jsonp:'cb'
+                }).then(function(res){
+                    this.mydata=res.data.s;
+                    //console.log(res.data.s)
+                },function(res){
+//                    alert(res.status)
+                })
+            },
+            change:function(){
+                this.now++;
+                if(this.now==this.mydata.length)
+                {
+                    this.now=-1;
+                }
+                this.text=this.mydata[this.now];
+            },
+            changeUp:function(){
+                this.now--;
+                if(this.now==-2)
+                {
+                    this.now=this.mydata.length-1;
+                }
+                this.text=this.mydata[this.now];
+            }
+        }
+	})
+</script>
+</html>

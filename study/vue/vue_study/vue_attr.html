@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+</head>
+<body>
+<div id="xxx" >
+    <img  :src="src" :witth="w" alt="">
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+			msg:"",
+			flag:true,
+            src:"http://img02.tooopen.com/images/20140504/sy_60294738471.jpg",
+            w:'100px'
+		},
+		methods:{
+			show:function(ev){
+			    this.msg='';
+			    this.msg=ev.keyCode;
+			}
+		}
+	})
+</script>
+</html>

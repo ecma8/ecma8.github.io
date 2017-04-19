@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+    <style>
+        .red{
+            color: #f00;
+        }
+        .size{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="xxx" >
+    <strong :style="json">123</strong>
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+		    json:{
+		        color:'#ccc',
+                background:'#f00'
+            },
+            red:{
+		        color:'red'
+            },
+            b:{
+		      background:"#00f"
+            }
+		}
+	})
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+    <style>
+        .red{
+            color: #f00;
+        }
+        .size{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="xxx" >
+    <input type="text" v-model="msg"><br>
+
+    {{msg}}<br>
+    {{*msg}}<br>
+    {{{msg}}}<br>
+    {{'welcome '|capitalize}}
+    {{123|currency '￥'}}
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+		    msg:'abc'
+        }
+	})
+</script>
+</html>

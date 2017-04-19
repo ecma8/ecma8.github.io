@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+    <script src="vue-resource.js"></script>
+    <style>
+        .red{
+            color: #f00;
+        }
+        .size{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="xxx" >
+    <input type="text" v-model="text">
+    <input type="button" value="按钮" @click="get()">
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+		    msg:'abc',
+            text:''
+        },
+        methods:{
+//		     get:function(){
+//                this.$http.get('index.txt').then(function(res){
+//                    alert(res.data);
+//                    alert(res.status)
+//                },function(res){
+//                    alert(res.status)
+//                })
+//            }
+//            get:function(){
+//                this.$http.get('http://open.ecma8.com/index.php?c=Index&a=phone',{
+//                    x:'1',
+//                    y:'2'
+//                }).then(function(res){
+//                    console.log(res)
+//                },function(res){
+////                    alert(res.status)
+//                })
+//            }
+//            get:function(){
+//                this.$http.post('http://open.ecma8.com/index.php?c=Index&a=index',{
+//                    first_name:'123',
+//                    last_name:'456'
+//                },{
+//                    emulateJSON:true
+//                }).then(function(res){
+//                    console.log(res)
+//                },function(res){
+////                    alert(res.status)
+//                })
+//            }
+//            get:function(){
+//                this.$http.jsonp('https://sug.so.360.cn/suggest',{
+//                    word:this.text
+//                },{
+//                    emulateJSON:true
+//                }).then(function(res){
+//                    console.log(res.data.s)
+//                },function(res){
+////                    alert(res.status)
+//                })
+//            }
+            get:function(){
+                this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+                    wd:this.text
+                },{
+                    jsonp:'cb'
+                }).then(function(res){
+                    console.log(res.data.s)
+                },function(res){
+//                    alert(res.status)
+                })
+            }
+        }
+	})
+</script>
+</html>

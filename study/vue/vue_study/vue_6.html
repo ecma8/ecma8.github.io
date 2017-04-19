@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='vue.js'></script>
+</head>
+<body>
+<div id="xxx" >
+    <input type="text" @keydown.enter='show($event)'>
+    <input type="text" value="{{msg}}">
+    <img src="http://img02.tooopen.com/images/20140504/sy_60294738471.jpg" alt="">
+</div>
+</body>
+<script>
+	new Vue({
+		el:'#xxx',
+		data:{
+			msg:"",
+			flag:true
+		},
+		methods:{
+			show:function(ev){
+			    this.msg='';
+			    this.msg=ev.keyCode;
+			}
+		}
+	})
+</script>
+</html>
