@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能课堂 —— 微博ajax接口测试 - www.zhinengshe.com</title>
+<style>
+	.hover{
+		background: #ff0000!important;
+		color: #fff!important;
+	}
+</style>
+<link href="style/weibo.css" rel="stylesheet" type="text/css" />
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+    <script>
+        window.onload=function(){
+        	var url='weibo.php';
+        	var vm = new Vue({
+        	 	el:'.znsArea',
+        	 	data:{
+        	 		msgData:[],
+        	 		t1:'',
+        	 		pages:0,
+        	 		nowIndex:0
+        	 	},
+        	 	methods:{
+        	 		add:function(){
+        	 			this.$http({
+        	 				url:url,
+        	 				data:{
+        	 					content:this.t1,
+        	 					act:'add'
+        	 				}
+        	 			}).then(function(res){
+        	 				var json=res.data;
+        	 				// this.msgData.unshift({
+        	 				// 	content:this.t1,
+        	 				// 	time:(function(time){
+        	 				// 		return new Date(time*1000);
+        	 				// 	})(json.time),
+        	 				// 	acc:0,
+        	 				// 	ref:0,
+        	 				// 	id:json.id
+
+        	 				// })
+        	 				this.msgData=[];
+        	 				this.getPageData();
+        	 				this.page();
+        	 				this.nowIndex=0;
+        	 			},function(res){
+
+        	 			})
+        	 		},
+        	 		getPageData:function(n){
+        	 			this.msgData=[];
+        	 			this.nowIndex=n;
+        	 			this.$http({
+        	 				url:url,
+        	 				data:{
+        	 					act:'get',
+                                page:n+1
+        	 				}
+        	 			}).
+        	 			then(function(res){
+        	 				var json=res.data.reverse();
+        	 				for(var i=0;i<json.length;i++)
+        	 				this.msgData.unshift({
+        	 					content:json[i].content,
+        	 					time:(function(time){
+        	 						return new Date(time*1000)
+        	 					})(json[i].time),
+        	 					acc:json[i].acc,
+        	 					ref:json[i].ref,
+        	 					id:json[i].id
+        	 				})
+        	 			},function(){
+
+        	 			})
+        	 		},
+        	 		del:function(id,index){
+        	 			this.$http({
+        	 				url:url,
+        	 				data:{
+        	 					id:id,
+        	 					act:'del'
+        	 				}
+        	 			}).then(function(res){
+        	 				this.msgData.splice(index,1)
+        	 			},function(res){
+
+        	 			})
+        	 		},
+        	 		acc:function(id,index){
+        	 			this.$http({
+        	 				url:url,
+        	 				data:{
+        	 					id:id,
+        	 					act:'acc'
+        	 				}
+        	 			}).then(function(res){
+        	 				this.msgData[index].acc+=1;
+        	 			},function(res){
+
+        	 			})
+        	 		},
+        	 		ref:function(id,index){
+        	 			this.$http({
+        	 				url:url,
+        	 				data:{
+        	 					id:id,
+        	 					act:'ref'
+        	 				}
+        	 			}).then(function(res){
+        	 				this.msgData[index].ref+=1;
+        	 			},function(res){
+
+        	 			})
+        	 		},
+        	 		page:function(){
+        	 			this.$http({
+        	 				url:url,
+        	 				data:{
+        	 					act:'get_page_count'
+        	 				}
+        	 			}).then(function(res){
+        	 				this.pages=res.data.count
+        	 			},function(res){
+
+        	 			})
+        	 		},
+        	 		pageX:function(x){
+        	 			console.log(x);
+        	 			if(x<0){
+        	 				this.nowIndex=this.pages;
+        	 				this.getPageData(this.nowIndex);
+        	 			}else if(x>=this.pages){
+        	 				this.nowIndex=0;
+        	 				this.getPageData(this.nowIndex);
+        	 			}else{
+        	 				this.getPageData(x);
+        	 			}
+        	 			
+        	 		}
+        	 	},ready:function(){
+        	 		this.getPageData(this.nowIndex);
+        	 		this.page();
+        	 	}
+        	 })
+        };
+    </script>
+</head>
+
+<body>
+<div class="znsArea" @keyup.enter="add">
+<!--留言-->
+     <div class="takeComment">
+        <textarea name="textarea" class="takeTextField" id="tijiaoText" v-model="t1"></textarea>
+        <div class="takeSbmComment">
+            <input type="button" class="inputs" value="" @click="add"/>
+            <span>(可按 Enter 回复)</span>
+        </div>
+    </div>
+<!--已留-->
+    <div class="commentOn">
+        <div class="noContent" v-show="msgData.length==0">暂无留言</div>
+        <div class="messList">
+        	<div class="reply" v-for="item in msgData">
+                <p class="replyContent">{{item.content}}</p>
+                <p class="operation">
+                    <span class="replyTime">{{item.time}}</span>
+                    <span class="handle">
+                    	<a href="javascript:;" class="top" @click='acc(item.id,$index)'>{{item.acc}}</a>
+                        <a href="javascript:;" class="down_icon" @click='ref(item.id,$index)'>{{item.ref}}</a>
+                        <a href="javascript:;" class="cut" @click="del(item.id,$index)">删除</a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="page" v-show='msgData.length>=0'>
+			<a href="javascript:;" @click='pageX(0)'>首页</a>
+			<a href="javascript:;" @click='pageX(nowIndex-1)'>上一页</a>
+        	<a href="javascript:;" v-for='item in pages' :class='{hover:nowIndex==$index}' @click='getPageData($index)'>{{$index+1}}</a>
+        	<a href="javascript:;" @click='pageX(nowIndex+1)'>下一页</a>
+			<a href="javascript:;" @click='pageX(pages-1)'>尾页</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
