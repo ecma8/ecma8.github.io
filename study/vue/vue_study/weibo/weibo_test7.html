@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能课堂 —— 微博ajax接口测试 - www.zhinengshe.com</title>
+<link href="style/weibo.css" rel="stylesheet" type="text/css" />
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+</head>
+
+<body>
+<div class="znsArea">
+    a = >{{a}}
+    b = >{{b}}
+</div>
+<script>
+    var vm = new Vue({
+        aa:11,
+        data:{
+            a:1
+        },
+        computed:{
+            b:{
+                get:function(){
+                    return this.a+100
+                },
+                set:function(val){
+                    this.a=val
+                }
+            }
+        },
+        show:function(){
+            alert(1)
+        }
+    })
+    vm.a=10;
+    vm.b=1000;
+    vm.$mount('.znsArea');
+    console.log(vm.$options.aa);
+    vm.$options.show();
+    vm.$log();
+</script>
+</body>
+</html>

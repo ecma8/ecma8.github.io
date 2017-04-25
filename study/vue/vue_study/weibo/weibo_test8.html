@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="style/weibo.css" rel="stylesheet" type="text/css" />
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-resource.js"></script>
+</head>
+
+<body>
+<div class="box">
+    <input type="text" @keyup='show | debounce 20' v-model='a|filterHtml '>
+    <ul>
+        <li v-for='item in arr | filterBy a' v-text='item'>item</li>
+    </ul>
+    <ul>
+        <li v-for='item in arr1 | orderBy 1' v-text='item'>item</li>
+    </ul>
+    {{b|date}}
+</div>
+<script>
+    Vue.filter('date',function(input){
+        return input<10?'0'+input:''+input;
+    })
+    Vue.filter('filterHtml',function(input){
+        return input.replace('/<[^<+]>/','')
+    })
+    new Vue({
+        el:'.box',
+        data:{
+            a:'',
+            arr:['a','aa','bb','ab'],
+            arr1:['d','a','b','c'],
+            b:8,
+        },
+        methods:{
+            show:function(){
+                
+            }
+        }
+    })
+</script>
+</body>
+</html>

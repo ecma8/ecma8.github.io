@@ -8,12 +8,19 @@
 		background: #ff0000!important;
 		color: #fff!important;
 	}
+	[v-cloak]{
+		display: none;
+	}
 </style>
 <link href="style/weibo.css" rel="stylesheet" type="text/css" />
     <script src="js/vue.js"></script>
     <script src="js/vue-resource.js"></script>
     <script>
         window.onload=function(){
+            Vue.filter('date',function(input){
+                var oDate=new Date(input*1000);
+                return oDate.getFullYear()+'-'+(oDate.getMonth()+1)+'-'+oDate.getDate()+' '+oDate.getHours()+':'+oDate.getMinutes()+':'+oDate.getSeconds();
+            });
         	var url='weibo.php';
         	var vm = new Vue({
         	 	el:'.znsArea',
@@ -21,7 +28,8 @@
         	 		msgData:[],
         	 		t1:'',
         	 		pages:0,
-        	 		nowIndex:0
+        	 		nowIndex:0,
+        	 		text:'<strong>123</strong>'
         	 	},
         	 	methods:{
         	 		add:function(){
@@ -44,7 +52,7 @@
 
         	 				// })
         	 				this.msgData=[];
-        	 				this.getPageData();
+        	 				this.getPageData(0);
         	 				this.page();
         	 				this.nowIndex=0;
         	 			},function(res){
@@ -66,9 +74,7 @@
         	 				for(var i=0;i<json.length;i++)
         	 				this.msgData.unshift({
         	 					content:json[i].content,
-        	 					time:(function(time){
-        	 						return new Date(time*1000)
-        	 					})(json[i].time),
+        	 					time:json[i].time,
         	 					acc:json[i].acc,
         	 					ref:json[i].ref,
         	 					id:json[i].id
@@ -85,7 +91,9 @@
         	 					act:'del'
         	 				}
         	 			}).then(function(res){
-        	 				this.msgData.splice(index,1)
+        	 				this.msgData=[];
+        	 				this.getPageData(0);
+        	 				this.page();
         	 			},function(res){
 
         	 			})
@@ -164,10 +172,10 @@
     <div class="commentOn">
         <div class="noContent" v-show="msgData.length==0">暂无留言</div>
         <div class="messList">
-        	<div class="reply" v-for="item in msgData">
+        	<div class="reply" v-cloak v-for="item in msgData">
                 <p class="replyContent">{{item.content}}</p>
                 <p class="operation">
-                    <span class="replyTime">{{item.time}}</span>
+                    <span class="replyTime">{{item.time|date}}</span>
                     <span class="handle">
                     	<a href="javascript:;" class="top" @click='acc(item.id,$index)'>{{item.acc}}</a>
                         <a href="javascript:;" class="down_icon" @click='ref(item.id,$index)'>{{item.ref}}</a>
@@ -179,7 +187,8 @@
         <div class="page" v-show='msgData.length>=0'>
 			<a href="javascript:;" @click='pageX(0)'>首页</a>
 			<a href="javascript:;" @click='pageX(nowIndex-1)'>上一页</a>
-        	<a href="javascript:;" v-for='item in pages' :class='{hover:nowIndex==$index}' @click='getPageData($index)'>{{$index+1}}</a>
+        	<a href="javascript:;" v-cloak v-for='item in pages' :class='{hover:nowIndex==$index}' @click='getPageData($index)' v-text='$index+1'>
+        	</a>
         	<a href="javascript:;" @click='pageX(nowIndex+1)'>下一页</a>
 			<a href="javascript:;" @click='pageX(pages-1)'>尾页</a>
         </div>
