@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.blur {    
+		    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */  
+		       
+		    -webkit-filter: blur(8px); /* Chrome, Opera */  
+		       -moz-filter: blur(8px);   
+		        -ms-filter: blur(8px);       
+		            filter: blur(8px);   
+		       
+		    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=false); /* IE6~IE9 */  
+		}  
+	</style>
+</head>
+<body>
+	<img src="../public/img/4.png" class="blur" alt="">
+</body>
+</html>
