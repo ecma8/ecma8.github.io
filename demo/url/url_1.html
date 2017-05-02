@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>URL参数截取</title>
+	<script src='../public/js/jquery-1.11.3.js'></script>
+</head>
+<body>
+	<input type="text" placeholder="请输入完整的URL地址" class="url">
+	<input type="text" placeholder="请输入要截取的参数名" class="type">
+	<input type="button" value="输出" class="button">
+	<p class="out"></p>
+</body>
+<script>
+	var str='http://testwww.baidu.com/index.php?m=Admincp&c=Teacher&a=teacherEdit&id=36'
+	function urlSub(str,type)
+	{
+		var arr=str.split('?')[1].split('&');
+		var json={};
+		for(var i=0;i<arr.length;i++)
+		{
+			json[arr[i].split('=')[0]]=arr[i].split('=')[1]
+		}
+		console.log(json);
+		if(json[type]){
+			return json[type]
+		}
+		else{
+			return '没有这个参数'
+		}
+	}
+	$('.button').click(function(){
+		var str=$('.url').val();
+		var type=$('.type').val();
+		$('.out').text(urlSub(str,type))
+	})
+</script>
+</html>
