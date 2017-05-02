@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../public/css/bootstrap.css">
+	<script src='../public/js/jquery-1.11.3.js'></script>
+	<style>
+		@keyframes mymove
+		{
+			0%{
+				background: #ff0;
+			}
+			25%{
+				background: #ff0;
+			}
+			50%{
+				background: #00f;
+			}
+			75%{
+				background: #0ff;
+			}
+			100%{
+				background: #f0f;
+			}
+		}
+		.abc{
+			width: 100px;
+			height: 100px;
+			background: #f00;
+			/* animation: mymove 5s linear infinite; */
+		}
+	</style>
+</head>
+<body>
+	<div class="abc"></div>
+</body>
+<script>
+	var r=0;
+	var g=0;
+	var b=0;
+	setInterval(function(){
+		r=255;
+		g++;
+		b++;
+		if(r>=255)
+		{
+			
+		}
+		if(g>=255)
+		{
+			
+			
+		}
+		if(b>=255)
+		{
+			r=0;
+			g=0;
+			b=0;
+		}
+		$('.abc').css('background','rgba('+r+','+g+','+b+',1)')
+	},100)
+</script>
+</html>

@@ -8,6 +8,8 @@
 	<style>
 		html,body{
 			height: 100%;
+			margin: 0;
+			padding: 0;
 		}
 		.mask{
 			height: 100%;
@@ -37,6 +39,8 @@
 	<div class="alert"></div> -->
 </body>
 <script>
+
+
 	$('a').click(function(){
 		var mask=$('<div class="mask"></div>')
 		var alert=$('<div class="alert animated zoomIn"></div>')
@@ -50,5 +54,12 @@
 			}, 100);
 		})
 	})
+	// setInterval(function(){
+	// 	$('a').trigger('click')
+	// 	setTimeout(function(){
+	// 		$('.alert').trigger('click')
+	// 	}, 1000);
+	// }, 2000);
+	
 </script>
 </html>
