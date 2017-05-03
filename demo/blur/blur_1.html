@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<script src='../public/js/jquery-1.11.3.js'></script>
 	<style>
 		.blur {    
 		    filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */  
@@ -13,6 +14,17 @@
 		            filter: blur(8px);   
 		       
 		    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=8, MakeShadow=false); /* IE6~IE9 */  
+		    transition: all 1s ease
+		}
+		.blur:hover{
+			filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */  
+		       
+		    -webkit-filter: blur(0px); /* Chrome, Opera */  
+		       -moz-filter: blur(0px);   
+		        -ms-filter: blur(0px);       
+		            filter: blur(0px);   
+		       
+		    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=0, MakeShadow=false); /* IE6~IE9 */  
 		}  
 	</style>
 </head>
