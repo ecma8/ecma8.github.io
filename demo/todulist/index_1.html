@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>toDolist</title>
+    <script src='js/jquery.js'></script>
+    <script src='js/jquery.todulist.js'></script>
+	<meta charset="UTF-8">
+</head>
+<body>
+<select name="" id="button">
+	<option value="23">001</option>
+	<option value="24">002</option>
+	<option value="25">003</option>
+	<option value="26">004</option>
+	<option value="27">005</option>
+	<option value="28">006</option>
+	<option value="29">007</option>
+	<option value="30">008</option>
+	<option value="31">009</option>
+	<option value="32">010</option>
+</select>
+<div class="table"></div>
+<p><input type="button" class="click" value="输出"></p>
+<p class="inner"></p>
+</body>
+<script>
+
+$('#button').toDuList({
+	box:$('.table'),
+	flag:2,
+	title:'编号,姓名,操作',
+	attrArr:'abc123'
+})
+$('.click').click(function(){
+	$('.inner').text($('#button').attr('abc123'))
+})
+</script>
+</html>
