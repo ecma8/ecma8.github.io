@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        #box{
+            width: 400px;
+            margin: 0 auto;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+        }
+        /*.fade-transition{*/
+            /*transition: all 1s ease;*/
+        /*}*/
+        /*.fade-enter{*/
+            /*opacity: 0;*/
+        /*}*/
+        /*.fade-leave{*/
+            /*opacity: 0;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div id="box">
+        <input type="button" value="123" @click="toggle">
+        <div id="div1" class="animated" v-show="dis" transition="zoom"></div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:'#box',
+        data:{
+            a:123,
+            dis:'true'
+        },
+        methods:{
+            toggle:function(){
+                this.dis=!this.dis
+            }
+        },
+        transitions:{
+            zoom:{
+                enterClass:'zoomInLeft',
+                leaveClass:'zoomOutRight'
+            }
+        }
+    })
+</script>
+</html>

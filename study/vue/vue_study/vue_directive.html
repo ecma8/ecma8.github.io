@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="box">
+        {{msg | json}}
+        {{b}}
+    </div>
+</div>
+</body>
+<script>
+
+    var vm=new Vue({
+        el:'#box',
+        data:{
+            msg:{
+                a:1,
+                c:2
+            },
+            b:1
+        }
+    });
+    vm.$watch('msg',function(){
+        vm.b=2;
+    },{deep:true});
+    document.onclick=function(){
+       vm.msg.a='123';
+    }
+</script>
+</html>

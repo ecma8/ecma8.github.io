@@ -9,7 +9,7 @@
 <div id="xxx">
 	<input type="button" value="按钮" v-on:click='show()'>
 	<ul>
-		<li v-for='item in arr'>
+		<li v-for='item in arr' track-by="$index">
 			{{item}}
 		</li>
 	</ul>

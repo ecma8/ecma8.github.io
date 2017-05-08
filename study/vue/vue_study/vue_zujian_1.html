@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <aaa></aaa>
+        <bbb></bbb>
+    </div>
+</body>
+<script>
+//    Vue.component('aaa',{
+//        template:'<h3 @click="change">{{msg}}</h3>',
+//        data:function(){
+//            return {
+//                msg:'我是标题'
+//            };
+//        },
+//        methods:{
+//            change:function(){
+//                alert(1)
+//            }
+//        }
+//
+//    });
+    var bbb=Vue.extend({
+        template:'<h1>这是一个组件</h1>',
+        data:function(){
+            return {
+                msg:'我是标题'
+            };
+        },
+        methods:{
+            change:function(){
+                alert(1)
+            }
+        }
+    });
+    var vm=new Vue({
+        el:'#box',
+        data:{
+
+        },
+        components:{
+            bbb:bbb
+        }
+    });
+</script>
+</html>

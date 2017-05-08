@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="box" v-drag>
+            {{msg}}
+        </div>
+    </div>
+</body>
+<script>
+    Vue.directive('drag',function(ev){
+       var oDiv=this.el;
+        oDiv.onmousedown=function(ev){
+            var disX=ev.clientX-oDiv.offsetLeft;
+            var disY=ev.clientY-oDiv.offsetTop;
+            console.log(ev);
+            document.onmousemove=function(ev){
+                var l=ev.clientX-disX;
+                var t=ev.clientY-disY;
+                oDiv.style.left=l+'px';
+                oDiv.style.top=t+'px';
+            };
+            document.onmouseup=function(ev){
+                document.onmouseup=null;
+                document.onmousemove=null;
+            }
+        }
+    });
+    var vm=new Vue({
+        el:'#box',
+        data:{
+            msg:'welcome'
+        }
+    })
+</script>
+</html>

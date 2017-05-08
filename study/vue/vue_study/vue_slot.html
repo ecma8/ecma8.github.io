@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <aaa>
+            <ul slot="ul">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <ul slot="ol">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </aaa>
+        <aaa>
+        </aaa>
+    </div>
+    <template id="abc">
+        <h1>{{msg}}</h1>
+        <slot name="ol">这是一个默认列表</slot>
+        <slot name="ul">这是二个默认列表</slot>
+    </template>
+</body>
+<script>
+    var vm=new Vue({
+        el:'#box',
+        data:{
+            xxx:'456'
+        },
+        components:{
+            aaa:{
+                template:'#abc',
+                data:function(){
+                    return {
+                        msg:111
+                    }
+                }
+            }
+        }
+    });
+</script>
+</html>

@@ -2769,6 +2769,7 @@
 
 @-webkit-keyframes zoomInLeft {
   from {
+    display: block;
     opacity: 0;
     -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
     transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
@@ -2787,6 +2788,7 @@
 
 @keyframes zoomInLeft {
   from {
+    display: block;
     opacity: 0;
     -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
     transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
@@ -3022,6 +3024,7 @@
     transform: scale(.1) translate3d(2000px, 0, 0);
     -webkit-transform-origin: right center;
     transform-origin: right center;
+    display: none;
   }
 }
 
@@ -3038,6 +3041,8 @@
     transform: scale(.1) translate3d(2000px, 0, 0);
     -webkit-transform-origin: right center;
     transform-origin: right center;
+    display: none;
+
   }
 }
 

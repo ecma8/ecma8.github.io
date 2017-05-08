@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <!--<div id="box">-->
+        <!--<input type="button" value="我是a组件" @click="a='aaa'" >-->
+        <!--<input type="button" value="我是c组件" @click="a='ccc'" >-->
+        <!--<component :is='a'></component>-->
+    <!--</div>-->
+    <div id="box">
+        <bbb></bbb>
+    </div>
+</body>
+<script>
+    var abc=Vue.component('bbb',{
+        template:'<h3 @click="change">{{msg}}</h3>',
+        data:function(){
+            return {
+                msg:'我是标题'
+            };
+        },
+        methods:{
+            change:function(){
+                alert(1)
+            }
+        }
+
+    });
+    var vm=new Vue({
+        el:'#box',
+        data:{
+            a:'aaa'
+        },
+        components:{
+            bbb:{
+                template:'<h3 @click="change">{{msg}}</h3>',
+                data:function(){
+                    return {
+                        msg:'我是标题'
+                    };
+                },
+                methods:{
+                    change:function(){
+                        alert(1)
+                    }
+                }
+            },
+            aaa:{
+                template:'<div>123</div>'
+            },
+            ccc:{
+                template:'<div>456</div>'
+            }
+        }
+    });
+</script>
+</html>

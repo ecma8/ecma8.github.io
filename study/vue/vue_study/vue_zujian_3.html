@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <aaa>
+            <bbb></bbb>
+        </aaa>
+    </div>
+</body>
+<script>
+    var vm=new Vue({
+        el:'#box',
+        data:{
+        },
+        components:{
+            aaa:{
+                data:function(){
+                    return {
+                        msg:'我是父组件的数据'
+                    }
+                },
+                template:'<div>这是aaa的组件=>{{msg}}<bbb></bbb></div>',
+                components:{
+                    bbb:{
+                        template:'<div>这是bbb的组件</div>'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</html>

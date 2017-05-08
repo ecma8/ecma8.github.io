@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <aaa>{{xxx}}</aaa>
+    </div>
+    <template id="abc">
+        <h1>我是父组件的数据 =>{{msg2}}</h1>
+        <bbb :m="msg" :my-msg="msg2"></bbb>
+    </template>
+</body>
+<script>
+    var vm=new Vue({
+        el:'#box',
+        data:{
+            xxx:'456'
+        },
+        components:{
+            aaa:{
+                template:'#abc',
+                data:function(){
+                    return {
+                        msg:111,
+                        msg2:'这是aaa的数据'
+                    }
+                },
+                components:{
+                    bbb:{
+                        props:['m','myMsg'],
+                        template:'<h1>这是子组件的数据 =>{{m}}<br>{{myMsg}}</h1>'
+                    }
+                }
+            }
+        }
+    });
+</script>
+</html>
