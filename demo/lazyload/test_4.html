@@ -43,12 +43,12 @@
 </body>
 <script>
 	$.fn.extend({
-		navScroll:function(img,height){
+		navScroll:function(obj,img,height){
 			img.eq(0).attr('src',img.eq(0).attr('data-src'))
 			$(window).scroll(function(){
 				var bodyScroll=$('body').scrollTop()+height;
 
-				img.each(function(i){
+				obj.find('img').each(function(i){
 					var floorOffset=img.eq(i).offset().top;
 					if(bodyScroll>floorOffset)
 					{
@@ -59,6 +59,6 @@
 			})
 		}
 	})
-	$('nav').navScroll($('.row img'),440)
+	$('nav').navScroll($('.container'),$('img'),600)
 </script>
 </html>
