@@ -22,7 +22,7 @@
 $('#button').click(function(event) {
 	/* Act on the event */
 		$.ajax({
-		url:'http://localhost:86/index.php?c=Index&a=index',
+		url:'/process_post',
 		type:'post',
 		data:{first_name:$('#first_name').val(),last_name:$('#last_name').val()},
 		dataType:'json',

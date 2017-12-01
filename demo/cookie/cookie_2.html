@@ -3,13 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>cookie</title>
-	<script src='../public/js/jquery-1.11.3.js'></script>
-	<script src='../public/js/jquery.cookie.js'></script>
+	<script src='./js/jquery-1.11.3.js'></script>
+	<script src='./js/jquery.cookie.js'></script>
 </head>
 <body>
-	
+<ul>
+	<li data-id='001' data-see='0'>001</li>
+	<li data-id='002' data-see='0'>002</li>
+	<li data-id='003' data-see='0'>003</li>
+	<li data-id='004' data-see='0'>004</li>
+	<li data-id='005' data-see='0'>005</li>
+	<li data-id='006' data-see='0'>006</li>
+	<li data-id='007' data-see='0'>007</li>
+	<li data-id='008' data-see='0'>008</li>
+	<li data-id='009' data-see='0'>009</li>
+	<li data-id='010' data-see='0'>010</li>
+</ul>
+<form action="">
+	<input type="text" id="a">
+	<input type="text" id="b">
+	<input type="button" id="btn" value="存">
+	<input type="button" id="btn1" value="取">
+</form>
 </body>
 <script>
-	console.log($.cookie('banban123456'))
+	$('#btn').click(function(){
+		var json={
+		}
+		for(var i=0;i<$('li').length;i++)
+		{
+			json[$('li').eq(i).attr('data-id')]=$('li').eq(i).attr('data-see')
+		}
+		$.cookie('videoType', JSON.stringify(json),{ expires: 7,raw: true});
+		console.log($.cookie('videoType'))
+	})
+	$('#btn1').click(function(){
+		var data=JSON.parse($.cookie('videoType'))
+		console.log(data);
+		for(var i in data){
+			console.log(i+'--'+data[i])
+		}
+	})
 </script>
 </html>

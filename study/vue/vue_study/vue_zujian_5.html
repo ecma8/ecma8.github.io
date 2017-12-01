@@ -9,13 +9,13 @@
     <div id="box">
         <aaa>{{xxx}}</aaa>
     </div>
-    <template id="abc">
+    <template id="abc" :xxxxxx="xxxxxx">
         <h3>我是父组件 ->{{msg}}</h3>
-        <input type="button" value="按钮">
+        <input type="button"  value="按钮">
         <bbb @maaa="get"></bbb>
     </template>
     <template id="bbb">
-        <h3>这是子组件</h3>
+        <h3>这是子组件 {{xxxxxx}}</h3>
         <input type="button" value="send" @click="send()">
     </template>
 </body>
@@ -40,11 +40,22 @@
                 },
                 components:{
                     bbb:{
+                    	props: {
+				            // 用于记录总页码，可由父组件传过来
+				            xxxxxx: {
+				                type: String,
+				                default: 1
+				            }
+				        },
                         data:function(){
                             return {
+                            	banban:this.xxxxxx,
                                 msg:111,
                                 a:'我是子组件的数据'
                             }
+                        },
+                        ready:function(){
+                        	console.log(this.banban)
                         },
                         methods:{
                             send:function(){

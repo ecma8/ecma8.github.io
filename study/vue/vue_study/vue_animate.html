@@ -15,41 +15,47 @@
             height: 100px;
             background: #ff0;
         }
-        /*.fade-transition{*/
-            /*transition: all 1s ease;*/
-        /*}*/
-        /*.fade-enter{*/
-            /*opacity: 0;*/
-        /*}*/
-        /*.fade-leave{*/
-            /*opacity: 0;*/
-        /*}*/
+        .class1{
+            animation: slideInLeft 0.3s ease 0.3s;
+        }
+        .class2{
+            animation: slideInLeft 0.3s ease 0.6s;
+        }
+        .class3{
+            animation: slideInLeft 0.3s ease 0.9s;
+        }
+        .div{
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+        }
     </style>
 </head>
 <body>
     <div id="box">
-        <input type="button" value="123" @click="toggle">
-        <div id="div1" class="animated" v-show="dis" transition="zoom"></div>
+        <div :class="{div:'true',animated:'true',class1:isShow}"></div>
+        <div :class="{div:'true',animated:'true',class2:isShow}"></div>
+        <div :class="{div:'true',animated:'true',class3:isShow}"></div>
     </div>
 </body>
 <script>
-    new Vue({
+    var vm=new Vue({
         el:'#box',
         data:{
-            a:123,
-            dis:'true'
+            isShow:false
         },
-        methods:{
-            toggle:function(){
-                this.dis=!this.dis
-            }
-        },
-        transitions:{
-            zoom:{
-                enterClass:'zoomInLeft',
-                leaveClass:'zoomOutRight'
-            }
+        ready:function(){
+            var that=this
+            setTimeout(function(){
+                that.isShow=true
+            },2000)
         }
     })
+    // window.onload=function(){
+    //     setTimeout(function(){
+    //         vm.isShow=true
+    //     },2000)
+        
+    // }
 </script>
 </html>

@@ -6,67 +6,15 @@
     <script src="../public/js/jquery-1.11.3.js"></script>
     <script>
         $(function(){
-            $.fn.extend({
-                lun:function(imgBox,imgS,left,right,num){
-                    var imgBox=imgBox;
-                    var imgS=imgS;
-                    var imgW=imgS.width();
-                    var imgN=imgS.length;
-                    var t=setInterval(move1,3000);
-                    var flag=true;
-                    imgBox.css("width",imgN*imgW);
-                    function move(){
-                        imgBox.stop();
-                        imgBox.animate({marginLeft:-imgW*num},function(){
-                            for(var i=0;i<num;i++){
-                                $(".img-box li:eq(0)").appendTo(imgBox);
-                            }
-                            imgBox.css("marginLeft",0);
-                            flag=true;
-                        })
-                    }
-                    function move1()
-                    {
-                        for(var i=0;i<num;i++)
-                        {
-                            $(".img-box li:last").prependTo(imgBox);
-                        }
-                        imgBox.css("marginLeft",-imgW*num);
-                        imgBox.animate({marginLeft:0},function(){
-                            flag=true;
-                        })
-                    }
-                    right.click(function(){
-                        if(!flag)
-                        {
-                            return;
-                        }
-                        flag=false;
-                        move1();
-                    })
-                    left.click(function(){
-                        if(!flag)
-                        {
-                            return;
-                        }
-                        flag=false;
-                        move();
-                    })
-                    left.mouseenter(function(){
-                        clearInterval(t);
-                    })
-                    left.mouseleave(function(){
-                        t=setInterval(move,2000)
-                    })
-                    right.mouseenter(function(){
-                        clearInterval(t);
-                    })
-                    right.mouseleave(function(){
-                        t=setInterval(move,2000)
-                    })
-                }
-            })
-            $('.box').lun($('.img-box'),$('.img'),$('.left'),$('.right'),3);
+        	
+            $('.box').lun({
+            	imgBox:$('.img-box'),
+            	img:$('.img-box li'),
+            	left:$('.left'),
+            	right:$('.right'),
+            	num:2,
+            	imgLen:3
+            });
         })
     </script>
     <style>
