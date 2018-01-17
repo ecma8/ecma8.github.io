@@ -5,7 +5,7 @@
     <title>demo</title>
 </head>
 <body>
-    <div id="allmap" style="height: 100%;width:  100%"></div>
+    <div id="allmap" style="height: 600px;width:  600px"></div>
 </body>
 </html>
 <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
@@ -43,7 +43,7 @@
             alert(addComp.province + ", " + addComp.city + ", "+ addComp.district + ", " + addComp.street + ", "+ addComp.streetNumber);
         });
         // 这里后面可以写你的后续操作了
-        postData(longitude, latitude);
+        // postData(longitude, latitude);
     }
     //失败时
     function onError(error) {
@@ -66,7 +66,7 @@
         var longitude = 23.1823780000;
         //纬度
         var latitude = 113.4233310000;
-        postData(longitude, latitude);
+        // postData(longitude, latitude);
     }
 
     // 页面载入时请求获取当前地理位置
